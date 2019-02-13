@@ -1,14 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const users = require('./routes/api/users');
-const items = require('./routes/api/items');
+const user = require('./routes/api/user');
+const item = require('./routes/api/item');
 const port = 3000;
 
 const app = express();
 
 app.use(bodyParser.json());
-app.use('/api/users', users);
-app.use('/api/items', items);
+app.use('/api/users', user);
+app.use('/api/items', item);
 
 app.get('/', (req, res) => res.send('Hello from the MMS backend!'));
 
