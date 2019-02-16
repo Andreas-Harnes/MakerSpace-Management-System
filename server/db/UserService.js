@@ -2,15 +2,8 @@ const database = require('./database');
 
 class UserService {
 
-    static async addUser() {
-        // TODO
-        await database.query('SELECT "Hello World!"')
-            .then(rows => {
-                console.log(rows[0]);
-            })
-            .catch(err => {
-                console.log(err)
-            });
+    static async addUser(email) {
+        return (await database.query('INSERT INTO user (email) VALUES (?)', [email])).insertId;
     }
 }
 
