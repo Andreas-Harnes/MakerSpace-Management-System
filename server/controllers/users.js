@@ -9,5 +9,9 @@ module.exports = {
 
         const token = TokenUtils.sign(await UserService.addUser(req.body.email, req.body.password));
         res.status(201).json({ token });
+    },
+
+    signIn: async (req, res) => {
+        res.status(200).send('TODO');
     }
 };
