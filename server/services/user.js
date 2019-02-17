@@ -10,6 +10,6 @@ module.exports = {
     },
 
     fetchUser: async (id) => {
-        return (await database.query('SELECT * FROM user WHERE id = ? LIMIT 1', [id]))[0].id;
+        return (await database.query('SELECT * FROM user WHERE id = ? LIMIT 1', [id]))[0];
     }
 };
