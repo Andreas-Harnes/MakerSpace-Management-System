@@ -9,12 +9,12 @@ module.exports = {
         // TODO Error handling. Also see UserService.emailUsed()
         // TODO Locks?
         if (await UserService.emailUsed(req.body.email)) {
-            return res.status(403).json({ error: 'Email already used.' });
+            return res.status(403).json({ error: 'Email already used' });
         }
 
         bcrypt.hash(req.body.password, saltLength, async (error, hash) => {
             if (error) {
-                return res(500).json({ error });
+                return res(500).json({ error: 'Internal error' });
             }
 
             const token = TokenUtils.sign(await UserService.create(req.body.email, hash));
