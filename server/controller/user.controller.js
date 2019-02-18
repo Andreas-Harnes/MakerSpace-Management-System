@@ -23,6 +23,24 @@ module.exports = {
     },
 
     signIn: async (req, res) => {
-        res.status(200).send('TODO');
+        // TODO Error handling.
+        const user = await UserService.findByEmail(req.body.email);
+        if (!user) {
+            return res.status(401).json({ msg: 'Authentication failed' });
+        }
+
+        console.log(user.dataValues.password);
+        await bcrypt.compare(req.body.password, user.dataValues.password, async (error, result) => {
+            if (error) {
+                return res.status(401).json({ msg: 'Authentication failed' });
+            }
+
+            if (result) {
+                const token = TokenUtils.sign(user.dataValues.id);
+                return res.status(200).json({ msg: 'Authentication successful', token });
+            }
+
+            return res.status(401).json({ msg: 'Authentication failed' });
+        });
     }
 };

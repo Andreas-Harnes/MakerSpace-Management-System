@@ -34,7 +34,7 @@ module.exports = {
     findByEmail: async (email) => {
         return await User.findOne({
             where: { email },
-            attributes: ['email']
+            attributes: ['id', 'email', 'password']
         })
         .then(user => {
             return user;
