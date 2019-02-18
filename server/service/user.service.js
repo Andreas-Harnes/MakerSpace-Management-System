@@ -32,21 +32,16 @@ module.exports = {
     },
 
     emailUsed: async (email) => {
-        return await User.findAll(
-            {attributes: { exclude: ["id", "password", "createdAt", "updatedAt"] } }
-        )
-        .then(users => {
-            // TODO Make this cleaner
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].dataValues.email === email) {
-                    return true;
-                }
-            }
-            return false;
-
+        return await User.findOne({
+            where: { email },
+            attributes: ['email']
+        })
+        .then(user => {
+            return !!user;
         })
         .catch(error => {
             // TODO - error handling.
+            console.log('--- ERROR ---');
             console.log(error);
             return error;
         });

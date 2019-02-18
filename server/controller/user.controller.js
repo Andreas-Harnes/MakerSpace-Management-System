@@ -12,7 +12,7 @@ module.exports = {
             return res.status(403).json({ error: 'Email already used' });
         }
 
-        bcrypt.hash(req.body.password, saltLength, async (error, hash) => {
+        await bcrypt.hash(req.body.password, saltLength, async (error, hash) => {
             if (error) {
                 return res(500).json({ error: 'Internal error' });
             }
@@ -20,8 +20,6 @@ module.exports = {
             const token = TokenUtils.sign(await UserService.create(req.body.email, hash));
             res.status(201).json({ token });
         });
-
-        
     },
 
     signIn: async (req, res) => {
