@@ -5,8 +5,8 @@ const port = 3000;
 const app = express();
 
 app.use(bodyParser.json());
-app.use('/users', require('./routes/users'));
-app.use('/items', require('./routes/items'));
+app.use('/users', require('./route/users'));
+app.use('/items', require('./route/items'));
 
 app.get('/', (req, res) => res.send('Hello from the MMS backend!'));
 

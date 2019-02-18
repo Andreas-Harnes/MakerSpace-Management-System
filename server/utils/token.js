@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const config = require('../config');
+const env = require('../config/env');
 
 module.exports = {
     sign: id => {
@@ -8,6 +8,6 @@ module.exports = {
             sub: id,
             iat: new Date().getTime(),
             exp: new Date().setDate(new Date().getDate() + 1)
-        }, config.jwt.secret);
+        }, env.jwt.secret);
     }
 };
