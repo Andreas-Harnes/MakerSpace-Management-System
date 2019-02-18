@@ -3,7 +3,7 @@ const User = db.users;
 
 module.exports = {
     create: async (email, password) => {
-        User.create({
+        return await User.create({
             email,
             password
         })
@@ -18,9 +18,24 @@ module.exports = {
     },
 
     findById: async (id) => {
-        User.findById(id,
+        return await User.findById(id,
             {attributes: { exclude: ["createdAt", "updatedAt"] } }
         )
+        .then(user => {
+            return user;
+        })
+        .catch(error => {
+            // TODO - error handling.
+            console.log(error);
+            return error;
+        });
+    },
+
+    findByEmail: async (email) => {
+        return await User.findOne({
+            where: { email },
+            attributes: ['email']
+        })
         .then(user => {
             return user;
         })
@@ -41,7 +56,6 @@ module.exports = {
         })
         .catch(error => {
             // TODO - error handling.
-            console.log('--- ERROR ---');
             console.log(error);
             return error;
         });
