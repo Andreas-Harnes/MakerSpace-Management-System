@@ -29,7 +29,6 @@ module.exports = {
             return res.status(401).json({ msg: 'Authentication failed' });
         }
 
-        console.log(user.dataValues.password);
         await bcrypt.compare(req.body.password, user.dataValues.password, async (error, result) => {
             if (error) {
                 return res.status(401).json({ msg: 'Authentication failed' });
