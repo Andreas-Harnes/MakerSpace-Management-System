@@ -8,7 +8,7 @@ module.exports.validateAuth = [
     // (?=.*[A-Z])              uppercase
     // (?=.*[^a-zA-Z0-9])       ?
     // .{8,}$/, "i"             at least 8 char(?)
-    check('password', 'Password is invalid').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i"),
+    check('password').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i"),
     (req, res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
