@@ -10,4 +10,4 @@ app.use('/items', require('./route/items'));
 
 app.get('/', (req, res) => res.send('Hello from the MMS backend!'));
 
-app.listen(port, () => console.log(`MMS backend listening on ${port} ...`));
+app.listen(port, '0.0.0.0', () => console.log(`MMS backend listening on ${port} ...`));
