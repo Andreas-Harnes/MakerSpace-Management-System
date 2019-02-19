@@ -82,3 +82,7 @@ typings/
 # Configuration files with credentials and other secrets
 config.js
 env.js
+
+# Mac spam
+.DS_Store
+../.DS_Store
