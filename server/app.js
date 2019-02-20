@@ -1,8 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const db = require('./config/db.config.js');
 const port = 3000;
 
 const app = express();
+
+db.sequelize.sync({force: true}).then(() => {
+    console.log('DB synced ...');
+});
 
 app.use(bodyParser.json());
 app.use('/users', require('./route/users'));
