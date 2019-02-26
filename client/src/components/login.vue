@@ -3,7 +3,7 @@
       <h1>MakerSpace Management System</h1>
       <input class="loginField" type="text" name="email" placeholder="Email" />
       <input class="loginField" type="password" name="password" placeholder="Password" />
-      <button type="button">Login</button>
+      <button type="button" v-on:click="loginRequest">Login</button>
   </div>
 </template>
 
@@ -11,13 +11,16 @@
   .loginField {
     margin-right: 1%
   }
-
-  
 </style>
 
 <script>
   export default {
     name: "login"
+  }
+  methods: {
+    loginRequest: function() {
+      console.log("sent")
+    }
   }
 </script>
 

@@ -8,12 +8,9 @@
           <input class="regFields" type="text" name="password" placeholder="Password" /> <br> 
           <input class="regFields" type="text" name="password" placeholder="Repeat password" /> <br> 
           <button type="button">Register</button>
-            
       </div>
-      
   </div>
 </template>
-
 
 <style lang="scss">
   #app {
