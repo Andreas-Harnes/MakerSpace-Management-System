@@ -18,5 +18,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.users = require('../model/user.model')(sequelize, Sequelize);
+db.cumulativeItems = require('../model/cumulativeitems.model')(sequelize, Sequelize);
 
 module.exports = db;
