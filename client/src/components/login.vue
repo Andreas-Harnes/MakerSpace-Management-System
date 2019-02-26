@@ -14,19 +14,12 @@
 </style>
 
 <script>
-  export default {
-    name: "login"
-  }
+export default {
+  name: 'login',
   methods: {
-    loginRequest: function() {
-      console.log("sent")
+    loginRequest: function (event) {
+      console.log('sent')
     }
   }
+}
 </script>
-
-
-
-
-
-
-
