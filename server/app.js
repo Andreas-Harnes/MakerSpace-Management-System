@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 app.use('/users', require('./route/users'));
 app.use('/cumulativeitems', require('./route/cumulativeitems'));
 
-app.use('/static', express.static(path.join(__dirname, 'public')));
-app.get('*', (req, res) => {
+app.use(express.static(path.join(__dirname, 'public')));
+app.get(/.*/, (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
 });
 
