@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./config/db.config.js');
+const path = require('path');
 const port = 3000;
 
 const app = express();
