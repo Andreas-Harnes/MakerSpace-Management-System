@@ -14,11 +14,25 @@
 </style>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'login',
+  data() {
+    return {
+      loginResult: []
+    }
+  },
   methods: {
-    loginRequest: function (event) {
-      console.log('sent')
+    loginRequest: function () {
+      axios.get('http://jsonplaceholder.typicode.com/todos')
+    .then(response => {
+         this.loginRequest = response.data;
+         console.log(this.loginRequest)
+    })
+    .catch(error => {
+      console.log(error);
+    })
     }
   }
 }
