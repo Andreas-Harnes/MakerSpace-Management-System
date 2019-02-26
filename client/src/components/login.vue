@@ -25,6 +25,7 @@ export default {
   },
   methods: {
     loginRequest: function () {
+      // Replace with POST request and the right URL
       axios.get('http://jsonplaceholder.typicode.com/todos')
     .then(response => {
          this.loginRequest = response.data;
