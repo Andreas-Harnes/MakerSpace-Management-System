@@ -11,7 +11,7 @@ db.sequelize.sync({force: true}).then(() => {
 
 app.use(bodyParser.json());
 app.use('/users', require('./route/users'));
-app.use('/items', require('./route/items'));
+app.use('/cumulativeitems', require('./route/cumulativeitems'));
 
 app.get('/', (req, res) => res.send('Hello from the MMS backend!'));
 
