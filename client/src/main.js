@@ -6,15 +6,17 @@ import VueRouter from 'vue-router'
 import Nav from './components/nav'
 import Login from './components/login'
 import Register from './components/register'
+import Header from './components/header'
 
-//tell vue to use the router
+// tell vue to use the router
 Vue.use(VueRouter)
 
-//define your routes
+//d efine your routes
 const routes = [
-  {path: '/', component: Nav},
-  {path: '/login', component: Login},
-  {path: '/register', component: Register}
+  { path: '/', component: Nav },
+  { path: '/header', component: Header },
+  { path: '/login', component: Login },
+  { path: '/register', component: Register }
 ]
 
 // Create the router instance and pass the `routes` option
@@ -32,4 +34,3 @@ new Vue({
   render: h => h(App),
   router
 }).$mount('#app')
-

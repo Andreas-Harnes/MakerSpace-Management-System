@@ -26,13 +26,15 @@ export default {
   methods: {
     loginRequest: function () {
       // Replace with POST request and the right URL
+      // Log in API
+      // http://localhost:3000/users/signin     
       axios.get('http://jsonplaceholder.typicode.com/todos')
     .then(response => {
          this.loginRequest = response.data;
          console.log(this.loginRequest)
     })
     .catch(error => {
-      console.log(error);
+      console.log(error)
     })
     }
   }
