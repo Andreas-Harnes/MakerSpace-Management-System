@@ -1,0 +1,81 @@
+\def\headerfont{\scriptsize}
+\newcommand{\makepresentationpage}{
+    \noindent\begin{minipage}{0.2\textwidth}
+        \includegraphics[width=\linewidth]{images/hiof-logo.pdf}
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}{0.75\textwidth}\raggedright
+        \textit{\textbf{
+            \Large
+            {\O}STFOLD UNIVERSITY COLLEGE \\
+        }}
+        \vskip 2mm
+        \textit{
+            \small
+            Department of Computer Science \\
+            Remmen \\
+            1757 Halden \\
+            Phone: 69 21 50 00 \\
+            URL: www.hiof.no \\
+        }
+    \end{minipage}
+    
+    \vspace*{2mm}
+    \noindent \rule{1\textwidth}{0.5mm}\\
+    \noindent \rule[3mm]{\textwidth}{1mm}
+    \vspace*{-5mm}
+    \begin{center}
+        \textbf{
+            \Large
+            BACHELOR THESIS
+        }
+    \end{center}  
+    
+    \vspace{5mm}
+    \small 
+    \hspace{-7mm}
+    \begin{tabular}{|p{95mm}|p{0mm}|p{9mm}|p{36mm}}
+        \cline{1-1} \cline{3-3}
+        \headerfont{Project category:} \newline \category & & \free & \headerfont{Freely available} \\
+        \cline{1-1} \cline{3-3}
+        \headerfont{Scope in credits:} \newline \credits & & \freeafter & \headerfont{Freely available after} \\
+        \cline{1-1} \cline{3-3}
+        \headerfont{Field of study:} \newline \area & & \freeafteragreement & \headerfont{Available after agreement with assignment provider} \\
+        \cline{1-1} \cline{3-3}
+    \end{tabular}
+    
+    \vspace{5mm}
+    \hspace{-7mm}  
+    \begin{tabular}{|p{95mm}|p{50mm}|}
+        \hline
+        \headerfont{Title:} \newline \titlepresentationpage & \headerfont{Date:}  \newline \today \\
+        \hline
+        \headerfont{Authors:}  \newline \authorspresentationpage & {\headerfont Supervisor:}  \newline \tutor \\
+        \hline
+        \headerfont{Department/Program:} \newline \department & \headerfont{Group number:} \newline \projectnr \\
+        \hline
+        \headerfont{Assignment provider:} \newline \customer & \headerfont{Contact person at the assignment provider:}  \newline \contact \\
+        \hline
+    \end{tabular}
+    
+    \vspace{5mm}
+    \hspace{-7mm}  
+    \begin{tabular}{|p{149mm}|}
+        \hline
+        \headerfont{Abstract:} \newline \abstract \\
+        \hline
+    \end{tabular}
+    
+    \vspace{5mm}
+    \hspace{-7mm}  
+    \begin{tabular}{p{25mm}|p{45mm}|}
+        \cline{2-2}
+        \headerfont{3 keywords:}
+        & \keywordone \\ 
+        \cline{2-2}
+        & \keywordtwo \\
+        \cline{2-2}
+        & \keywordthree \\
+        \cline{2-2}
+    \end{tabular}
+}
