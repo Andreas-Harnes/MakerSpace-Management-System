@@ -84,7 +84,6 @@ config.js
 env.js
 
 # Generated files
-public/
 dist/
 
 # Mac spam
