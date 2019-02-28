@@ -28,6 +28,20 @@ export default {
       // Replace with POST request and the right URL
       // Log in API
       // http://localhost:3000/users/signin     
+      // axios.post('/user', {
+      // firstName: 'Fred',
+      // lastName: 'Flintstone'
+      // })
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
+
+
+
+
       axios.get('http://jsonplaceholder.typicode.com/todos')
     .then(response => {
          this.loginRequest = response.data;
