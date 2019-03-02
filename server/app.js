@@ -33,29 +33,16 @@ const strategy = new JwtStrategy(jwtOptions, async function(jwt_payload, next) {
 passport.use(strategy);
 // TODO Refactor stop
 
-const app = express();
-// TODO Refactor start
-app.use(passport.initialize());
-app.use(bodyParser.urlencoded({
-    extended: true
-  }));
-
-  
-// TODO Refactor stop
-
 db.sequelize.sync({force: true}).then(() => {
     console.log('DB synced ...');
 });
 
+const app = express();
 app.use(bodyParser.json());
+app.use(passport.initialize());
 app.use('/users', require('./route/users'));
 app.use('/cumulativeitems', require('./route/cumulativeitems'));
-
-// TODO Refactor start
-app.get("/secret", passport.authenticate('jwt', { session: false }), function(req, res){
-    res.json({message: "JWT authenticated successfully!"});
-});
-// TODO Refactor stop
+app.use('/secrets', require('./route/secrets'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get(/.*/, (req, res) => {
