@@ -1,10 +1,15 @@
 const { check, validationResult } = require('express-validator/check');
 
-module.exports.validateRegistration = [
+module.exports.auth = [
     check('email').isEmail(),
 
-    // Atleast 1 digit, 1 lower case character, 1 upper case character with a length of 8 or more.
+    // (?=.*\d)                 at least a digit
+    // (?=.*[a-z])              lowercase
+    // (?=.*[A-Z])              uppercase
+    // .{8,}$/, "i"             at least 8 char
+
     check('password').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/, "i"),
+
     (req, res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {

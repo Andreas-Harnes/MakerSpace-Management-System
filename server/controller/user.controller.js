@@ -11,16 +11,16 @@ module.exports = {
 
         await bcrypt.hash(req.body.password, saltLength, async (error, hash) => {
             if (error) {
-                return res(500).json({ error: 'Internal error' });
+                next(error);
             }
 
             const user = await UserService.create(req.body.email, hash);
-            req.login(user.dataValues.id, (err) => {
-                if (err) {
-                    next(err);
+            req.login(user.dataValues.id, (error) => {
+                if (error) {
+                    next(error);
                 }
 
-                return res.redirect('/');
+                return res.status(201).send({ msg: 'Authentication successful' });
             });
         });
     }

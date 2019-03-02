@@ -13,7 +13,6 @@ db.sequelize.sync({force: true}).then(() => {
 
 const app = express();
 app.use(bodyParser.json());
-
 app.use(session({
     name: 'mms.id',
     resave: false,
