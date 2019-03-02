@@ -20,4 +20,14 @@ const strategy = new JwtStrategy(jwtOptions, async function(jwt_payload, next) {
   
 passport.use(strategy);
 
+passport.serializeUser((userId, done) => {
+    console.log('Serializing ...');
+    done(null, userId);
+});
+
+passport.deserializeUser((userId, done) => {
+    console.log('Deserializing ...');
+    done(null, userId);
+});
+
 module.exports = passport;

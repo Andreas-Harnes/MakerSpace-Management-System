@@ -1,15 +1,12 @@
 const bcrypt = require('bcrypt');
 const UserService = require('../service/user.service');
 const TokenUtils = require('../utils/token');
-// TODO Refactor 
-const passport = require('../passport');
+
 
 const saltLength = 12;
 
 module.exports = {
-    signUp: async (req, res) => {
-        // TODO Error handling. Also see UserService.emailUsed()
-        // TODO Locks?
+    signUp: async (req, res, next) => {
         if (await UserService.emailUsed(req.body.email)) {
             return res.status(403).json({ error: 'Email already used' });
         }
@@ -20,9 +17,12 @@ module.exports = {
             }
 
             const user = await UserService.create(req.body.email, hash);
-            // TODO Refactor
             req.login(user.dataValues.id, (err) => {
-                res.redirect('/');
+                if (err) {
+                    next(err);
+                }
+
+                return res.redirect('/');
             });
         });
     },
@@ -48,13 +48,3 @@ module.exports = {
         });
     }
 };
-
-passport.serializeUser((userId, done) => {
-    console.log('Serializing ...');
-    done(null, userId);
-});
-
-passport.deserializeUser(async (userId, done) => {
-    console.log('Deserializing ...');
-    done(null, userId);
-});
