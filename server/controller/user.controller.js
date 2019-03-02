@@ -1,7 +1,5 @@
 const bcrypt = require('bcrypt');
 const UserService = require('../service/user.service');
-const TokenUtils = require('../utils/token');
-
 
 const saltLength = 12;
 

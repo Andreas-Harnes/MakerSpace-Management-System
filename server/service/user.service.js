@@ -17,17 +17,15 @@ module.exports = {
         });
     },
 
-    findById: async (id) => {
+    findById: async (id, callback) => {
         return await User.findByPk(id,
             {attributes: { exclude: ["createdAt", "updatedAt"] } }
         )
         .then(user => {
-            return user;
+            return callback(null, user);
         })
         .catch(error => {
-            // TODO - error handling.
-            console.log(error);
-            return error;
+            return callback(error, null);
         });
     },
 

@@ -1,13 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./config/db.config.js');
-const passport = require('./passport');
-const path = require('path');
-const port = 3000;
-
-// TODO Refactor start
 const session = require('express-session');
-// TODO Refactor stop
+const path = require('path');
+const db = require('./config/db.config.js');
+const passportConfig = require('./passport.config');
+const env = require('./config/env');
+const port = 3000;
 
 db.sequelize.sync({force: true}).then(() => {
     console.log('DB synced ...');
@@ -16,16 +14,15 @@ db.sequelize.sync({force: true}).then(() => {
 const app = express();
 app.use(bodyParser.json());
 
-// TODO Refactor start
 app.use(session({
-    secret: 'TODO',
+    name: 'mms.id',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    secret: env.cookie.secret
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
-// TODO Refactor stop
+app.use(passportConfig.initialize());
+app.use(passportConfig.session());
 
 app.use('/users', require('./route/users'));
 app.use('/cumulativeitems', require('./route/cumulativeitems'));

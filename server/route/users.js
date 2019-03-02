@@ -1,13 +1,13 @@
 const express = require('express');
-const passport = require('../passport');
+const passportConfig = require('../passport.config');
 const RouteUtils = require('../utils/route');
 const UsersController = require('../controller/user.controller');
 
 const router = express.Router();
 
-router.post('/signup', RouteUtils.validateAuth, UsersController.signUp);
-router.post('/signin', passport.authenticate('local', {
-    successRedirect: '/'
-}));
+router.post('/signup', RouteUtils.validateRegistration, UsersController.signUp);
+router.post('/signin', passportConfig.authenticate('local'), (req, res) => {
+    return res.status(200).send('OK!');
+});
 
 module.exports = router;

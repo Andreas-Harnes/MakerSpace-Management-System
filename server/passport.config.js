@@ -12,22 +12,28 @@ passport.use(new LocalStrategy({
     }
 
     await bcrypt.compare(password, user.dataValues.password, async (error, result) => {
+        if (error) {
+            return done(error);
+        }
+
         if (result) {
             return done(null, user.dataValues.id);
-        } else {
-            return done(null, false);
         }
+
+        return done(null, false);
     });
 }));
 
 passport.serializeUser((userId, done) => {
-    console.log('Serializing ...');
+    console.log('Serialized ...');
     done(null, userId);
 });
 
-passport.deserializeUser((userId, done) => {
-    console.log('Deserializing ...');
-    done(null, userId);
+passport.deserializeUser(async (userId, done) => {
+    await UserService.findById(userId, (err, user) => {
+        console.log('Deserialized ...');
+        done(err, userId);
+    });
 });
 
 module.exports = passport;
