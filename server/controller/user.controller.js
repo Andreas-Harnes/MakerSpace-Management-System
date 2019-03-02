@@ -17,7 +17,8 @@ module.exports = {
                 return res(500).json({ error: 'Internal error' });
             }
 
-            const token = TokenUtils.sign(await UserService.create(req.body.email, hash));
+            const user = await UserService.create(req.body.email, hash);
+            const token = TokenUtils.sign(user.dataValues.id);
             res.status(201).json({ token });
         });
     },

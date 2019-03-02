@@ -4,7 +4,44 @@ const db = require('./config/db.config.js');
 const path = require('path');
 const port = 3000;
 
+// TODO Refactor start
+const jwt = require('jsonwebtoken');
+const passport = require('passport');
+const passportJWT = require("passport-jwt");
+const ExtractJwt = passportJWT.ExtractJwt;
+const JwtStrategy = passportJWT.Strategy;
+const jwtOptions = {};
+const UserService = require('./service/user.service');
+const env = require('./config/env');
+
+jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = env.jwt.secret;
+
+const strategy = new JwtStrategy(jwtOptions, async function(jwt_payload, next) {
+    console.log('Payload received', jwt_payload);
+    const user = await UserService.findById(jwt_payload.sub);
+
+    if (user) {
+        console.log("Id ok ...");
+        next(null, user);
+    } else {
+        console.log("Id NOT ok ...")
+        next(null, false);
+    }
+});
+  
+passport.use(strategy);
+// TODO Refactor stop
+
 const app = express();
+// TODO Refactor start
+app.use(passport.initialize());
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
+
+  
+// TODO Refactor stop
 
 db.sequelize.sync({force: true}).then(() => {
     console.log('DB synced ...');
@@ -13,6 +50,12 @@ db.sequelize.sync({force: true}).then(() => {
 app.use(bodyParser.json());
 app.use('/users', require('./route/users'));
 app.use('/cumulativeitems', require('./route/cumulativeitems'));
+
+// TODO Refactor start
+app.get("/secret", passport.authenticate('jwt', { session: false }), function(req, res){
+    res.json({message: "JWT authenticated successfully!"});
+});
+// TODO Refactor stop
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get(/.*/, (req, res) => {

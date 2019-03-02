@@ -16,6 +16,8 @@
     "jsonwebtoken": "^8.4.0",
     "mariadb": "^2.0.3",
     "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "sequelize": "^4.42.0"
   }
 }
