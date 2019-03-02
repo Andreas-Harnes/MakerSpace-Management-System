@@ -18,7 +18,7 @@ module.exports = {
     },
 
     findById: async (id) => {
-        return await User.findById(id,
+        return await User.findByPk(id,
             {attributes: { exclude: ["createdAt", "updatedAt"] } }
         )
         .then(user => {
