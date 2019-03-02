@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
 const UserService = require('../service/user.service');
 const TokenUtils = require('../utils/token');
+// TODO Refactor 
+const passport = require('../passport');
 
 const saltLength = 12;
 
@@ -18,8 +20,10 @@ module.exports = {
             }
 
             const user = await UserService.create(req.body.email, hash);
-            const token = TokenUtils.sign(user.dataValues.id);
-            res.status(201).json({ token });
+            // TODO Refactor
+            req.login(user.dataValues.id, (err) => {
+                res.redirect('/');
+            });
         });
     },
 
@@ -44,3 +48,13 @@ module.exports = {
         });
     }
 };
+
+passport.serializeUser((userId, done) => {
+    console.log('Serializing ...');
+    done(null, userId);
+});
+
+passport.deserializeUser(async (userId, done) => {
+    console.log('Deserializing ...');
+    done(null, userId);
+});

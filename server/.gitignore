@@ -85,6 +85,7 @@ env.js
 
 # Generated files
 dist/
+public/
 
 # Mac spam
 .DS_Store
