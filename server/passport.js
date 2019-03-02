@@ -1,24 +1,24 @@
 const passport = require('passport');
-const passportJWT = require("passport-jwt");
-const env = require('./config/env');
+const LocalStrategy = require('passport-local').Strategy;
+const bcrypt = require('bcrypt');
 const UserService = require('./service/user.service');
-const ExtractJwt = passportJWT.ExtractJwt;
-const JwtStrategy = passportJWT.Strategy;
-const jwtOptions = {};
 
-jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-jwtOptions.secretOrKey = env.jwt.secret;
-
-const strategy = new JwtStrategy(jwtOptions, async function(jwt_payload, next) {
-    const user = await UserService.findById(jwt_payload.sub);
-    if (user) {
-        next(null, user);
-    } else {
-        next(null, false);
+passport.use(new LocalStrategy({
+    usernameField: 'email'
+}, async (email, password, done) => {
+    const user = await UserService.findByEmail(email);
+    if (!user) {
+        return done(null, false);
     }
-});
-  
-passport.use(strategy);
+
+    await bcrypt.compare(password, user.dataValues.password, async (error, result) => {
+        if (result) {
+            return done(null, user.dataValues.id);
+        } else {
+            return done(null, false);
+        }
+    });
+}));
 
 passport.serializeUser((userId, done) => {
     console.log('Serializing ...');
