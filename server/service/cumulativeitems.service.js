@@ -1,17 +1,14 @@
 const db = require('../config/db.config');
-const Cumulative = db.cumulativeItems;
+const CumulativeItems = db.cumulativeItems;
 
 module.exports = {
-    fetchItems: async () => {
-        return await Cumulative.findAll({
-        })
-        .then(cumulativeitems => {
-            return cumulativeitems;
-        })
-        .catch(error => {
-            // TODO - error handling.
-            console.log(error);
-            return error;
-        });
-    },    
+    fetchItems: async (callback) => {
+        return await CumulativeItems.findAll()
+            .then(cumulativeItems => {
+                return callback(null, cumulativeItems);
+            })
+            .catch(error => {
+                return callback(error, null);
+            });
+    }
 };

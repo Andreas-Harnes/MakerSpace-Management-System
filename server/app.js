@@ -26,6 +26,10 @@ app.use(passportConfig.session());
 app.use('/users', require('./route/users'));
 app.use('/cumulativeitems', require('./route/cumulativeitems'));
 app.use('/secrets', require('./route/secrets'));
+app.use((error, req, res, next) => {
+    console.log(error);
+    res.status(500).send({ error: 'Internal server error' })
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.get(/.*/, (req, res) => {
