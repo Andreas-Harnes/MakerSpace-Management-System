@@ -3,8 +3,8 @@ const passport = require('passport');
 
 const router = express.Router();
 
-router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => {
-    res.json({ msg: 'JWT authenticated successfully!' });
+router.get('/', passport.authenticate('local', { session: false }), (req, res) => {
+    res.json({ msg: 'Authenticated successfully!' });
 });
 
 module.exports = router;
