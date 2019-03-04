@@ -13,9 +13,9 @@ const app = express();
 app.use(bodyParser.json());
 
 const sequelize = new Sequelize(
-    "database",
-    "username",
-    "password", {
+    env.sqlitedb.database,
+    env.sqlitedb.username,
+    env.sqlitedb.password, {
         "dialect": "sqlite",
         "storage": "./session.sqlite"
     }
