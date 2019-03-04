@@ -89,3 +89,6 @@ public/
 
 # Mac spam
 .DS_Store
+
+# SQL sessions
+session.sqlite
