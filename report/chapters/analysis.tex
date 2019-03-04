@@ -32,23 +32,29 @@ A database is said to support AC when availability and consistency are selected,
 SQL(Structured Query Language) is a database language for data management\cite{sql-goal} of a RDBMS(relational database management system) \cite{sql-is-a-rdbms} based on the relational data model proposed by Edgar Frank Todd \cite{rdbms}.
 The relational data model logically structures all relations(tables) and each relation is provided a name and is built up of named attributes - columns of data \cite{sql-is-a-rdbms}.
 The rows of a table are known as tuples \cite{sql-is-a-rdbms} and, provided the table is normalized for the first normal form or higher, they contain one value per attribute \cite{sql-1nf}.
-The figure attached below illustrates the relational model further.
+Figure \ref{fig:relational-db-visualised} illustrates the relational model graphically.
 
-\includegraphics[width=115mm,scale=1]{figures/relational-db-visualised.png}
-
-\textit{Figure nr. (TODO): Displays a table named "Customer", with three attributes and four tuples.}
+\begin{figure}
+    \centering
+    \includegraphics[width=115mm,scale=1]{figures/relational-db-visualised.png}
+    \caption{Table named "Customer" containing three attributes and four tuples}
+    \label{fig:relational-db-visualised}
+\end{figure}
 
 SQL offers a data definition language(DDL) \cite{sql-components}.
 The DDL defines the database schema - that is the structure, meaning which attributes the tables consists of, and which tables the database consists of.
 It is impossible to add data to the database until a schema has been defined.
 The DDL also describes any relational integrities the tables of the database, or the columns of table, may have \cite{sql-constraints}.
-In the figure below a given customer may have several orders but a given order may have one and only one customer associated with it; this is an example of a one-to-many relationship.
+In figure \ref{fig:relational-db-relation} a given customer may have several orders but a given order may have one and only one customer associated with it; this is an example of a one-to-many relationship.
 In addition to a one-to-many relationship an attribute or table may also have a one-to-one or a many-to-many relationship \cite{sql-relationships}.
 Lastly the DDL also defines any security constraints the database may have - such as which users have permissions to read, update or delete the contents of a given table \cite{sql-ddl}.
 
-\includegraphics[width=115mm,scale=1]{figures/relational-db-relation.png}
-
-\textit{Figure nr. (TODO): Displays a one-to-many relation between customer and orders}
+\begin{figure}
+    \centering
+    \includegraphics[width=115mm,scale=1]{figures/relational-db-relation.png}
+    \caption{One-to-many relation between "Customer" and "Order"}
+    \label{fig:relational-db-relation}
+\end{figure}
 
 SQL also offers a data manipulation language(DML) \cite{sql-components}.
 The DML allows for the insertion of, retrieval of, update of, and deletion of data \cite{sql-dml-options}.
@@ -106,22 +112,24 @@ NoSQL is advantageous because it:
 \end{itemize}
 
 \subsection{Why SQL is the selected database system}
-The group have looked into both SQL and the NoSQL to find out what fits the project best and also consulted with the assignment provider. Since the project is to create a lending system for the school, the group believe that for this system it won’t contain large amount of data. The data will contain information about the student, employees and the equipment that you can find in MakerSpace. In other words, there are not millions of data that will be stored, and the group don’t see the need for a NoSQL system. SQL is however a standardized database query system and because of this the adaptability of SQL is great\cite{structured-query-language}. If SQL lacks a feature there is nothing keeping it back from being improved upon. The support for SQL is not going to suddenly stop and is used in most known database management systems today. This ensures that support for SQL and DBMS is not going to halt the project or stop the product from functioning in the future.  
-
-The group don’t believe that the lending will contain allot of tables and relation either, but also don’t see how NoSQL benefits more than a SQL system will. By choosing a SQL system instead of a NoSQL, it will avoid a lot of duplicates too, since NoSQL duplicate a lot of data.
+The assignment provider believes a SQL database system is more suited for the project than that of a NoSQL database system.
+The equipment provided at MakerSpace is limited in quantity - as such the data to be stored in the database is also small in scale.
+Due to the limited data the schema is simple to define, and as the requirements for the project are unlikely to change at a structural level the flexibility a NoSQL schema provides is not necessary.
+The database is also likely to be stored in a limited number of locations and as such the distributed scaling capabilities a NoSQL database system offers is not particularly beneficial.
+Overall the benefits provided by a NoSQL database system are not well suited for the project nor the scope of it which makes the SQL database system the preferable choice due to its organized structure, its relational properties and its support for JOIN operations.
 
 \subsection{MariaDB as software}
 After that the group found out that they wanted to use a SQL system for the project and as the assignment provider 
-agree with, the group had to look away from MongoDB, since MongoDB is a NoSQL system, the group needed to find another solution. When researching into what software to use, the group found MariaDB as a good alternative. The assignement provider was consulted and agreed that MariaDb was a good choice. MariaDB is an open source software and also one of the most popular database servers you can find in this world. Since MariaDB has been made by the original developers of MySQL, MySQL and MariaDB shares the same structure. They use the same query and if you already have MySQL there is no problem switching to a MariaDB server. MariaDB can be seen as MySQL, just with some more functionality. Because of the plugins and tools MariaDB make it very open for a wide variety of uses. MariaDB also support javascript and node.js. This is important for the project since the group will use both. As a conclusion, the group don't see the need for MySQL when MariaDB covers all functionality that MySQL have, and also offers more than MySQL does. The choice of a Database ended with MariaDB.\cite{mariadb_1}\cite{mariadb_2}
+agree with, the group did some researching into what software to use, the group found MariaDB as a good alternative. The assignement provider was consulted and agreed that MariaDb was a good choice. MariaDB is an open source software and also one of the most popular database servers you can find in this world. Since MariaDB has been made by the original developers of MySQL, MySQL and MariaDB shares the same structure. They use the same query and if you already have MySQL there is no problem switching to a MariaDB server. MariaDB can be seen as MySQL, just with some more functionality. Because of the plugins and tools MariaDB make it very open for a wide variety of uses. MariaDB also support javascript and node.js. This is important for the project since the group will use both. As a conclusion, the group don't see the need for MySQL when MariaDB covers all functionality that MySQL have, and also offers more than MySQL does. The choice of a Database ended with MariaDB.\cite{mariadb_1}\cite{mariadb_2}
 
 \section{Choice of frontend} 
-\todo{Legg til bilder på frontend og backend}
-\todo{Event loop for backend og reactivity for frontend}
+\todo{Legg til bilde/figur + skriv om reactivity}
 For the frontend technology the group had several choices, since the group earlier had decided to go for a full JavaScript technology stack and the assignment provider agreed with the choice. This did not limit our choice for a frontend technology since there are alot of frontend frameworks written in JavaScript. The group ended up debating between React and Vue.js. Both React and Vue.js are very similar but does things differently. 
 
- Vue.js was chosen because of three major factors; the size of the framework, live updating in the browser and the low learning curve in the start. Vue.js is comparably smaller than many of the other big JavaScript frameworks out there. It is roughly 58.8 kB in size. Since the framework is so small it will help with the loading speed of the web application. The second major point for choosing Vue.js was the reactivity of Vue. With the reactivity of Vue.js you could update individual components based off of which data had been updated in the database. With this feature there will be no need to update the whole site to show an update in the database. The last major point for the group was the low learning curve of Vue.js. With this learning curve it means that the easier parts of Vue.js is easier to learn, but the more complicated components can be harder. This is perfect for the groups project since all the group members are new to Vue.js and can faster get into the programming.
+Vue.js was chosen because of three major factors; the size of the framework, live updating in the browser and the low learning curve in the start. Vue.js is comparably smaller than many of the other big JavaScript frameworks out there. It is roughly 58.8 kB in size. Since the framework is so small it will help with the loading speed of the web application. The second major point for choosing Vue.js was the reactivity of Vue. With the reactivity of Vue.js you could update individual components based off of which data had been updated in the database. With this feature there will be no need to update the whole site to show an update in the database. The last major point for the group was the low learning curve of Vue.js. With this learning curve it means that the easier parts of Vue.js is easier to learn, but the more complicated components can be harder. This is perfect for the groups project since all the group members are new to Vue.js and can faster get into the programming.
 
 \section{Choice of backend}
+\todo{Legg in bilde/figur + skriv om event loop}
 For the backend technology there are several technologies that could be used. The group had discussed what back-end technology to use, and asked the assignment provider to choose. A full JavaScript technology stack was chosen and some of the major backend technologies have been ruled out. Such as Pythons Django, PHP or Javas Spring backend framework. 
 
 JavaScript will be used for the backend, Node.js will be used as the server to create and handle the backend operations needed in the application. Node.js is a JavaScript run-time environment that can run JavaScript code outside of the browser using the V8 JavaScript engine. Node.js runs on a single thread and is able to do this because of the Event Loop. The event loop is how Node.js gets a request, it will make that request into a task and delegate it to another part of the system it runs on. When the task is done the feedback get sent back to Node.js and Node sends that back to the recipient. The reason this event loop is so efficient at handling requests is because it runs asynchronous. So when it receives a request and sends off a callback function for that request. It doesn't need to wait for that callback function to return something before it handles a new request.
