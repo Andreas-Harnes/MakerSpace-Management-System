@@ -1,6 +1,13 @@
+const CumulativeItemsService = require('../service/cumulativeitems.service');
+
 module.exports = {
-    fetchCumulativeItems: (req, res) => {
-        console.log('Fetching items ...');
-        res.status(200).send('Items fethed ...');
+    fetchCumulativeItems: async (req, res, next) => {
+        await CumulativeItemsService.fetchItems((error, cumulativeitems) => {
+            if (error) {
+                next(error);
+            }
+
+            res.send({ cumulativeitems });
+        });
     }
 };
