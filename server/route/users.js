@@ -5,8 +5,8 @@ const UsersController = require('../controller/user.controller');
 
 const router = express.Router();
 
-router.post('/signup', RouteValidator.auth, UsersController.signUp);
-router.post('/signin', RouteValidator.auth, passportConfig.authenticate('local'), (req, res) => {
+router.post('/signup', RouteValidator.signUp, UsersController.signUp);
+router.post('/signin', RouteValidator.signIn, passportConfig.authenticate('local'), (req, res) => {
     return res.status(200).send({ msg: 'Authentication successful' });
 });
 
