@@ -1,0 +1,15 @@
+\chapter{Design and Implementation}
+
+Explains how the components of the application are designed and how these components are intended to connect to form the final application. Describes how the application was built and which tools were used in doing so in addition to a description of the application itself.
+
+skriv overordnet om hvordan systemet henger sammen og deretter for hver enkelt komponent. 
+
+kap 3 og 4 kan slås sammen. 
+
+\section{Frontend}
+
+\section{Backend}
+
+\section{Database}
+
+\section{Hardware}

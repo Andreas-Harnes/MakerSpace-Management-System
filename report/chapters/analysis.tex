@@ -107,8 +107,6 @@ NoSQL is advantageous because it:
     \item Scales horizontally rather than vertically \cite{mongodb-adv-nosql}.
     Scaling horizontally allows partitions of data to be scatted across several pieces of hardware in order to store the data in the database.
     By contrast, scaling vertically means replacing already-existing hardware with more powerful hardware \cite{technopedia-nosql-scale}.
-    %\item Some operations in NoSQL is faster than SQL, because the data structures are different. \cite{Amazon DynamoDB}
-    %\item NoSQL has the ability to perform ad-hoc joins across tables. \cite{Data management in cloud}
 \end{itemize}
 
 \subsection{Why SQL is the selected database system}
@@ -129,26 +127,42 @@ MariaDB has several notable features.
 It is able to handle small and large data alike making it highly scalable, and it allows for rapid access to the data.
 MariaDB releases stable releases, and each new release brings speed and stability improvements in addition to new features.
 Additionally it places a high value of security - all data is encrypted by default and whenever critical security issues arise a new release is prepared \cite{mariadb-about}.
-Lastly MariaDB offers a Node.js connector allowing applications developed on Node to connect to MariaDB \cite{mariadb-node-connector}.
+Lastly MariaDB offers a Node.js connector allowing applications developed on Node.js to connect to MariaDB \cite{mariadb-node-connector}.
 
-\section{Choice of frontend} 
-\todo{Legg til bilde/figur + skriv om reactivity}
-For the frontend technology the group had several choices, since the group earlier had decided to go for a full JavaScript technology stack and the assignment provider agreed with the choice. This did not limit our choice for a frontend technology since there are alot of frontend frameworks written in JavaScript. The group ended up debating between React and Vue.js. Both React and Vue.js are very similar but does things differently. 
+\section{Frontend technology selection} 
+The assignment provider wanted a full JavaScript technology stack and as such there were several technologies that could have been chosen for the frontend development.
+There are several JavaScript frontend frameworks and libraries freely available and as such this was not a limitation.
 
-Vue.js was chosen because of three major factors; the size of the framework, live updating in the browser and the low learning curve in the start. Vue.js is comparably smaller than many of the other big JavaScript frameworks out there. It is roughly 58.8 kB in size. Since the framework is so small it will help with the loading speed of the web application. The second major point for choosing Vue.js was the reactivity of Vue. With the reactivity of Vue.js you could update individual components based off of which data had been updated in the database. With this feature there will be no need to update the whole site to show an update in the database. The last major point for the group was the low learning curve of Vue.js. With this learning curve it means that the easier parts of Vue.js is easier to learn, but the more complicated components can be harder. This is perfect for the groups project since all the group members are new to Vue.js and can faster get into the programming.
+The assignment provider ended up choosing Vue.js because of three major factors; the size of the framework, live updating in the browser and the low learning curve it has. Vue.js is comparably smaller than many of the other big JavaScript frameworks. It is roughly 58.8 kB in size. Since the framework is so small it will help with the loading speed of the web application \cite{vue-size}. 
 
-\section{Choice of backend}
-\todo{Legg in bilde/figur + skriv om event loop}
-For the backend technology there are several technologies that could be used. The group had discussed what back-end technology to use, and asked the assignment provider to choose. A full JavaScript technology stack was chosen and some of the major backend technologies have been ruled out. Such as Pythons Django, PHP or Javas Spring backend framework. 
+The second major point for choosing Vue.js was the reactivity of Vue. With the reactivity of Vue.js you could update individual components based off of which data had been updated in the database. In Vue.js each component has getters and setters that enables Vue to track each component for when it's been accessed or modified. Each component also has a watcher instance that will be notified when that components setter is triggered. When this happens the watcher will notify Vue to run the component render function on that component again. With this feature there will be no need to update the whole site to show an update in the database \cite{vue-reactivity}. 
 
-JavaScript will be used for the backend, Node.js will be used as the server to create and handle the backend operations needed in the application. Node.js is a JavaScript run-time environment that can run JavaScript code outside of the browser using the V8 JavaScript engine. Node.js runs on a single thread and is able to do this because of the Event Loop. The event loop is how Node.js gets a request, it will make that request into a task and delegate it to another part of the system it runs on. When the task is done the feedback get sent back to Node.js and Node sends that back to the recipient. The reason this event loop is so efficient at handling requests is because it runs asynchronous. So when it receives a request and sends off a callback function for that request. It doesn't need to wait for that callback function to return something before it handles a new request.
+\begin{figure}
+    \centering
+    \includegraphics[width=115mm,scale=1]{figures/reactivity.png}
+    \caption{Reactivity in Vue.js}
+    \label{fig:vue_reactivity}
+\end{figure}
+
+The last major point for the group was the low learning curve of Vue.js. With this learning curve it means that the easier parts of Vue.js is easier to learn, but the more complicated components can be harder. This is perfect for the groups project since all the group members are new to Vue.js and can get faster into the programming.
+
+\section{Backend technology selection}
+For the backend technology there are several technologies that could be used. The group had discussed what backend technology to use, and asked the assignment provider to choose. A full JavaScript technology stack was chosen and some of the major backend technologies have been ruled out. Such as Pythons Django, PHP or Javas Spring backend framework. 
+
+JavaScript will be used for the backend, Node.js will be used as the server to create and handle the backend operations needed in the application. Node.js is a JavaScript run-time environment that can run JavaScript code outside of the browser using the V8 JavaScript engine. Node.js runs on a single thread and is able to do this because of the Event Loop. When a request gets sent to Node from the application it will be added to the event queue before being picked up by the Event Loop. The Event Loop will take these requests and send them to the system that Node runs on. Here each request will be sent to different threads and be completed. When the task in done a callback function in the request is activated and the feedback is sent directly back to the application. The reason this event loop is so efficient at handling requests is because it runs asynchronous. So when it receives a request and sends off a callback function for that request. It doesn't need to wait for that callback function to return something before it handles a new request \cite{Node-event-loop}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=115mm,scale=1]{figures/event_loop.png}
+    \caption{Event loop in Node.js}
+    \label{fig:Node_Event_Loop}
+\end{figure}
 
 \section{Analysis of different MakerSpaces}
-The project group has decided to conduct interviews with different MakerSpace branches in Norway. The reason for choosing interviews is to be able to decide what information we want to get out of the interviewees. The project group will make a set of predetermined questions about how MakerSpace operates and what kind of systems and technologies they have. While conducting the interviews the project group also wants to arrange the interview at the respective MakerSpace, where the project group could get a tour of the MakerSpace and take a look at the systems they have and how they are used. This will be used to get more hands-on knowledge for the project, to be able to make a better system. The interviewee will also be more comfortable in a known environment during the interview. 
+The project group has decided to conduct interviews with different MakerSpace branches in Norway. The reason for choosing interviews is to be able to decide what information we want to get out of the interviewees. The project group will make a set of predetermined questions about how MakerSpace operates and what kind of systems and technologies they have. While conducting the interviews the project group also wants to arrange the interview at the respective MakerSpace, where the project group could get a tour of the MakerSpace and take a look at the systems they have and how they are used. This will be used to get more hands-on knowledge for the project, to be able to make a better system. The interviewee will also be more comfortable in a known environment during the interview.
 
 \subsection{Interview method}
 
-\todo{Unngå små avsnitt}
 Interviews can be defined as a qualitative research technique. This involves conducting intensive individual interviews with a small number of respondents to explore their perspectives on a particular idea, program or situation.\cite{Interview-Methods} Interviews have three different formats: structured, semi-structured and unstructured.
 
 Unstructured interviews is conducted without any questions prepared before the interview takes place and data is collected in an informal way. This makes unstructured interviews very unreliable from a research standpoint. Answers given during an interview will also vary based on the formulation of the question. Comparing the answers for the questions will then be a challenge due to the different formulation.
@@ -159,4 +173,19 @@ Structured interviews consists of a set of predetermined questions that all of t
 
 Interviewing people for the project will have many advantages like the chance to collect detailed information about what other MakerSpaces do, and what kind of systems is in place for loaning out equipment or if they even have a system. By interviewing different MakerSpaces the group has more direct control over the flow of the interview process and has a chance to clarify issues during the interview process. This will make the data collected more accurate and easier to compare to the answers of other MakerSpace branches.
 
-There is however some disadvantages of conducting interviews. One of the disadvantages is the time needed to arrange the interviews at appropriate times for the interviewees and the project group. Each member of the project group would learn most by being present in all the interviews. Being able to see and listen to what other MakerSpaces do would be a better experience than reading a summary or written answers to the interview. Depending on the time needed for other tasks for the project and the interview. The project group will send one person to all the interviews if time is limited.    
+There is however some disadvantages of conducting interviews. One of the disadvantages is the time needed to arrange the interviews at appropriate times for the interviewees and the project group. Each member of the project group would learn most by being present in all the interviews. Being able to see and listen to what other MakerSpaces do would be a better experience than reading a summary or written answers to the interview. Depending on the time needed for other tasks for the project and the interview. The project group will send one person to all the interviews if time is limited.  
+
+\subsection{MakerSpace Inspiria}
+
+The first MakerSpace that was interviewed was MakerSpace Inspiria, located in Sarpsborg. It is part of Inspiria Science Centre \cite{Inspiria-SC}, a building full of science for people to enjoy and test out. It is mainly targeted for kids, but the MakerSpace is open for everyone when the centre is open. MakerSpace Inspiria is very much alike MakerSpace Halden. It's closely resembles each other and has a lot of the same equipment; 3D printers, laser cutters, soldering irons etc. 
+And it is here the group conducted its first interview, at MakerSpace Inspiria. The interviewee answered all the questions best possible and the group got a lot of interesting information. There was no system in place for keeping tabs on the inventory, digital or other. The employees were the ones that kept control over the inventory personally, the employees shared responsibility of overseeing the inventory and ordering new parts and equipment when needed. But admitted to not having full control over everything. Components and tools are being kept in lockers and has a box i.e where similar tools or components are grouped and put together. There is however no special categorizing of the equipment, but everything has a predetermined place. 
+
+As far as lending out equipment, MakerSpace Inspiria has no system in place for it and they do not lend equipment out. Exceptions could be made, depending on the person asking to loan something or the equipment in question. If an exception is made, the employee that loans something out is responsible for the item and its condition. If something is broken or gets broken, MakerSpace Inspiria has a system for reporting broken or faulty equipment. This system is used for the entire building (Inspiria Science Center). The employees report on the specific equipment that is broken and it is filed for review. The review consist of looking at the budget and the broken equipment to see if it is possible to order a replacement or if it is to expensive at the moment. This depends on what kind of equipment is broken. If it is an expensive 3D printer there might not be enough money in the budget to buy a new one e.g However if it is something smaller and not very expensive the employees doesn't report it broken and just orders a new one. 
+
+When asked if a digital system for inventory keeping was something MakerSpace Inspiria could potentially want, the interviewee positively agreed. The interviewee already had an idea for a potential digital system. A simple bar-code and a scanner, zero thinking. Everything has its own ID and it gets scanned into a system. Everything about it has to be simple and have as few button presses as possible. This was from the interviewees own experience with people and IT, or more about people who doesn't know a lot about IT and would be using mentioned system. Other than that the interviewee didn't have any specific ideas on how the system should work or look. But the project group got some very nice ideas and pointers for the User Interface (UI) and User Experience (UX). Keep it nice and simple, not very complicated which is something the project group had already thought of. A bar-code was discussed early on in the project as a possible solution for both lending out equipment and inventory keeping. 
+
+\subsection{Conclusion of interview(s) (temporary text)}
+
+From the interview(s) and questionnaire the project group can conclude that MakerSpace(s)... 
+
+Ut ifra spørreskjema så skriver vi hva vi fikk ut av det og hva vi lærte av det. Vi har ikke sendt ut spørreskjema enda så denne delen er av den grunn ikke fylt ut.

@@ -14,7 +14,7 @@
 
 \input{meta/presentationpage.tex}
 
-\addbibresource{bibliography/bibliography.bib}
+\bibliography{bibliography/bibliography.bib}
 
 \renewcommand{\listfigurename}{Figures}
  
@@ -78,11 +78,9 @@ Morten Offerdal \textsc{Kvigne}\\% Your name
 \end{titlepage}
 
 \makepresentationpage
+\addcontentsline{toc}{chapter}{Bachelor thesis}
 
 \pagenumbering{roman}
-
-\chapter*{Bachelor thesis}
-\addcontentsline{toc}{chapter}{Bachelor thesis}
 
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
@@ -101,9 +99,11 @@ Morten Offerdal \textsc{Kvigne}\\% Your name
 
 \addcontentsline{toc}{chapter}{Figures}
 \listoffigures
+\newpage
 
 \addcontentsline{toc}{chapter}{Tables}
 \listoftables
+\newpage
 
 \chapter*{Code list}
 \addcontentsline{toc}{chapter}{Code list}
@@ -116,9 +116,7 @@ Morten Offerdal \textsc{Kvigne}\\% Your name
 
 \input{chapters/analysis}
 
-\input{chapters/design-and-planning}
-
-\input{chapters/implementation}
+\input{chapters/design-and-implementation}
 
 \input{chapters/testing-and-evaluation}
 
