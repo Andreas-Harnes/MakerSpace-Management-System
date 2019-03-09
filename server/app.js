@@ -50,8 +50,8 @@ sequelize.sync()
         console.log(error);
     });
 
-app.use('/users', require('./routes/usersroute'));
-app.use('/cumulativeitems', require('./routes/cumulativeitemsroute'));
+app.use('/users', require('./routes/users-route'));
+app.use('/cumulativeitems', require('./routes/cumulative-items-route'));
 
 app.use(express.static('public'));
 app.get(/.*/, (req, res) => {
