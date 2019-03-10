@@ -82,7 +82,7 @@ typings/
 # Configuration files with credentials and other secrets
 config.js
 env.js
-dbconfig.json
+db-config.json
 
 # Generated files
 dist/
