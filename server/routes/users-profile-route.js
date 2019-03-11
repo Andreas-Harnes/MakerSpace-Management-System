@@ -2,11 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-router.post('/:userid/firstname', (req, res) => {
-    res.send('TODO');
-});
-
-router.post('/:userid/lastname', (req, res) => {
+router.post('/:userid/name', (req, res) => {
     res.send('TODO');
 });
 
