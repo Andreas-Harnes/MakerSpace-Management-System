@@ -50,7 +50,8 @@ router.post('/signup', signUpValidation, (req, res, next) => {
                 db.User.create({
                     email: req.body.email,
                     password: req.body.password,
-                    firstName: req.body.firstName
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName
                 })
                     .then(user => {
                         req.logIn(user.dataValues, error => {
