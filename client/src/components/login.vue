@@ -1,15 +1,49 @@
 <template>
     <div id="login">
-      <h1>MakerSpace Management System</h1>
-      <input class="loginField" type="text" name="email" placeholder="Email" />
-      <input class="loginField" type="password" name="password" placeholder="Password" />
-      <button type="button" v-on:click="loginRequest">Login</button>
+      <div id="txtTitle"><h1>MakerSpace Management System</h1></div>
+      <input class="loginField" type="text" name="email" placeholder="Email" /> <br>
+      <input class="loginField" type="password" name="password" placeholder="Password" /> <br>
+      <button type="button" id="btnLogin" v-on:click="loginRequest">Login</button>
   </div>
 </template>
 
 <style lang="scss">
+  h1 {
+    font-size: 50px;
+  }
+
+  #txtTitle {
+    height: 5%;
+    margin-bottom: 8;
+  }
+
   .loginField {
-    margin-right: 1%
+    margin-right: 1%;
+    width: 25%;
+    margin: auto;
+    margin-bottom: 1%;
+    border: none;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 15px;
+    text-align: center; 
+  }
+
+  #btnLogin {
+    width: 25%;
+    height: 30px;
+    margin-bottom: 5%;
+    position: bottom;
+    border-radius: 15px;
+  }
+
+  #login {
+    box-sizing: border-box;
+    width: 30%;
+    border-style: dotted;
+    background-color: white;
+    
   }
 </style>
 
