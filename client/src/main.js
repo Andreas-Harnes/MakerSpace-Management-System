@@ -2,11 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
 import VueRouter from 'vue-router'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import Nav from './components/nav'
 import Login from './components/login'
 import Register from './components/register'
 import Header from './components/header'
+import body from './components/body'
+
+//tell vue to use bootstrap
+Vue.use(BootstrapVue)
 
 // tell vue to use the router
 Vue.use(VueRouter)
@@ -16,7 +23,8 @@ const routes = [
   { path: '/', component: Nav },
   { path: '/header', component: Header },
   { path: '/login', component: Login },
-  { path: '/register', component: Register }
+  { path: '/register', component: Register },
+  { path: '/body' , component: body}
 ]
 
 // Create the router instance and pass the `routes` option
