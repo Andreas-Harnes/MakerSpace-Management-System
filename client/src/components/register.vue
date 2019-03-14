@@ -6,8 +6,8 @@
           <input class="regFields" id="txtLastName" type="text" name="lastName" placeholder="Last name" /> <br> 
           <input class="regFields" id="txtEmail" type="email" name="email" placeholder="Email" /> <br> 
           <input class="regFields" id="numPhone" type="number" name="telephone" placeholder="Telephone number" /> <br> 
-          <input class="regFields" id="txtPassword" type="text" name="password" placeholder="Password" /> <br> 
-          <input class="regFields" id="txtPasswordRepeat" type="text" name="password" placeholder="Repeat password" /> <br> 
+          <input class="regFields" id="txtPassword" type="password" name="password" placeholder="Password" /> <br> 
+          <input class="regFields" id="txtPasswordRepeat" type="password" name="password" placeholder="Repeat password" /> <br> 
           <button type="button" v-on:click="regRequest">Register</button>
       </div>
   </div>
