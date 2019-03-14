@@ -1,20 +1,20 @@
 <template>
     <div id="login">
       <div id="txtTitle"><h1>MakerSpace Management System</h1></div>
-      <input class="loginField" type="text" name="email" placeholder="Email" /> <br>
-      <input class="loginField" type="password" name="password" placeholder="Password" /> <br>
+      <input class="loginField" id="txtEmail" type="text" name="email" placeholder="Email" /> <br>
+      <input class="loginField" id="txtPassword" type="password" name="password" placeholder="Password" /> <br>
       <button type="button" id="btnLogin" v-on:click="loginRequest">Login</button>
+      <button type="button" id="btnSignout" v-on:click="signoutRequest">Sign out</button>
+
+
   </div>
 </template>
 
 <style lang="scss">
-  h1 {
+  #txtTitle h1 {
     font-size: 50px;
-  }
-
-  #txtTitle {
     height: 5%;
-    margin-bottom: 8;
+    margin-bottom: 75px;
   }
 
   .loginField {
@@ -59,31 +59,26 @@ export default {
   },
   methods: {
     loginRequest: function () {
+      var userEmail = document.getElementById('txtEmail').value
+      var userPassword = document.getElementById('txtPassword').value
+      console.log(userEmail);
+      console.log(userPassword);
       // Replace with POST request and the right URL
       // Log in API
       // http://localhost:3000/users/signin     
-      // axios.post('/user', {
-      // firstName: 'Fred',
-      // lastName: 'Flintstone'
-      // })
-      // .then(function (response) {
-      //   console.log(response);
-      // })
-      // .catch(function (error) {
-      //   console.log(error);
-      // });
-
-
-
-
-      axios.get('http://jsonplaceholder.typicode.com/todos')
-    .then(response => {
-         this.loginRequest = response.data;
-         console.log(this.loginRequest)
-    })
-    .catch(error => {
-      console.log(error)
-    })
+      axios.post('/users/signin', {
+      email: userEmail,
+      password: userPassword
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    },
+    signoutRequest: function () {
+      console.log('signed out')
     }
   }
 }

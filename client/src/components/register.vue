@@ -2,13 +2,13 @@
     <div id="reg">
       <h1>MakerSpace Management System</h1>
       <div id="inputFields">
-          <input class="regFields" type="text" name="firstName" placeholder="First name" /> <br>
-          <input class="regFields" type="text" name="lastName" placeholder="Last name" /> <br> 
-          <input class="regFields" type="text" name="email" placeholder="Email" /> <br> 
-          <input class="regFields" type="text" name="telephone" placeholder="Telephone number" /> <br> 
-          <input class="regFields" type="text" name="password" placeholder="Password" /> <br> 
-          <input class="regFields" type="text" name="password" placeholder="Repeat password" /> <br> 
-          <button type="button">Register</button>
+          <input class="regFields" id="txtFirstName" type="text" name="firstName" placeholder="First name" /> <br>
+          <input class="regFields" id="txtLastName" type="text" name="lastName" placeholder="Last name" /> <br> 
+          <input class="regFields" id="txtEmail" type="email" name="email" placeholder="Email" /> <br> 
+          <input class="regFields" id="numPhone" type="number" name="telephone" placeholder="Telephone number" /> <br> 
+          <input class="regFields" id="txtPassword" type="text" name="password" placeholder="Password" /> <br> 
+          <input class="regFields" id="txtPasswordRepeat" type="text" name="password" placeholder="Repeat password" /> <br> 
+          <button type="button" v-on:click="regRequest">Register</button>
       </div>
   </div>
 </template>
@@ -64,8 +64,44 @@
 
 
 <script>
+import axios from 'axios';
   export default {
-    name: "registerPage"
+    name: "registerPage",
+    data() {
+    return {
+      regResult: []
+    }
+  },
+  methods: {
+    regRequest: function () {
+      var userEmail = document.getElementById('txtEmail').value
+      var userPassword = document.getElementById('txtPassword').value
+      var userFirstName = document.getElementById('txtFirstName').value
+      var userLastName = document.getElementById('txtLastName').value
+      var userPhone = document.getElementById('numPhone').value
+      console.log(userEmail);
+      console.log(userPassword);
+      console.log(userFirstName)
+      console.log(userLastName)
+      console.log(userPhone)
+      // Replace with POST request and the right URL
+      // Log in API
+      // http://localhost:3000/users/signin     
+      axios.post('/users/signup', {
+      email: userEmail,
+      password: userPassword,
+      firstName: userFirstName,
+      lastName: userLastName,
+      phone: userPhone
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
+  }
   }
 </script>
 

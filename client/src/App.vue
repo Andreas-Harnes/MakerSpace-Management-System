@@ -8,8 +8,8 @@
 <style lang="scss">
   $primary-color: #FAA418;
 
-  body {
-    background-color: $primary-color;
+  html, body {
+    background-color: orange;
   }
 
   #header {
