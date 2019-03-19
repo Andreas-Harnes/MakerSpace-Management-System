@@ -40,11 +40,5 @@ export default {
     padding: 2rem 5rem 2rem 5rem;
     position: relative;
 }
-.b-dropdown {
-    display: flex;
-    
-    align-content: right;
-}
-
 </style>
 
