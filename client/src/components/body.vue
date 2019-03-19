@@ -1,4 +1,5 @@
 <template>
+<tr>
     <b-container fluid>
         <b-row>
             <b-col md="6" class="my-1">
@@ -11,16 +12,26 @@
                 </b-form-group>
             </b-col>
         </b-row>
-        <b-table
+        
+        <b-table id="Table" 
+      selectable
       responsive: true
       show-empty
       bordered="md"
+      :tabindex="0"
       :items="items"
+      :aria-busy="isBusy"
       :fields="fields"
       :current-page="currentPage"
       :per-page="perPage"
       :sort-by.sync="sortBy"
     >
+    <!-- Busy state med spinner for loading-->
+    <div slot="table-busy" class="text-center text-danger my-2">
+      <b-spinner class="align-middle"/>
+      <strong>Loading items...</strong>
+      </div>
+
       <template slot="name" slot-scope="row">
         {{ row.value.first }} {{ row.value.last }}
       </template>
@@ -43,19 +54,24 @@
         </b-card>
       </template>
     </b-table>
-
+    <!-- Side bytte igjennom pagination-->
     <b-row>
       <b-col class="my-1">
-        <b-pagination
+        <b-pagination aria-label="Table"
           :total-rows="totalRows"
-          :per-page="perPage"
+          :per-page="perPage" label-page
           v-model="currentPage"
+          first-text="First" label-first-page
+          prev-text="Prev" label-prev-page 
+          next-text="Next" label-next-page
+          last-text="Last" label-last-page
           class="my-0"
           align= "end"
         />
       </b-col>
     </b-row>
   </b-container>
+  </tr>
 </template>
 
 <script>
@@ -71,12 +87,13 @@ export default {
     name: "body",
     data() {
       return {
+        isBusy: false,
         items: items,
         fields: [
           { key: 'name', label: 'Ting', sortable: true, sortDirection: 'desc' },
           { key: 'amount', label: 'Mengde', sortable: true, class: 'text-center' },
           { key: 'isActive', label: 'Status' },
-          { key: 'actions', label: 'Comment' }
+          { key: 'actions', label: 'Actions' }
         ],
         sortBy: null,
         sortDesc: false,
@@ -92,6 +109,11 @@ export default {
           })
       }
     },
+    methods: {
+      togglebusy() {
+        this.isBusy = !this.isBusy
+      }
+    }
 }
 </script>
 
