@@ -11,6 +11,7 @@ import Login from './components/login'
 import Register from './components/register'
 import Header from './components/header'
 import body from './components/body'
+import header from './components/header'
 
 //tell vue to use bootstrap
 Vue.use(BootstrapVue)
@@ -42,3 +43,9 @@ new Vue({
   render: h => h(App),
   router
 }).$mount('#app')
+
+new Vue({
+  store,
+  render: h => h(header),
+  router
+}).$mount('#header')
