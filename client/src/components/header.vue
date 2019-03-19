@@ -40,5 +40,4 @@ export default {
     padding: 2rem 5rem 2rem 5rem;
     position: relative;
 }
-
 </style>
