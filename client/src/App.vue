@@ -6,27 +6,22 @@
 </template>
 
 <style lang="scss">
-  $primary-color: #FAA418;
+  $primary-color: #f9a31d;
 
   html, body {
-    background-color: orange;
+    // background-color: $primary-color;
   }
 
   #header {
     position: fixed;
     width:100%;
     top:0;
+    left: 0%;
+    z-index: 999;
     height: 15%;
     background: white;
-    left: 0%;
     margin-bottom: 60%;
   }
-
-  #routeView {
-    
-  }
-
-
 
   #app {
     position: absolute;
