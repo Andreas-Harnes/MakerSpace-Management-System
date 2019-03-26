@@ -35,11 +35,13 @@ export default {
 </script>
 
 
-<style scoped>
-.header {
+<style >
+/* <style scoped>
+   .header {
     background-color: #f9a31d;
     text-align: center;
     padding: 2rem 5rem 2rem 5rem;
-    position: relative;
+    position: relative; 
 }
+*/
 </style>

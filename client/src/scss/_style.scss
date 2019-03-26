@@ -1,0 +1,39 @@
+
+@import "scss/colors.scss";
+
+/* App.vue */
+
+$primary-color: #f9a31d;
+
+html, body {
+  // background-color: $primary-color;
+}
+
+#header {
+  position: fixed;
+  width:100%;
+  top:0;
+  left: 0%;
+  z-index: 999;
+  height: 15%;
+  background: white;
+  margin-bottom: 60%;
+}
+
+#app {
+  position: absolute;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  height: 75%;
+  
+}
+/* Header */
+.header {
+  background-color: $makerSpaceColor;
+  text-align: center;
+  padding: 2rem 5rem 2rem 5rem;
+  position: relative; 
+}

@@ -6,14 +6,16 @@
 </template>
 
 <style lang="scss">
-  $primary-color: #f9a31d;
+@import 'src/scss/style.scss';
 
-  html, body {
-    // background-color: $primary-color;
-  }
+ // $primary-color: #f9a31d;
 
-  #header {
-    position: fixed;
+ // html, body {
+    // background-color: $primary-color;  skal være kommentert
+  //}
+
+  //#header {
+   /* position: fixed;
     width:100%;
     top:0;
     left: 0%;
@@ -32,5 +34,5 @@
     color: #2c3e50;
 
     height: 75%;
-  }
+  } */
 </style>

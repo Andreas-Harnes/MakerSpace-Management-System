@@ -45,7 +45,7 @@
     border-style: dotted;
     background-color: white;
     
-  }
+  } 
 </style>
 
 <script>
