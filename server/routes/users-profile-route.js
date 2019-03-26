@@ -2,56 +2,44 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-
-   
-router.post('/:userid/name',  (req, res) => {
-
-        // firstName
-
-        let firstNameUser = db.User.find({ where: {firstName: req.body.firstName } })
-                            .then(firstNameUser => {
-                               if (firstNameUser) {
-                                   return res.status(403).json({ error: 'Cant use this name' });
-                               }
-                               
-                               db.User.set("firstName");
-                           
-                               db.User.updateAttributes()
-                               //db.User.save();
-                            
-                            });
-                        
-
-        // lastName
-        let lastNameUser = db.User.find({ where: {lastName: req.body.lastName } })
-                        .then(lastNameUser => {
-                           if (lastNameUser) {
-                               return res.status(403).json({ error: 'Cant use this name' });
-                           }
+router.post('/:userid/name',  (req, res, next) => {
+    db.User.findOne({ where: { id: req.params.userid } })
+        .then(user => {
+            if (!user) {
+                // TODO Error handling
+                return next();
+            }
             
-                 db.User.set("lastName");
+            // TODO Add user input validation
+            let firstNameChanged = false;
+            if (req.body.firstName) {
+                user.set("firstName", req.body.firstName);
+                firstNameChanged = true;
+            }
 
-                 db.User.updateAttributes()
-                 //db.User.save();
-        
-        });
-
-        // password
-        let passwordUser = db.User.find({ where: {password: req.body.password } })
-                        .then(passwordUser => {
-                           if (passwordUser) {
-                               return res.status(403).json({ error: 'Cant use this password' });
-                           }
+            let lastNameChanged = false;
+            if (req.body.lastName) {
+                user.set("lastName", req.body.lastName);
+                lastNameChanged = true;
+            }
             
-                 db.User.set("password");
+            if (firstNameChanged && lastNameChanged) {
+                user.save();
+                req.user.firstName = req.body.firstName;
+                req.user.lastName = req.body.lastName;
+            } else if (firstNameChanged) {
+                user.save();
+                req.user.firstName = req.body.firstName;
+            } else if (lastNameChanged) {
+                user.save();
+                req.user.lastName = req.body.lastName;
+            }
 
-                 db.User.updateAttributes()
-                 //db.User.save();
-        
+            return res.json({ firstName: req.user.firstName, lastName: req.user.lastName });
+        })
+        .catch(error => {
+            return next(error);
         });
-
-
-  //  res.send('TODO');
 });
 
 module.exports = router;
