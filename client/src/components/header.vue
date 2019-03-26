@@ -1,6 +1,8 @@
 <template>
 <header class="header">
-<h2>MakerSpace: sett logo her istedenfor?</h2>
+<!-- <h2>MakerSpace: sett logo her istedenfor?</h2> -->
+<img src="../assets/facebook-logo.png" alt="" width="5%"  height="5%">
+<h2>MakerSpace Management System</h2>
 <div>
 <b-dropdown id="ddown-aria" text="Dropdown Button" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
     <template slot="button-content">&#x1f50d;<span class="sr-only">ByttBilde</span></template>
@@ -35,7 +37,7 @@ export default {
 
 <style scoped>
 .header {
-    background-color: darkorange;
+    background-color: #f9a31d;
     text-align: center;
     padding: 2rem 5rem 2rem 5rem;
     position: relative;

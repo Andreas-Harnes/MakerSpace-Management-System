@@ -5,6 +5,7 @@
       <input class="loginField" id="txtPassword" type="password" name="password" placeholder="Password" /> <br>
       <button type="button" id="btnLogin" v-on:click="loginRequest">Login</button>
       <button type="button" id="btnSignout" v-on:click="signoutRequest">Sign out</button>
+      <button type="button" id="btnReqpassword">Forgotten password?</button>
 
 
   </div>
