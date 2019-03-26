@@ -42,33 +42,33 @@ const signInValidation = [
 
 router.post('/signup', signUpValidation, (req, res, next) => {
     db.User.findOne({ where: { email: req.body.email } })
-            .then(user => {
-                if (user) {
-                    return res.status(403).json({ error: 'Email already used' });
-                }
+        .then(user => {
+            if (user) {
+                return res.status(403).json({ error: 'Email already used' });
+            }
 
-                db.User.create({
-                    email: req.body.email,
-                    password: req.body.password,
-                    firstName: req.body.firstName,
-                    lastName: req.body.lastName
-                })
-                    .then(user => {
-                        req.logIn(user.dataValues, error => {
-                            if (error) {
-                                return next(error);
-                            }
-                            
-                            return res.status(201).json({ message: 'Successfully authenticated' });
-                        });
-                    })
-                    .catch(error => {
-                        return next(error);
-                });
+            db.User.create({
+                email: req.body.email,
+                password: req.body.password,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName
             })
-            .catch(error => {
-                return next(error);
+                .then(user => {
+                    req.logIn(user.dataValues, error => {
+                        if (error) {
+                            return next(error);
+                        }
+                        
+                        return res.status(201).json({ message: 'Successfully authenticated' });
+                    });
+                })
+                .catch(error => {
+                    return next(error);
             });
+        })
+        .catch(error => {
+            return next(error);
+        });
 });
 
 router.post('/signin', signInValidation, passport.authenticate('local'), (req, res) => {
