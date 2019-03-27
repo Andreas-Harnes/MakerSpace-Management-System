@@ -1,7 +1,7 @@
 <template>
 <header class="header">
 <!-- <h2>MakerSpace: sett logo her istedenfor?</h2> -->
-<div class="test">
+<div>
 <img class="makerspace-logo" src="../assets/facebook-logo.png" alt="MakerSpaceLogo" width="9%"  height="9%" />
 </div>
 <h2>MakerSpace Management System</h2>
@@ -16,7 +16,7 @@
     <b-button id="signIn" variant="primary" size="sm" @click="onClick">Sign In</b-button>
     <b-dropdown-divider>
     </b-dropdown-divider>
-    <b-dropdown-item-button>Ny? Registrer deg her!</b-dropdown-item-button>
+    <b-dropdown-item-button>Registrer deg her</b-dropdown-item-button>
     <b-dropdown-item-button>Glemt passord?</b-dropdown-item-button>
     </div>
 </b-dropdown>

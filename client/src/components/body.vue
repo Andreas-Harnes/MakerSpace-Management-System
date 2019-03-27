@@ -5,7 +5,7 @@
             <b-col md="6" class="my-1">
                 <b-form-group label-cols-sm="3" label="Sorting" class="mb-0">
                     <b-input-group>
-                        <b-form-select v-model="sortBy" :options="sortOptions">
+                        <b-form-select class="sorting" v-model="sortBy" :options="sortOptions">
                             <option slot="first" :value="null">-- none --</option>
                         </b-form-select>
                     </b-input-group>
@@ -26,13 +26,21 @@
       :per-page="perPage"
       :sort-by.sync="sortBy"
     >
+    <!-- Søkeing -->
+    <!--
+    <div class="searching">
+  <input type="text" placeholder="Search..">
+    </div>
+  -->
+
+
     <!-- Busy state med spinner for loading-->
     <div slot="table-busy" class="text-center text-danger my-2">
       <b-spinner class="align-middle"/>
       <strong>Loading items...</strong>
       </div>
 
-      <template slot="name" slot-scope="row">
+      <template class="test-2" slot="name" slot-scope="row">
         {{ row.value.first }} {{ row.value.last }}
       </template>
 

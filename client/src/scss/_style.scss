@@ -41,11 +41,33 @@ html, body {
 /* MakerSpace logo */
 
 .makerspace-logo {
-  float: left;
+ float: left;
  padding: 0 45px 45px 0;
 }
-/*
-.test {
- float: left;
- padding: 0 40px 40px 0;
-} */
+
+/* body items */
+
+.mb-0 {
+  float: right;
+  padding: 0 25px 40px 1250px;
+}
+
+/* sorting */
+.input-group {
+  float: left;
+  padding: 0 25px 25px 45px;
+  height: 10px;
+  width: 4px;
+
+}
+
+/* Elementene/ting etc */
+
+.table.b-table.table-bordered.b-table-selectable {
+  margin: 0 auto;
+  padding: 0 0 0 0;
+  height: 35px;
+  width: 900px;
+}
+
+
