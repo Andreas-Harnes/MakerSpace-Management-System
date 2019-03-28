@@ -46,32 +46,86 @@ html, body {
 }
 
 /* body items */
-
+/*
 .mb-0 {
+  position: relative;
   float: right;
   padding: 0 25px 40px 1250px;
+  right: 0;
 }
+*/
+
 
 /* sorting */
-.input-group {
-  float: left;
-  padding: 0 25px 25px 45px;
-  height: 10px;
-  width: 4px;
-
+/*
+.sorting{
+  clear: none;
+  top: 150px;
+  right: 50px;
 }
+*/
+
+.group-by {
+  position: relative;
+  float: left;
+  height: 30%;
+  width: 30%;
+  right: 0em;
+  top: 18em;
+}
+
+
+/* first - nesxt - last */
+.my-1 {
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  right: 5em;
+  top: 27em;
+}
+
 
 /* Elementene/ting etc */
-
 .table.b-table.table-bordered.b-table-selectable {
-  margin: 0 auto;
-  padding: 0 0 0 0;
-  height: 35px;
-  width: 900px;
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 100%;
+  left: 30em;
+  bottom: 5em;
 }
 
+
+
+/* Søk */
 .searching {
+  position: relative;
   float: left;
-  padding: 10px 0 0 0;
+  height: 30%;
+  width: 30%;
+  top: 1em;
+  left: 2em;
 }
+
+/* checkbox */
+.category {
+  position: relative;
+  float: left;
+  height: 30%;
+  width: 30%;
+  right: 17em;
+  top: 12em;
+}
+
+/* availability */
+.availability {
+  position: relative;
+  float: left;
+  height: 30%;
+  width: 30%;
+  right: 32em;
+  top: 5em;
+}
+
 

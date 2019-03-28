@@ -6,13 +6,64 @@
  <!-- Søkeing -->
       <template>
     <div class="searching">
-  <input type="text" v-model="search" placeholder="Searching..." /> 
+  <input type="text" v-model="search" placeholder="Search..." /> 
     </div> 
   </template> 
+  <!-- Checkbox-->
+
+  <template>
+    <!--
+  <div class="category">
+    <b-form-group label="Category">
+      <b-form-checkbox-group
+        id="checkbox-group-1"
+        v-model="selected"
+        :options="options"
+        name="flavour-1"
+        stacked
+      ></b-form-checkbox-group>
+    </b-form-group> -->
+
+  
+
+  <div class="category">
+    <b-form-group label="Category">
+      <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
+        <b-form-checkbox value="drone">Drone</b-form-checkbox>
+        <br />
+        <b-form-checkbox value="3d-printer">3D-printer</b-form-checkbox>
+         <br />
+        <b-form-checkbox value="skruer">Skruer</b-form-checkbox>
+      </b-form-checkbox-group>
+    </b-form-group> 
+
+   <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
+  </div>
+
+  <!-- Availability -->
+   <div class="availability">
+    <b-form-group label="Availability">
+      <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-3">
+        <b-form-checkbox value="available">Available</b-form-checkbox>
+        <br />
+        <b-form-checkbox value="unavailable">Unavailable</b-form-checkbox>
+      </b-form-checkbox-group>
+    </b-form-group> 
+
+   <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
+  </div>
+
+</template>
+<!--- --- -->
+<template>
+  <div>
+    <h5 class="group-by">Group by</h5>
+    </div>
+</template>
 
         <b-row>
             <b-col md="6" class="my-1">
-                <b-form-group label-cols-sm="3" label="Sorting" class="mb-0">
+                <b-form-group label-cols-sm="3" class="mb-0" >
                     <b-input-group>
                         <b-form-select class="sorting" v-model="sortBy" :options="sortOptions">
                             <option slot="first" :value="null">-- none --</option>
@@ -22,7 +73,7 @@
             </b-col>
         </b-row>
         
-        <b-table id="Table" 
+        <b-table id="Table"
       selectable
       responsive: true
       show-empty
@@ -35,6 +86,8 @@
       :per-page="perPage"
       :sort-by.sync="sortBy"
     >
+  
+
     <!-- Søkeing -->
     
    
@@ -100,6 +153,14 @@ export default {
     name: "body",
     data() {
       return {
+
+      /*   selected: [], // Must be an array reference!
+         options: [
+          { text: 'Drone', value: 'drone' },
+          { text: '3D-printer', value: '3d-printer' },
+          { text: 'Test', value: 'test' }
+        ], */
+
         search: '',
         isBusy: false,
         items: items,
