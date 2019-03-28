@@ -21,6 +21,7 @@
     </div>
 </b-dropdown>
 </div>    
+
 </header>
 </template>
 

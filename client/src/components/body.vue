@@ -1,6 +1,15 @@
+
+  
 <template>
 <tr>
     <b-container fluid>
+ <!-- Søkeing -->
+      <template>
+    <div class="searching">
+  <input type="text" v-model="search" placeholder="Searching..." /> 
+    </div> 
+  </template> 
+
         <b-row>
             <b-col md="6" class="my-1">
                 <b-form-group label-cols-sm="3" label="Sorting" class="mb-0">
@@ -27,12 +36,8 @@
       :sort-by.sync="sortBy"
     >
     <!-- Søkeing -->
-    <!--
-    <div class="searching">
-  <input type="text" placeholder="Search..">
-    </div>
-  -->
-
+    
+   
 
     <!-- Busy state med spinner for loading-->
     <div slot="table-busy" class="text-center text-danger my-2">
@@ -95,6 +100,7 @@ export default {
     name: "body",
     data() {
       return {
+        search: '',
         isBusy: false,
         items: items,
         fields: [
