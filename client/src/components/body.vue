@@ -9,9 +9,20 @@
   <input type="text" v-model="search" placeholder="Search..." /> 
     </div> 
   </template> 
-  <!-- Checkbox-->
 
+  <!-- Checkbox-->
   <template>
+
+    <div class="checkbox-label">
+    <h5>Category</h5>
+    </div>
+
+    <div class="checkbox">
+      <label>Droner</label>
+        <input type="checkbox" value="droner" v-model="category"/>
+      <label>3D-printer</label>
+        <input type="checkbox" value="3d-printer" v-model="category"/>
+      </div>
     <!--
   <div class="category">
     <b-form-group label="Category">
@@ -25,7 +36,7 @@
     </b-form-group> -->
 
   
-
+<!--
   <div class="category">
     <b-form-group label="Category">
       <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
@@ -36,11 +47,12 @@
         <b-form-checkbox value="skruer">Skruer</b-form-checkbox>
       </b-form-checkbox-group>
     </b-form-group> 
-
-   <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
   </div>
-
+  -->
+  <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
   <!-- Availability -->
+  
+  <!--
    <div class="availability">
     <b-form-group label="Availability">
       <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-3">
@@ -49,12 +61,23 @@
         <b-form-checkbox value="unavailable">Unavailable</b-form-checkbox>
       </b-form-checkbox-group>
     </b-form-group> 
-
-   <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
   </div>
+  -->
+ <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
+   <div class="div-availability">
+    <div class="availability-label">
+    <h5>Availability</h5>
+    </div>
 
+<div class="availability">
+      <label>Available</label>
+        <input type="checkbox" value="available" v-model="availability"/>
+      <label>Unavailable</label>
+        <input type="checkbox" value="unavailable" v-model="availability"/>
+      </div>
+</div>
 </template>
-<!--- --- -->
+<!--- --- Group by/sorting -->
 <template>
   <div>
     <h5 class="group-by">Group by</h5>
@@ -86,13 +109,8 @@
       :per-page="perPage"
       :sort-by.sync="sortBy"
     >
-  
-
-    <!-- Søkeing -->
-    
-   
-
-    <!-- Busy state med spinner for loading-->
+     
+   <!-- Busy state med spinner for loading-->
     <div slot="table-busy" class="text-center text-danger my-2">
       <b-spinner class="align-middle"/>
       <strong>Loading items...</strong>
@@ -160,7 +178,7 @@ export default {
           { text: '3D-printer', value: '3d-printer' },
           { text: 'Test', value: 'test' }
         ], */
-
+        category: [],
         search: '',
         isBusy: false,
         items: items,

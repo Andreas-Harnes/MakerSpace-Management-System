@@ -70,7 +70,7 @@ html, body {
   float: left;
   height: 30%;
   width: 30%;
-  right: 0em;
+  left: 29em;
   top: 18em;
 }
 
@@ -82,7 +82,7 @@ html, body {
   height: 100%;
   width: 100%;
   right: 5em;
-  top: 27em;
+  top: 28em;
 }
 
 
@@ -93,10 +93,9 @@ html, body {
   height: 100%;
   width: 100%;
   left: 30em;
-  bottom: 5em;
+  bottom: 1.3em;
+
 }
-
-
 
 /* Søk */
 .searching {
@@ -104,18 +103,51 @@ html, body {
   float: left;
   height: 30%;
   width: 30%;
-  top: 1em;
+  top: 3em;
   left: 2em;
 }
 
 /* checkbox */
-.category {
+
+/*.category {
   position: relative;
   float: left;
   height: 30%;
   width: 30%;
   right: 17em;
-  top: 12em;
+  top: 13em;
+}
+*/
+
+.checkbox {
+  position: relative;
+  float: left;
+  height: 30%;
+  width: 30%;
+  top: 8em;
+  right: 31.75em;
+  background: #B8C2CC;
+}
+
+.checkbox input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.checkbox label {
+  display: inline-block;
+  margin-right: 5px;
+  
+}
+
+.checkbox-label {
+  position: relative;
+  float: left;
+  height: 30%;
+  width: 30%;
+  right: 16em;
+  top: 6em;
+  background: #B8C2CC;
 }
 
 /* availability */
@@ -124,8 +156,29 @@ html, body {
   float: left;
   height: 30%;
   width: 30%;
-  right: 32em;
-  top: 5em;
+  right: 16.1em;
+  top: 12em;
+  background: #B8C2CC;
 }
 
+.availability input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.availability label {
+  display: inline-block;
+  margin-right: 5px;
+  
+}
+
+.availability-label {
+  position: relative;
+  float: left;
+  height: 30%;
+  width: 30%;
+  right: 0.4em;
+  top: 10em;
+  background: #B8C2CC;
+}
 
