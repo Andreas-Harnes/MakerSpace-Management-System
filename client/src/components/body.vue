@@ -79,9 +79,10 @@
 </template>
 <!--- --- Group by/sorting -->
 <template>
-  <div>
+  
+  <!--<div>
     <h5 class="group-by">Group by</h5>
-    </div>
+    </div> -->
 </template>
 
         <b-row>
