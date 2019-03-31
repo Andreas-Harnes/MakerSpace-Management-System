@@ -3,10 +3,22 @@ const db = require('../models');
 
 const router = express.Router();
 
+const ITEM_START_POSITION = 25;
 const MAX_ITEMS_PER_PAGE = 25;
 
 router.get('/', (req, res, next) => {
-    db.CumulativeItems.findAll({ limit: MAX_ITEMS_PER_PAGE })
+    let startPosition = ITEM_START_POSITION;
+    if (req.query.start) {
+        const regex = /^[0-9]+$/;
+        if (regex.test(req.query.start)) {
+            startPosition = parseInt(req.query.start);
+        }
+    }
+
+    db.CumulativeItems.findAll({ 
+        limit: MAX_ITEMS_PER_PAGE,
+        offset: startPosition
+    })
         .then(cumulativeItems => {
             return res.json({ cumulativeItems });
         })
