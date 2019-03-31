@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const CumulativeItems = sequelize.define('CumulativeItems', {
+    const CumulativeItems = sequelize.define('CumulativeItem', {
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         }
     });
+
+    CumulativeItems.associate = models => {
+        CumulativeItems.hasMany(models.SpecificItem, { as: 'specificItems' })
+    }
         
     return CumulativeItems;
 }
