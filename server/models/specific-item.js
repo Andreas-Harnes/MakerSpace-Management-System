@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const SpecificItems = sequelize.define('SpecificItem', {
+    const SpecificItems = sequelize.define('SpecificItems', {
         specificItemId: {
             type: DataTypes.INTEGER,
             allownull: false,
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     SpecificItems.associate = models => {
-        SpecificItems.belongsTo(models.CumulativeItem);
+        SpecificItems.belongsTo(models.CumulativeItems);
     }
     
     return SpecificItems;
