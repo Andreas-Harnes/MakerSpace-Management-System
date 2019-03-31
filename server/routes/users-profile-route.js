@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-router.post('/:userid/name',  (req, res, next) => {
+// TODO
+router.post('/:userid/name', (req, res, next) => {
     db.User.findOne({ where: { id: req.params.userid } })
         .then(user => {
             if (!user) {

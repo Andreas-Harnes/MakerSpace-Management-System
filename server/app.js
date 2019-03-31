@@ -52,7 +52,6 @@ sequelize.sync()
 
 
 app.use('/users', require('./routes/users-route'));
-app.use('/users/profile', require('./routes/users-profile-route'));
 app.use('/cumulativeitems', require('./routes/cumulative-items-route'));
 
 app.use(express.static('public'));
