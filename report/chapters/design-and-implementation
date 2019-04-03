@@ -1,14 +1,74 @@
 \chapter{Design and Implementation}
+This chapter will go over all the technical documentation needed to maintain and understand the system. In addition to this documentation this chapter will also contain information about how the system was built and what technologies that was used to create the system.
+The System is divided into two sections; the frontend and the backend. The frontend is where all the graphical user interfaces are and where all the interactions with the user will be. The backend will handle all the computing of the data that gets sent from the frontend and the data from the database. These two system are communicating through an API (Application Programming Interface).
 
-Explains how the components of the application are designed and how these components are intended to connect to form the final application. Describes how the application was built and which tools were used in doing so in addition to a description of the application itself.
-
-skriv overordnet om hvordan systemet henger sammen og deretter for hver enkelt komponent. 
-
-kap 3 og 4 kan slås sammen. 
+\todo{Skriv overordnet om hvordan systemet henger sammen og deretter for hver enkelt komponent}
 
 \section{Frontend}
 
+The frontend was built using HTML(Hyper Text Markup Language), JavaScript, Vue.js and Sass(Syntactically awesome style sheets).
+Vue.js is a Framework based on the programming language JavaScript and is used for creating web applications.  Sass is CSS(Cascading Style Sheet) preprocessor which allows the developer to write CSS rules in another scripting language that will be compiled into CSS by the browser. 
+
+SPA
+
+Components
+
+Wireframes
+
+
 \section{Backend}
+The backend operates on the JavaScript runtime enviroment provided by Node.js.
+The backend uses the default Node.js package manager NPM.
+There are many packages used in the backend but the most prominent of them is the web application framework Express.js.
+The routing Express.js provides is used for all endpoints in the application.
+The endpoints provides clients access to resources stored on the backend or allows clients to create their resources.
+The endpoints provides clients with the ability to create, read, update, or delete resources stored on the backend.
+There are several endpoints provided by the backend.
+
+User registration is achieved through an endpoint.
+In order to register a new user the client has to send a POST request to the endpoint at /users/signup.
+The backend is implemented with input validation.
+Therefore the request must contain the necessary fields, and the fields must be in the proper format, when requesting the backend to create a new account.
+The required fields are email, password, phone, firstName and lastName.
+The backend will return an HTTP status code of 422(unprocessable entity) should the client fail to provide the necessary fields.
+After having validated the input provided by the client the backend verifies that the email has not been registered before.
+If the email has been registered before the backend responds with an HTTP status code of 403(forbidden).
+If the email has not been registered before the backend creates the new user and sends a response with an HTTP status of 201.
+
+Login is also achieved through an endpoint.
+In order to login the client has to send a POST request to the endpoint at /users/signin.
+The request must contain the two required fields; email and password.
+The backend will return an HTTP status code of 422(unprocessable entity) should the client fail to provide the necessary fields or the fields be in an improper format.
+After having validated the input provided by the client the backend compares the information provided by the client with the one stored in the database.
+If the two match the backend returns an HTTP status code of 200 and the user is logged in.
+If they do not match the backend returns an HTTP status code of 401(unauthorized).
+
+
+
+
+
+
+
+The backend is designed with access restrictions on the resources it provides.
+This ensures protected resources(resources that are only available to a subset of the total number of users) remain confidential and inaccessible to unauthorized or unauthenticated users.
+
+Logging out kills cookie, no cookie before login ...
+
+Passport ...
+
+Sessions ...
+
+Salting/hashing ...
+
+Authentication ...
+
+Log in ...
+
+Fetching items ...
+
+HTTPS ...
+
+Domain name ...
 
 \section{Database}
 
