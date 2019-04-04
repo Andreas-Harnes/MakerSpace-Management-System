@@ -12,6 +12,7 @@ import Register from './components/register'
 import Header from './components/header'
 import body from './components/body'
 import header from './components/header'
+import test from './components/test'
 
 //tell vue to use bootstrap
 Vue.use(BootstrapVue)
@@ -25,7 +26,8 @@ const routes = [
   { path: '/header', component: Header },
   { path: '/login', component: Login },
   { path: '/register', component: Register },
-  { path: '/body' , component: body}
+  { path: '/body' , component: body},
+  { path: '/test' , component: test}
 ]
 
 // Create the router instance and pass the `routes` option

@@ -84,9 +84,7 @@ import axios from 'axios';
       console.log(userFirstName)
       console.log(userLastName)
       console.log(userPhone)
-      // Replace with POST request and the right URL
-      // Log in API
-      // http://localhost:3000/users/signin     
+    
       axios.post('/users/signup', {
       email: userEmail,
       password: userPassword,
