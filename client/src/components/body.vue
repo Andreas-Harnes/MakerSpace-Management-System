@@ -12,6 +12,16 @@
 
   <!-- Checkbox-->
   <template>
+<!--- content -->
+    </template>
+  <div id="container">
+    <div id="item_element">
+      <h2 id="item_title">Element navn</h2>
+      <img src="smiley.gif" alt="beskrivelse" height="42" width="42">
+      <p id="description">Beskrivelse av element her</p>
+    </div>
+  </div>
+<template>
 <!--
     <div class="checkbox-label">
     <h5>Category</h5>
@@ -79,9 +89,9 @@
 </div> 
 -->
 </template>
-<!--- --- Group by/sorting -->
-<template>
   
+<template>
+  <!--- --- Group by/sorting -->
   <!--<div>
     <h5 class="group-by">Group by</h5>
     </div> -->
