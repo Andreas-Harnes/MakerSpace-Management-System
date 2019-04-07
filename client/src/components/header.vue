@@ -5,7 +5,7 @@
     </div>
     <h2>MakerSpace Management System</h2>
     <div id="dropdownID">
-      <b-dropdown id="ddown-aria" text="Right align" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
+      <b-dropdown id="ddown-aria" offset="-60px" text="Dropdown Button" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
         <template slot="button-content">
           &#x1f50d;
           <span class="sr-only">Hamburger meny</span>
@@ -74,7 +74,7 @@ export default {
   #signIn {
     float: right;
     position: relative;
-    right: 5em;
+    right: 4.5em;
   }
 
   header h2 {
