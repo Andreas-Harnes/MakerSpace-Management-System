@@ -3,7 +3,7 @@
       <div id="txtTitle"><h1>MakerSpace Management System</h1></div>
       <input class="loginField" id="txtEmail" type="text" name="email" placeholder="Email" /> <br>
       <input class="loginField" id="txtPassword" type="password" name="password" placeholder="Password" /> <br>
-      <button type="button" id="btnLogin" v-on:click="loginRequest">Login</button>
+      <b-button type="button" id="btnLogin" v-on:click="loginRequest" variant="outline-primary">Login</b-button>
       <button type="button" id="btnSignout" v-on:click="signoutRequest">Sign out</button>
       <button type="button" id="btnReqpassword">Forgotten password?</button>
 
@@ -32,11 +32,13 @@
   }
 
   #btnLogin {
-    width: 25%;
-    height: 30px;
-    margin-bottom: 5%;
-    position: bottom;
-    border-radius: 15px;
+    position: relative;
+    float: left;
+    /*width: 300em;*/
+    /*height: 200em;*/
+     /* margin-bottom: 5%; */
+    /* position: bottom; */
+    /*border-radius: 15px; */
   }
 
   #login {
