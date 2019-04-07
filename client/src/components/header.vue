@@ -8,18 +8,27 @@
       <b-dropdown id="ddown-aria" text="Dropdown Button" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
         <template slot="button-content">
           &#x1f50d;
-          <span class="sr-only">ByttBilde</span>
+          <span class="sr-only">Hamburger meny</span>
         </template>
         <div role="group" aria-labelledby="header1">
-          <b-dropdown-item-button aria-describedby="header1" href="#">Hjem</b-dropdown-item-button>
-          <b-dropdown-item-button aria-describedby="header1" href="#">Ting2</b-dropdown-item-button>
+          <b-dropdown-item-button aria-describedby="header1">
+            <router-link to="/body">
+              <a class="" href="">Hjem</a>
+            </router-link>
+          </b-dropdown-item-button>
           <b-dropdown-divider>
           </b-dropdown-divider>
-          <b-button id="signIn" variant="primary" size="sm" @click="onClick">Sign In</b-button>
-          <b-dropdown-divider>
-          </b-dropdown-divider>
-          <b-dropdown-item-button>Registrer deg her</b-dropdown-item-button>
-          <b-dropdown-item-button>Glemt passord?</b-dropdown-item-button>
+          <b-button id="signIn" variant="primary" size="sm" @click="onClick">Login</b-button>
+          <b-dropdown-item-button>
+            <router-link to="/register">
+              <a href="#">Registrer deg her!</a>
+            </router-link>
+          </b-dropdown-item-button>
+          <b-dropdown-item-button>
+            <router-link to="/">
+              <a class="" href="">Glemt passord?</a>
+            </router-link>
+          </b-dropdown-item-button>
         </div>
       </b-dropdown>
     </div>
@@ -55,6 +64,12 @@ export default {
 
   #dropdownID {
     float: right;
+  }
+
+  #signIn {
+    float: right;
+    position: relative;
+    right: 5em;
   }
 
   header h2 {
