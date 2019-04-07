@@ -18,6 +18,7 @@
             </b-dropdown-divider>
             <b-button 
             id="signIn" 
+            v-bind:to="'/login'"
             variant="primary" 
             size="sm" 
             @click="onClick"
