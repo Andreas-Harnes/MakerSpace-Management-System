@@ -11,7 +11,7 @@
 <!-- containt -->
  <div id="container">
     <div id="item_element">
-      <h2 id="item_title">Element navn</h2>
+      <h2 id="item_title">Drone</h2>
       <img id="content_img" src="smiley.gif" alt="bilde" height="42" width="42">
       <p id="description">Beskrivelse av element her</p>
       <p id="status">Status</p>
@@ -22,7 +22,7 @@
 <div id="category">
     <b-form-group label="Category">
       <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
-        <b-form-checkbox value="drone">Drone</b-form-checkbox>
+        <b-form-checkbox value="item_title">Drone</b-form-checkbox>
         <br />
         <b-form-checkbox value="3d-printer">3D-printer</b-form-checkbox>
         <br />
@@ -33,7 +33,7 @@
   <!-- availability -->
   <div id="availability">
     <b-form-group label="Availability">
-      <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-3">
+      <b-form-checkbox-group id="checkbox-group-2" v-model="selected_2" name="flavour-3">
         <b-form-checkbox value="available">Available</b-form-checkbox>
         <br />
         <b-form-checkbox value="unavailable">Unavailable</b-form-checkbox>
@@ -43,6 +43,18 @@
   </tr>
 </template>
 <script>
+  export default {
+    data() {
+      return {
+        selected: [], // Must be an array reference!
+        options: [
+          { text: 'Drone', value: 'item_title' },
+          { text: '3D-printer', value: '3d-printer' },
+          { text: 'Skruer', value: 'skruer' },
+        ]
+      }
+    }
+  }
 </script>
 <style lang="sass" scoped>
 </style>
