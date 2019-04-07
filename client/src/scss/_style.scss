@@ -60,7 +60,7 @@ html, body {
   right: 50px;
 }
 */
-
+/*
 .group-by {
   position: relative;
   float: left;
@@ -69,6 +69,7 @@ html, body {
   left: 29em;
   top: 18em;
 }
+*/
 
 
 /* first - nesxt - last */
@@ -82,14 +83,15 @@ html, body {
 }
 
 
+
 /* Elementene/ting etc */
 .table.b-table.table-bordered.b-table-selectable {
   position: relative;
   float: left;
   height: 100%;
   width: 100%;
-  left: 30em;
-  bottom: 1.3em;
+  left: 20em;
+  bottom: 6.5em;
 
 }
 
@@ -97,10 +99,10 @@ html, body {
 .searching {
   position: relative;
   float: left;
-  height: 30%;
-  width: 30%;
+  height: 100%;
+  width: 100%;
   top: 3em;
-  left: 2em;
+  right: 20.5em;
 }
 
 /* checkbox */
@@ -113,7 +115,7 @@ html, body {
   right: 17em;
   top: 13em;
 }
-*/
+
 
 .checkbox {
   position: relative;
@@ -144,9 +146,18 @@ html, body {
   right: 16em;
   top: 6em;
   background: #B8C2CC;
+} */
+
+#category {
+  position: relative;
+  float: left;
+  text-align: left;
+  top: 11em;
+
 }
 
 /* availability */
+/*
 .availability {
   position: relative;
   float: left;
@@ -176,6 +187,14 @@ html, body {
   right: 0.4em;
   top: 10em;
   background: #B8C2CC;
+} */
+
+#availability {
+  position: relative;
+  float: left;
+  text-align: left;
+  top: 5em;
+  right: 7em;
 }
 
 /* nav manager */

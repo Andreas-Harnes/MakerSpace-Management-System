@@ -12,7 +12,7 @@
 
   <!-- Checkbox-->
   <template>
-
+<!--
     <div class="checkbox-label">
     <h5>Category</h5>
     </div>
@@ -36,8 +36,8 @@
     </b-form-group> -->
 
   
-<!--
-  <div class="category">
+
+  <div id="category">
     <b-form-group label="Category">
       <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
         <b-form-checkbox value="drone">Drone</b-form-checkbox>
@@ -48,12 +48,12 @@
       </b-form-checkbox-group>
     </b-form-group> 
   </div>
-  -->
+  
   <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
   <!-- Availability -->
   
-  <!--
-   <div class="availability">
+  
+   <div id="availability">
     <b-form-group label="Availability">
       <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-3">
         <b-form-checkbox value="available">Available</b-form-checkbox>
@@ -62,8 +62,9 @@
       </b-form-checkbox-group>
     </b-form-group> 
   </div>
-  -->
+ 
  <!-- <div>Selected: <strong>{{ selected }}</strong></div> -->
+ <!--
    <div class="div-availability">
     <div class="availability-label">
     <h5>Availability</h5>
@@ -75,7 +76,8 @@
       <label>Unavailable</label>
         <input type="checkbox" value="unavailable" v-model="availability"/>
       </div>
-</div>
+</div> 
+-->
 </template>
 <!--- --- Group by/sorting -->
 <template>
