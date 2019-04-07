@@ -133,7 +133,7 @@
         {{ row.value.first }} {{ row.value.last }}
       </template>
 
-      <template slot="actions" slot-scope="row">
+      <!--<template slot="actions" slot-scope="row">
         <b-button size="sm" @click="trekkFra()" class="mr-1">FjernTing </b-button>
         <b-button size="sm" @click="info(row.item, row.index, $event.target)" class="mr-1">
           leggTil
@@ -141,7 +141,7 @@
         <b-button size="sm" @click="row.toggleDetails">
           {{ row.detailsShowing ? 'Hide' : 'Show' }} Comment
         </b-button>
-      </template>
+      </template> -->
 
       <template slot="row-details" slot-scope="row">
         <b-card>
@@ -199,7 +199,7 @@ export default {
           { key: 'name', label: 'Ting', sortable: true, sortDirection: 'desc' },
           { key: 'amount', label: 'Mengde', sortable: true, class: 'text-center' },
           { key: 'isActive', label: 'Status' },
-          { key: 'actions', label: 'Actions' }
+          //{ key: 'actions', label: 'Actions' }//
         ],
         sortBy: null,
         sortDesc: false,
