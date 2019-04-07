@@ -2,7 +2,7 @@
     <header class="header">
     <!-- <h2>MakerSpace: sett logo her istedenfor?</h2> -->
     <div>
-        <img id="makerspace-logo" src="../assets/facebook-logo.png" alt="MakerSpaceLogo" width="9%"  height="9%" />
+        <img id="makerspace-logo" src="../assets/facebook-logo.png" v-bind:to="'/'" alt="MakerSpaceLogo" width="9%"  height="9%" />
     </div>
     <h2>MakerSpace Management System</h2>
     <div id="dropdownID">
