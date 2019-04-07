@@ -14,8 +14,7 @@ import {testLoginFunction} from '@/functions'
   export default {
     name: "test",
     mounted: function () {
-        console.log(document.cookie)
-        console.log('mor di')
+        console.log(testLoginFunction())
     }
   }
 </script>

@@ -1,7 +1,6 @@
+import cookie from 'js-cookie';
+
 export function testLoginFunction() {
-    var myCookie = document.cookie;
-    
-    // console.log('hello Morten')
+    var myCookie = cookies.get('mms_sid');
     return myCookie
-    // return('Hello Magnus')
 }
