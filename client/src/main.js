@@ -18,7 +18,7 @@ import faq from './components/faq'
 import tos from './components/tos'
 import privacy_policy from './components/privacy_policy'
 import settings from './components/settings'
-import settings from './components/item'
+import item from './components/item'
 
 //tell vue to use bootstrap
 Vue.use(BootstrapVue)
