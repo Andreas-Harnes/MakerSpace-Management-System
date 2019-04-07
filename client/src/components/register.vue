@@ -20,16 +20,16 @@
   .regFields {
       margin-bottom: 1%
   }
-
+/*
     h1 {
     font-size: 50px;
-  }
-
+  } */
+/*
   #txtTitle {
     height: 5%;
     margin-bottom: 8;
-  }
-
+  } */
+/*
   .regFields {
     margin-right: 1%;
     width: 25%;
@@ -41,8 +41,8 @@
     border-color: grey;
     border-radius: 15px;
     text-align: center; 
-  }
-
+  } */
+/*
   #btnLogin {
     width: 25%;
     height: 30px;
@@ -50,14 +50,15 @@
     position: bottom;
     border-radius: 15px;
   }
-
+  */
+/*
   #login {
     box-sizing: border-box;
     width: 30%;
     border-style: dotted;
     background-color: white;
     
-  }
+  } */
 </style>
 
 

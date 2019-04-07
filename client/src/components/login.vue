@@ -1,18 +1,16 @@
 <template>
     <div id="login">
-      <div id="txtTitle"><h1>MakerSpace Management System</h1></div>
+      <div id="txtTitle"><h1 id="login_txt">Log into MakerSpace Management System</h1></div>
       <input class="loginField" id="txtEmail" type="text" name="email" placeholder="Email" /> <br>
       <input class="loginField" id="txtPassword" type="password" name="password" placeholder="Password" /> <br>
-      <b-button type="button" id="btnLogin" v-on:click="loginRequest" variant="outline-primary">Login</b-button>
-      <button type="button" id="btnSignout" v-on:click="signoutRequest">Sign out</button>
-      <button type="button" id="btnReqpassword">Forgotten password?</button>
+      <b-button type="button" id="btnLogin" v-on:click="loginRequest" variant="outline-warning">Login</b-button>
+      <a href="url" id="forgot_password">Forgotten password?</a>
 
-
-  </div>
+  </div> 
 </template>
 
 <style lang="scss">
-  #txtTitle h1 {
+ /* #txtTitle h1 {
     font-size: 50px;
     height: 5%;
     margin-bottom: 75px;
@@ -29,25 +27,26 @@
     border-color: grey;
     border-radius: 15px;
     text-align: center; 
-  }
-
+  } */
+  
   #btnLogin {
-    position: relative;
-    float: left;
+    /*position: relative;*/
+  /*  float: left; */
     /*width: 300em;*/
     /*height: 200em;*/
      /* margin-bottom: 5%; */
     /* position: bottom; */
     /*border-radius: 15px; */
   }
-
+  /*
   #login {
     box-sizing: border-box;
     width: 30%;
     border-style: dotted;
     background-color: white;
     
-  } 
+  } */
+  
 </style>
 
 <script>
