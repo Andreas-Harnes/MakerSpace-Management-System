@@ -9,14 +9,12 @@
 </style>
 
 <script>
-import {testLoginFunction} from '@/functions'
+import { testLoginFunction } from '@/functions'
 
-  export default {
-    name: "test",
-    mounted: function () {
-        // document.getElementById('loginStatus').value = testLoginFunction()
-        console.log(testLoginFunction())
-        // console.log("hello")
-    }
+export default {
+  name: 'test',
+  mounted: () => {
+    console.log(testLoginFunction())
   }
+}
 </script>
