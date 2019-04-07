@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
     const CumulativeItems = sequelize.define('CumulativeItems', {
         name: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(150),
             allowNull: false
         },
             
         description: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(150),
             allowNull: true
         }
     });
