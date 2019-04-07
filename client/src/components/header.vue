@@ -5,14 +5,14 @@
     </div>
     <h2>MakerSpace Management System</h2>
     <div id="dropdownID">
-      <b-dropdown id="ddown-aria" text="Dropdown Button" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
+      <b-dropdown id="ddown-aria" text="Right align" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
         <template slot="button-content">
           &#x1f50d;
           <span class="sr-only">Hamburger meny</span>
         </template>
         <div role="group" aria-labelledby="header1">
           <b-dropdown-item-button aria-describedby="header1">
-            <router-link to="/body">
+            <router-link to="/">
               <a class="" href="">Hjem</a>
             </router-link>
           </b-dropdown-item-button>
@@ -27,6 +27,11 @@
           <b-dropdown-item-button>
             <router-link to="/">
               <a class="" href="">Glemt passord?</a>
+            </router-link>
+          </b-dropdown-item-button>
+          <b-dropdown-item-button>
+            <router-link to="/test">
+              <a class="" href="">Test</a>
             </router-link>
           </b-dropdown-item-button>
         </div>
