@@ -22,6 +22,7 @@ const sequelize = new Sequelize(
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(session({
+    httpOnly: false,
     name: 'mms_sid',
     resave: false,
     saveUninitialized: false,

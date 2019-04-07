@@ -38,163 +38,33 @@ html, body {
   position: relative; 
 } */
 
-/* MakerSpace logo */
-
-
-/* body items */
-/*
-.mb-0 {
-  position: relative;
-  float: right;
-  padding: 0 25px 40px 1250px;
-  right: 0;
-}
-*/
-
-
-/* sorting */
-/*
-.sorting{
-  clear: none;
-  top: 150px;
-  right: 50px;
-}
-*/
-/*
-.group-by {
-  position: relative;
-  float: left;
-  height: 30%;
-  width: 30%;
-  left: 29em;
-  top: 18em;
-}
-*/
-
-
-/* first - nesxt - last */
-.my-1 {
-  position: relative;
-  float: left;
-  height: 100%;
-  width: 100%;
-  right: 5em;
-  top: 28em;
-}
-
-
-
-/* Elementene/ting etc */
-.table.b-table.table-bordered.b-table-selectable {
-  position: relative;
-  float: left;
-  height: 100%;
-  width: 100%;
-  left: 20em;
-  bottom: 6.5em;
-
-}
-
 /* Søk */
-.searching {
+#searching {
   position: relative;
   float: left;
   height: 100%;
   width: 100%;
-  top: 3em;
-  right: 20.5em;
+  top: 2em;
+  right: 26em;
 }
 
 /* checkbox */
-
-/*.category {
-  position: relative;
-  float: left;
-  height: 30%;
-  width: 30%;
-  right: 17em;
-  top: 13em;
-}
-
-
-.checkbox {
-  position: relative;
-  float: left;
-  height: 30%;
-  width: 30%;
-  top: 8em;
-  right: 31.75em;
-  background: #B8C2CC;
-}
-
-.checkbox input {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.checkbox label {
-  display: inline-block;
-  margin-right: 5px;
-  
-}
-
-.checkbox-label {
-  position: relative;
-  float: left;
-  height: 30%;
-  width: 30%;
-  right: 16em;
-  top: 6em;
-  background: #B8C2CC;
-} */
 
 #category {
   position: relative;
   float: left;
   text-align: left;
-  top: 11em;
-
+  top: 9em;
+  right: 37.8em;
 }
 
 /* availability */
-/*
-.availability {
-  position: relative;
-  float: left;
-  height: 30%;
-  width: 30%;
-  right: 16.1em;
-  top: 12em;
-  background: #B8C2CC;
-}
-
-.availability input {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.availability label {
-  display: inline-block;
-  margin-right: 5px;
-  
-}
-
-.availability-label {
-  position: relative;
-  float: left;
-  height: 30%;
-  width: 30%;
-  right: 0.4em;
-  top: 10em;
-  background: #B8C2CC;
-} */
-
 #availability {
   position: relative;
   float: left;
   text-align: left;
-  top: 5em;
-  right: 7em;
+  top: 3em;
+  right: 44.7em;
 }
 
 /* nav manager */
@@ -213,6 +83,51 @@ html, body {
 #container {
   position: relative;
   float: left;
-  top: 8em;
+  height: 25em;
+  width: 38em;
+  top: 0em;
   left: 20em;
+  border-style: solid;
+}
+/* For earch element */
+#item_element {
+  position: relative;
+  border-style: solid;
+  height: 10em;
+}
+
+#content_img {
+  position: relative;
+  float: left;
+  right: 7em;
+  top: 2em;
+}
+
+#item_title {
+  font-size: 20px;
+  position: relative;
+  float: left;
+  left: 6em;
+  top: 1em;
+}
+
+#description {
+  position: relative;
+  float: left;
+  top: 5em;
+  right: 4em;
+}
+
+#status {
+  position: relative;
+  float: left;
+  top: 3em;
+  right: 15.9em;
+}
+
+#favorit_button {
+  position: relative;
+  float: left;
+  top: 1em;
+  left: 7em;
 }
