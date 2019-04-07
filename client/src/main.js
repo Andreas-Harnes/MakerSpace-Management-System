@@ -22,11 +22,11 @@ Vue.use(VueRouter)
 
 //d efine your routes
 const routes = [
-  { path: '/', component: Nav },
+  { path: '/', component: body },
   { path: '/header', component: Header },
   { path: '/login', component: Login },
   { path: '/register', component: Register },
-  { path: '/body' , component: body},
+  // { path: '/body' , component: body},
   { path: '/test' , component: test}
 ]
 
