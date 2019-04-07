@@ -14,9 +14,8 @@ import {testLoginFunction} from '@/functions'
   export default {
     name: "test",
     mounted: function () {
-        // document.getElementById('loginStatus').value = testLoginFunction()
-        console.log(testLoginFunction())
-        // console.log("hello")
+        console.log(document.cookie)
+        console.log('mor di')
     }
   }
 </script>
