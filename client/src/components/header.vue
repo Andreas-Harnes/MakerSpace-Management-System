@@ -34,7 +34,7 @@
     </div>
     <nav class="manger-nav">
       <a href="myFavorites">My Favorites</a>
-      <a href="mangaerItems">Manage Items</a>
+      <a href="manageItems">Manage Items</a>
     </nav>
   </header>
 </template>
