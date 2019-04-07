@@ -5,7 +5,7 @@
  <tr>
 <!-- search -->
  <template>
-    <div class="searching">
+    <div id="searching">
   <input type="text" v-model="search" placeholder="Search..." /> 
     </div> 
   </template> 
@@ -14,8 +14,10 @@
  <div id="container">
     <div id="item_element">
       <h2 id="item_title">Element navn</h2>
-      <img src="smiley.gif" alt="beskrivelse" height="42" width="42">
+      <img id="content_img" src="smiley.gif" alt="bilde" height="42" width="42">
       <p id="description">Beskrivelse av element her</p>
+      <p id="status">Status</p>
+  <b-button id="favorit_button">Favorit</b-button>
     </div>
   </div>
 <!-- category -->
@@ -28,7 +30,7 @@
          <br />
         <b-form-checkbox value="skruer">Skruer</b-form-checkbox>
       </b-form-checkbox-group>
-    </b-form-group> 
+        </b-form-group> 
   </div>
   <!-- availability -->
   <div id="availability">
@@ -40,7 +42,6 @@
       </b-form-checkbox-group>
     </b-form-group> 
   </div>
-
   </tr>
  </template>
  
@@ -51,5 +52,3 @@
 <style lang="sass" scoped>
 
 </style>
-
-
