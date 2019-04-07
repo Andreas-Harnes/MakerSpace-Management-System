@@ -87,7 +87,7 @@
     </div> -->
 </template>
 
-        <b-row>
+        <!--<b-row>
             <b-col md="6" class="my-1">
                 <b-form-group label-cols-sm="3" class="mb-0" >
                     <b-input-group>
@@ -111,7 +111,7 @@
       :current-page="currentPage"
       :per-page="perPage"
       :sort-by.sync="sortBy"
-    >
+    > -->
      
    <!-- Busy state med spinner for loading-->
     <div slot="table-busy" class="text-center text-danger my-2">
@@ -119,9 +119,10 @@
       <strong>Loading items...</strong>
       </div>
 
-      <template class="test-2" slot="name" slot-scope="row">
+      <!--<template class="test-2" slot="name" slot-scope="row">
         {{ row.value.first }} {{ row.value.last }}
       </template>
+      -->
 
       <!--<template slot="actions" slot-scope="row">
         <b-button size="sm" @click="trekkFra()" class="mr-1">FjernTing </b-button>
@@ -133,7 +134,7 @@
         </b-button>
       </template> -->
 
-      <template slot="row-details" slot-scope="row">
+      <!--<template slot="row-details" slot-scope="row">
         <b-card>
           <ul>
             <li v-for="(value, key) in row.item" :key="key">{{ key }}: {{ value }}</li>
@@ -142,7 +143,7 @@
       </template>
     </b-table>
     <!-- Side bytte igjennom pagination-->
-    <b-row>
+    <!--<b-row>
       <b-col class="my-1">
         <b-pagination aria-label="Table"
           :total-rows="totalRows"
@@ -159,58 +160,10 @@
     </b-row>
   </b-container>
   </tr>
-</template>
+</template> -->
 
 <script>
-const items = [
-    { isActive: true, amount: 40, name: {first:"Hammer"}},
-    { isActive: false, amount: 21, name: {first:"Avbiter"}},
-    { isActive: false, amount: 89, name: {first:"Skrutrekker" }},
-    { isActive: true, amount: 38, name: {first:"RC bil" }},
-    { isActive: false, amount: 27, name: {first:"Skruer" }},
-    { isActive: true, amount: 40, name: {first:"Drone" }},
-]
-export default {
-    name: "body",
-    data() {
-      return {
 
-      /*   selected: [], // Must be an array reference!
-         options: [
-          { text: 'Drone', value: 'drone' },
-          { text: '3D-printer', value: '3d-printer' },
-          { text: 'Test', value: 'test' }
-        ], */
-        category: [],
-        search: '',
-        isBusy: false,
-        items: items,
-        fields: [
-          { key: 'name', label: 'Ting', sortable: true, sortDirection: 'desc' },
-          { key: 'amount', label: 'Mengde', sortable: true, class: 'text-center' },
-          { key: 'isActive', label: 'Status' },
-          //{ key: 'actions', label: 'Actions' }//
-        ],
-        sortBy: null,
-        sortDesc: false,
-      }
-    },
-    computed: {
-      sortOptions() {
-        // Create an options list from our fields
-        return this.fields
-          .filter(f => f.sortable)
-          .map(f => {
-            return { text: f.label, value: f.key }
-          })
-      }
-    },
-    methods: {
-      togglebusy() {
-        this.isBusy = !this.isBusy
-      }
-    }
-}
 </script>
 
 <style lang="sass" scoped>
