@@ -235,3 +235,7 @@ html, body {
   position: relative;
   bottom: 1em;
 }
+
+::-webkit-input-placeholder {
+  padding-left: 6px;
+}
