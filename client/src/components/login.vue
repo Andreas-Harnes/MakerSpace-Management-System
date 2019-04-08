@@ -1,8 +1,8 @@
 <template>
     <div id="login">
-      <div id="txtTitle"><h1 id="login_txt">Log into MakerSpace Management System</h1></div>
-      <input class="loginField" id="txtEmail" type="text" name="email" placeholder="Email" /> <br>
-      <input class="loginField" id="txtPassword" type="password" name="password" placeholder="Password" /> <br>
+      <div id="txtTitle"><h1 id="login_txt">Log in</h1></div>
+      <input class="loginField" id="txtEmail2" type="text" name="email" placeholder="Email" /> <br>
+      <input class="loginField" id="txtPassword2" type="password" name="password" placeholder="Password" /> <br>
       <b-button type="button" id="btnLogin" v-on:click="loginRequest" variant="outline-warning">Login</b-button>
       <a href="url" id="forgot_password">Forgotten password?</a>
 
