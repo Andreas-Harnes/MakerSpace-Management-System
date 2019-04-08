@@ -148,6 +148,7 @@ html, body {
   top: 2em;
   left: 4em;
   width: 8em;
+  
 }
 
 #txtEmail2 {
@@ -200,7 +201,7 @@ html, body {
 
 #txtLastName {
   position: relative;
-  top: 1.2em;
+  top: 1.3em;
   width: 15em;
 }
 
@@ -213,7 +214,7 @@ html, body {
 
 #numPhone {
   position: relative;
-  top: 0.5em;
+  top: 0.3em;
   width: 15em;
 }
 
@@ -221,10 +222,16 @@ html, body {
   position: relative;
   left: 0em;
   width: 15em;
+  top: 0em;
 }
 
 #txtPasswordRepeat {
   position: relative;
-  top: 0.2em;
+  bottom: 0.7em;
   width: 15em;
+}
+
+#btnReg {
+  position: relative;
+  bottom: 1em;
 }

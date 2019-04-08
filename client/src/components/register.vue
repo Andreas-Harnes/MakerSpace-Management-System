@@ -8,7 +8,7 @@
           <input class="regFields" id="numPhone" type="number" name="telephone" placeholder="Telephone number" /> <br> 
           <input class="regFields" id="txtPassword" type="password" name="password" placeholder="Password" /> <br> 
           <input class="regFields" id="txtPasswordRepeat" type="password" name="password" placeholder="Repeat password" /> <br> 
-          <b-button type="button" v-on:click="regRequest" variant="outline-warning">Register</b-button>
+          <b-button type="button" v-on:click="regRequest" variant="outline-warning" id="btnReg">Register</b-button>
       </div>
   </div>
 </template>
