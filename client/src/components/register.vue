@@ -1,6 +1,6 @@
 <template>
     <div id="reg">
-      <h1>MakerSpace Management System</h1>
+      <h1 id="reg_title">Registrer now!</h1>
       <div id="inputFields">
           <input class="regFields" id="txtFirstName" type="text" name="firstName" placeholder="First name" /> <br>
           <input class="regFields" id="txtLastName" type="text" name="lastName" placeholder="Last name" /> <br> 
@@ -8,7 +8,7 @@
           <input class="regFields" id="numPhone" type="number" name="telephone" placeholder="Telephone number" /> <br> 
           <input class="regFields" id="txtPassword" type="password" name="password" placeholder="Password" /> <br> 
           <input class="regFields" id="txtPasswordRepeat" type="password" name="password" placeholder="Repeat password" /> <br> 
-          <button type="button" v-on:click="regRequest">Register</button>
+          <b-button type="button" v-on:click="regRequest" variant="outline-warning">Register</b-button>
       </div>
   </div>
 </template>

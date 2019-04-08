@@ -38,6 +38,8 @@ html, body {
   position: relative; 
 } */
 
+/* -------------- body --------------- */ 
+
 /* Søk */
 #searching {
   position: relative;
@@ -65,11 +67,6 @@ html, body {
   text-align: left;
   top: 3em;
   right: 44.7em;
-}
-
-/* nav manager */
-.manger-nav {
-  
 }
 
 .manger-nav a{
@@ -132,11 +129,12 @@ html, body {
   left: 7em;
 }
 
-/* login */
+/* --------------- login ---------------- */
 #login_txt {
   font-size: 25px;
   position: relative;
   top: 1em;
+  color: #2c3e50;
 }
 
 #login {
@@ -177,6 +175,53 @@ html, body {
 #forgot_password {
   position: relative;
   top: 6em;
-  right: 5.5em;
+  right: 4.5em;
   top: 5em;
+}
+
+/* -------------- registrer ----------------- */
+
+#reg_title {
+  font-size: 25px;
+  position: relative;
+  top: 1em;
+  right: 1em;
+  color: #2c3e50;
+}
+
+#txtFirstName {
+  position: relative;
+  top: 2em;
+  width: 15em;
+}
+
+#txtLastName {
+  position: relative;
+  top: 1.2em;
+  width: 15em;
+}
+
+#txtEmail {
+  position: relative;
+  top: 1em;
+  left: 0em;
+  width: 15em;
+}
+
+#numPhone {
+  position: relative;
+  top: 0.5em;
+  width: 15em;
+}
+
+#txtPassword {
+  position: relative;
+  left: 0em;
+  width: 15em;
+}
+
+#txtPasswordRepeat {
+  position: relative;
+  top: 0.2em;
+  width: 15em;
 }
