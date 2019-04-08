@@ -68,6 +68,7 @@ export default {
 
   #dropdownID {
     float: right;
+    padding: bottom 5px;
   }
 
   #signIn {
@@ -78,5 +79,7 @@ export default {
 
   header h2 {
     width: 50%;
+    position: relative;
+    right: 4px;
   }
 </style>
