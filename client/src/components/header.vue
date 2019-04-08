@@ -68,7 +68,8 @@ export default {
 
   #dropdownID {
     float: right;
-    padding: bottom 5px;
+    position: relative;
+    bottom: 40px
   }
 
   #signIn {
