@@ -4,7 +4,7 @@
 <!-- search -->
  <template>
   <div id="searching">
-    <input type="text" v-model="search" placeholder="Search..." />
+    <input type="text" placeholder="Search..." />
   </div>
 </template>
 
@@ -33,7 +33,7 @@
   <!-- availability -->
   <div id="availability">
     <b-form-group label="Availability">
-      <b-form-checkbox-group id="checkbox-group-2" v-model="selected_2" name="flavour-3">
+      <b-form-checkbox-group id="checkbox-group-2" name="flavour-3">
         <b-form-checkbox value="available">Available</b-form-checkbox>
         <br />
         <b-form-checkbox value="unavailable">Unavailable</b-form-checkbox>
