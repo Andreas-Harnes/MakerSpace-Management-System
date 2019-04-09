@@ -10,7 +10,7 @@
       <b-dropdown id="ddown-aria" offset="-60px" text="Dropdown Button" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
         <template slot="button-content">
           <!-- <i class="material-icons" id="dropdown_test">horizontal_split</i> -->
-          <i class="material-icons" id="dropdown_test">accessible_forward</i>
+          <i class="material-icons" id="dropdown_test">dehaze</i>
         </template>
         <div role="group" aria-labelledby="header1">
           <b-dropdown-item-button aria-describedby="header1">
