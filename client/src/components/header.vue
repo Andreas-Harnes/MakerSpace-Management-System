@@ -7,7 +7,7 @@
     <div id="dropdownID">
       <b-dropdown id="ddown-aria" offset="-60px" text="Dropdown Button" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
         <template slot="button-content">
-          <span class="material-icons">Face</span>
+          <b-img block src="baseline-horizontal_split-24px.svg">baseline</b-img>
         </template>
         <div role="group" aria-labelledby="header1">
           <b-dropdown-item-button aria-describedby="header1">
