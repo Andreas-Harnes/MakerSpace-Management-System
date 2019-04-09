@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     User.addHook('beforeCreate', user => {
-        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(12), null);
     });
     
     return User;
