@@ -236,6 +236,15 @@ html, body {
   bottom: 1em;
 }
 
+/* ---------------- padding på tekstfelter ------------------- */
 ::-webkit-input-placeholder {
   padding-left: 6px;
+}
+
+
+/* ----------------- Dropdown ------------------ */
+
+#dropdown_test {
+  position: relative;
+  color:#2c3e50;
 }
