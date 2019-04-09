@@ -20,45 +20,6 @@
   .regFields {
       margin-bottom: 1%
   }
-/*
-    h1 {
-    font-size: 50px;
-  } */
-/*
-  #txtTitle {
-    height: 5%;
-    margin-bottom: 8;
-  } */
-/*
-  .regFields {
-    margin-right: 1%;
-    width: 25%;
-    margin: auto;
-    margin-bottom: 1%;
-    border: none;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: grey;
-    border-radius: 15px;
-    text-align: center; 
-  } */
-/*
-  #btnLogin {
-    width: 25%;
-    height: 30px;
-    margin-bottom: 5%;
-    position: bottom;
-    border-radius: 15px;
-  }
-  */
-/*
-  #login {
-    box-sizing: border-box;
-    width: 30%;
-    border-style: dotted;
-    background-color: white;
-    
-  } */
 </style>
 
 

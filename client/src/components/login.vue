@@ -10,43 +10,7 @@
 </template>
 
 <style lang="scss">
- /* #txtTitle h1 {
-    font-size: 50px;
-    height: 5%;
-    margin-bottom: 75px;
-  }
-
-  .loginField {
-    margin-right: 1%;
-    width: 25%;
-    margin: auto;
-    margin-bottom: 1%;
-    border: none;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: grey;
-    border-radius: 15px;
-    text-align: center; 
-  } */
-  
-  #btnLogin {
-    /*position: relative;*/
-  /*  float: left; */
-    /*width: 300em;*/
-    /*height: 200em;*/
-     /* margin-bottom: 5%; */
-    /* position: bottom; */
-    /*border-radius: 15px; */
-  }
-  /*
-  #login {
-    box-sizing: border-box;
-    width: 30%;
-    border-style: dotted;
-    background-color: white;
-    
-  } */
-  
+ 
 </style>
 
 <script>
