@@ -1,5 +1,7 @@
 <template>
   <header class="header">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <div>
       <img id="makerspace-logo" src="../assets/facebook-logo.png" v-bind:to="'/'" alt="MakerSpaceLogo" width="9%"  height="9%" />
     </div>
@@ -7,7 +9,7 @@
     <div id="dropdownID">
       <b-dropdown id="ddown-aria" offset="-60px" text="Dropdown Button" variant="link" size="sm" ref="ddown" class="m-2" no-caret>
         <template slot="button-content">
-          <b-img block src="baseline-horizontal_split-24px.svg">baseline</b-img>
+          <i class="material-icons">horizontal_split</i>
         </template>
         <div role="group" aria-labelledby="header1">
           <b-dropdown-item-button aria-describedby="header1">
@@ -69,7 +71,7 @@ export default {
   #dropdownID {
     float: right;
     position: relative;
-    bottom: 40px
+    bottom: 40px;
   }
 
   #signIn {

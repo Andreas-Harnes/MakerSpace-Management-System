@@ -5,7 +5,6 @@ import VueRouter from 'vue-router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import Image from 'bootstrap-vue/es/components/image'
 
 import Nav from './components/nav'
 import login from './components/login'
@@ -23,9 +22,6 @@ import item from './components/item'
 
 //tell vue to use bootstrap
 Vue.use(BootstrapVue)
-
-//tell vue to use bootstrap images
-Vue.use(Image)
 
 // tell vue to use the router
 Vue.use(VueRouter)
