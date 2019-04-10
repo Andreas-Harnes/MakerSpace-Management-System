@@ -16,6 +16,14 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.STRING(MAX_STRING_LENGTH),
             allowNull: true
+        },
+
+        categoryId: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Categories',
+                foreignKey: 'id'
+            }
         }
     }, {
         timestamps: false

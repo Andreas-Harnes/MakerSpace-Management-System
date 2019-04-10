@@ -15,10 +15,23 @@ router.get('/', (req, res, next) => {
         }
     }
 
-    db.CumulativeItems.findAll({ 
+    let categories = [];
+    if (req.query.category) {
+        categories = req.query.category;
+    }
+
+    const withCategories = {
+        limit: MAX_ITEMS_PER_PAGE,
+        offset: startPosition,
+        where: { 'categoryId': { in: [categories] } }
+    };
+
+    const withoutCategories = {
         limit: MAX_ITEMS_PER_PAGE,
         offset: startPosition
-    })
+    };
+
+    db.CumulativeItems.findAll((req.query.category ? withCategories : withoutCategories))
         .then(cumulativeItems => {
             let entries = [];
             for (let i = 0; i < cumulativeItems.length; i++) {
