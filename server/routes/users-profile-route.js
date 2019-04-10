@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 
-// TODO
+// TODO add authentication in order to ensure the user can only change his name
 router.post('/:userid/name', (req, res, next) => {
     db.User.findOne({ where: { id: req.params.userid } })
         .then(user => {
