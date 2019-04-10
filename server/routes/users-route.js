@@ -98,7 +98,7 @@ router.get('/signout', (req, res, next) => {
             return next(error);
         }
 
-        return res.clearCookie('mms_sid').status(200).json({ message: 'Successfully signed out' });
+        return res.clearCookie('mms_sid').status(200).send();
     });
 });
 
