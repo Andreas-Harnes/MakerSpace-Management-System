@@ -59,7 +59,7 @@ router.post('/signup', signUpValidation, (req, res, next) => {
                             return next(error);
                         }
                         
-                        return res.status(201).json({ message: 'Successfully authenticated' });
+                        return res.status(201).json({ userid: user.dataValues.id });
                     });
                 })
                 .catch(error => {
