@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoincrement: true
+            autoIncrement: true
         },
 
         cumulativeItemsId: {
@@ -19,6 +19,8 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         }
+    }, {
+        timestamps: false
     });
     
     return SpecificItems;
