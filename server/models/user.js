@@ -24,6 +24,12 @@ module.exports = (sequelize, DataTypes) => {
         lastName: {
             type: DataTypes.STRING(150),
             allowNull: false
+        },
+
+        phone: {
+            type: DataTypes.STRING(150),
+            unique: true,
+            allowNull: false
         }
     });
 

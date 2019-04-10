@@ -47,24 +47,35 @@ router.post('/signup', signUpValidation, (req, res, next) => {
                 return res.status(403).json({ error: 'Email already used' });
             }
 
-            db.User.create({
-                email: req.body.email,
-                password: req.body.password,
-                firstName: req.body.firstName,
-                lastName: req.body.lastName
-            })
+            db.User.findOne({ where: { phone: req.body.phone } })
                 .then(user => {
-                    req.logIn(user.dataValues, error => {
-                        if (error) {
+                    if (user) {
+                        return res.status(403).json({ error: 'Phone already used' });
+                    }
+
+                    db.User.create({
+                        email: req.body.email,
+                        password: req.body.password,
+                        firstName: req.body.firstName,
+                        lastName: req.body.lastName,
+                        phone: req.body.phone
+                    })
+                        .then(user => {
+                            req.logIn(user.dataValues, error => {
+                                if (error) {
+                                    return next(error);
+                                }
+                                
+                                return res.status(201).json({ userid: user.dataValues.id });
+                            });
+                        })
+                        .catch(error => {
                             return next(error);
-                        }
-                        
-                        return res.status(201).json({ userid: user.dataValues.id });
                     });
                 })
                 .catch(error => {
                     return next(error);
-            });
+                });
         })
         .catch(error => {
             return next(error);
