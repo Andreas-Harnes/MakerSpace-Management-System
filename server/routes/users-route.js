@@ -66,7 +66,7 @@ router.post('/signup', signUpValidation, (req, res, next) => {
                                     return next(error);
                                 }
                                 
-                                return res.status(201).json({ userid: user.dataValues.id });
+                                return res.status(201).json({ 'id': user.dataValues.id });
                             });
                         })
                         .catch(error => {
@@ -87,7 +87,8 @@ router.post('/signin', signInValidation, passport.authenticate('local'), (req, r
         id: req.user.dataValues.id,
         email: req.user.dataValues.email,
         firstName: req.user.dataValues.firstName,
-        lastName: req.user.dataValues.lastName
+        lastName: req.user.dataValues.lastName,
+        phone: req.user.dataValues.phone
     });
 });
 
