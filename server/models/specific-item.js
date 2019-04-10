@@ -1,9 +1,18 @@
 module.exports = (sequelize, DataTypes) => {
     const SpecificItems = sequelize.define('SpecificItems', {
-        specificItemId: {
+        id: {
             type: DataTypes.INTEGER,
-            allownull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoincrement: true
+        },
+
+        cumulativeItemsId: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            references: {
+                model: 'CumulativeItems',
+                foreignKey: 'id'
+            }
         },
             
         status: {
@@ -11,10 +20,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }
     });
-
-    SpecificItems.associate = models => {
-        SpecificItems.belongsTo(models.CumulativeItems);
-    }
     
     return SpecificItems;
 }

@@ -1,19 +1,23 @@
+const MAX_STRING_LENGTH = 190;
+
 module.exports = (sequelize, DataTypes) => {
     const CumulativeItems = sequelize.define('CumulativeItems', {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoincrement: true
+        },
+
         name: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
             allowNull: false
         },
             
         description: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
             allowNull: true
         }
     });
-
-    CumulativeItems.associate = models => {
-        CumulativeItems.hasMany(models.SpecificItems, { as: 'specificItems' })
-    }
         
     return CumulativeItems;
 }
