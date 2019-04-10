@@ -72,7 +72,12 @@ router.post('/signup', signUpValidation, (req, res, next) => {
 });
 
 router.post('/signin', signInValidation, passport.authenticate('local'), (req, res) => {
-    return res.status(200).json({ message: 'Successfully authenticated' });
+    return res.status(200).json({
+        id: req.user.dataValues.id,
+        email: req.user.dataValues.email,
+        firstName: req.user.dataValues.firstName,
+        lastName: req.user.dataValues.lastName
+    });
 });
 
 router.get('/signout', (req, res, next) => {
