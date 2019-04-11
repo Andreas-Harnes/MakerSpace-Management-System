@@ -38,31 +38,37 @@ router.get('/', (req, res, next) => {
                 entries[i] = cumulativeItems[i].id;
             }
 
-            db.SpecificItems.findAll({
-                where: {
-                    cumulativeItemsId: entries
-                }
-            })
-                .then(specificItems => {
-                    for (let i = 0; i < cumulativeItems.length; i++) {
-                        cumulativeItems[i].dataValues.items = 0;
-                        cumulativeItems[i].dataValues.availableItems = 0;
-                    }
-                    
-                    for (let i = 0; i < specificItems.length; i++) {
-                        for (let j = 0; j < cumulativeItems.length; j++) {
-                            if (cumulativeItems[j].dataValues.id === specificItems[i].dataValues.cumulativeItemsId) {
-                                cumulativeItems[j].dataValues.items++;
-                                if (specificItems[i].dataValues.status) {
-                                    cumulativeItems[j].dataValues.availableItems++;
-                                }
-
-                                break;
-                            }
+            db.Categories.findAll()
+                .then(categories => {
+                    db.SpecificItems.findAll({
+                        where: {
+                            cumulativeItemsId: entries
                         }
-                    }
-
-                    return res.json({ cumulativeItems });
+                    })
+                        .then(specificItems => {
+                            for (let i = 0; i < cumulativeItems.length; i++) {
+                                cumulativeItems[i].dataValues.items = 0;
+                                cumulativeItems[i].dataValues.availableItems = 0;
+                            }
+                            
+                            for (let i = 0; i < specificItems.length; i++) {
+                                for (let j = 0; j < cumulativeItems.length; j++) {
+                                    if (cumulativeItems[j].dataValues.id === specificItems[i].dataValues.cumulativeItemsId) {
+                                        cumulativeItems[j].dataValues.items++;
+                                        if (specificItems[i].dataValues.status) {
+                                            cumulativeItems[j].dataValues.availableItems++;
+                                        }
+        
+                                        break;
+                                    }
+                                }
+                            }
+        
+                            return res.json({ categories, cumulativeItems });
+                        })
+                        .catch(error => {
+                            return next(error);
+                        });
                 })
                 .catch(error => {
                     return next(error);
