@@ -1,9 +1,10 @@
+const MAX_STRING_LENGTH = 190;
 const bcrypt = require('bcrypt');
 
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
         email: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
             allowNull: false,
             unique: true,
             validate: {
@@ -12,22 +13,22 @@ module.exports = (sequelize, DataTypes) => {
         },
 
         password: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
             allowNull: false
         },
 
         firstName: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
             allowNull: false
         },
 
         lastName: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
             allowNull: false
         },
 
         phone: {
-            type: DataTypes.STRING(150),
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
             unique: true,
             allowNull: false
         }
