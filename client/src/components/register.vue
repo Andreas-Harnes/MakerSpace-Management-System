@@ -9,6 +9,8 @@
           <input class="regFields" id="txtPassword" type="password" name="password" placeholder="Password" /> <br> 
           <input class="regFields" id="txtPasswordRepeat" type="password" name="password" placeholder="Repeat password" /> <br> 
           <b-button type="button" v-on:click="regRequest" variant="outline-warning" id="btnReg">Register</b-button>
+          <!-- <b-button type="button" v-on:click="createUserDebug" variant="outline-warning" id="btnReg">debug</b-button> -->
+
       </div>
   </div>
 </template>
@@ -38,6 +40,7 @@ import axios from 'axios';
     regRequest: function () {
       var userEmail = document.getElementById('txtEmail').value
       var userPassword = document.getElementById('txtPassword').value
+      var userPasswordRepeat = document.getElementById('txtPasswordRepeat').value
       var userFirstName = document.getElementById('txtFirstName').value
       var userLastName = document.getElementById('txtLastName').value
       var userPhone = document.getElementById('numPhone').value
@@ -47,20 +50,51 @@ import axios from 'axios';
       console.log(userLastName)
       console.log(userPhone)
     
-      axios.post('/users/signup', {
-      email: userEmail,
-      password: userPassword,
-      firstName: userFirstName,
-      lastName: userLastName,
-      phone: userPhone
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-    }
+    if(userEmail == "" || userPassword == "" || userFirstName == "" || userLastName == "" || userPhone == "") {
+      alert("Du må fylle inn alle feltene");
+    } else {
+        if(userPassword === userPasswordRepeat) {
+          axios.post('/users/signup', {
+          email: userEmail,
+          password: userPassword,
+          firstName: userFirstName,
+          lastName: userLastName,
+          phone: userPhone
+          })
+          .then(function (response) {
+            console.log(response);
+            alert("Bruker er registrert");
+          })
+          .catch(function (error) {
+            console.log(error.status);
+          });
+        } else {
+          alert("Passordene er ikke like");
+        }
+    } 
+  },
+    // createUserDebug: function () {
+    //   var userEmail = "andreas@mail.com";
+    //   var userPassword = "Andreas10!";
+    //   var userFirstName = "Andreas";
+    //   var userLastName = "Harnes";
+    //   var userPhone = "12312312";
+
+    //   axios.post('/users/signup', {
+    //   email: userEmail,
+    //   password: userPassword,
+    //   firstName: userFirstName,
+    //   lastName: userLastName,
+    //   phone: userPhone
+    //   })
+    //   .then(function (response) {
+    //     console.log(response);
+    //     alert(response.status);
+    //   })
+    //   .catch(function (error) {
+    //     alert(error.status);
+    //   });
+    // }
   }
   }
 </script>

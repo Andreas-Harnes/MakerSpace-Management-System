@@ -25,19 +25,27 @@ export default {
   },
   methods: {
     loginRequest: function () {
-      var userEmail = document.getElementById('txtEmail').value
-      var userPassword = document.getElementById('txtPassword').value
-      console.log(userEmail);
-      console.log(userPassword);
-      // Replace with POST request and the right URL
-      // Log in API
-      // http://localhost:3000/users/signin     
+      var userEmail = document.getElementById('txtEmail2').value
+      var userPassword = document.getElementById('txtPassword2').value
+ 
+      if(userEmail == "" || userPassword == ""){
+        if(userEmail == "" && userPassword == ""){
+          alert("Du må fylle inn begge felter");
+        } else if(userEmail == ""){
+          alert("Du må fylle inn email");
+        } else {
+          alert("Du må fylle inn passord");
+        }
+      }
       axios.post('/users/signin', {
       email: userEmail,
       password: userPassword
       })
       .then(function (response) {
-        console.log(response);
+        if(response.status == "200"){
+          alert("Logget inn");
+        }
+        // console.log(response);
       })
       .catch(function (error) {
         console.log(error);
