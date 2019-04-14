@@ -85,4 +85,10 @@ export default {
     position: relative;
     right: 4px;
   }
+  /* ----------------- Dropdown ------------------ */
+
+#dropdown_test {
+  position: relative;
+  color:#2c3e50;
+}
 </style>

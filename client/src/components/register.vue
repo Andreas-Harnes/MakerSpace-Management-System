@@ -22,6 +22,61 @@
   .regFields {
       margin-bottom: 1%
   }
+
+
+
+/* -------------- registrer ----------------- */
+
+#reg_title {
+  font-size: 25px;
+  position: relative;
+  top: 1em;
+  right: 1em;
+  color: #2c3e50;
+}
+
+#txtFirstName {
+  position: relative;
+  top: 2em;
+  width: 15em;
+}
+
+#txtLastName {
+  position: relative;
+  top: 1.3em;
+  width: 15em;
+}
+
+#txtEmail {
+  position: relative;
+  top: 1em;
+  left: 0em;
+  width: 15em;
+}
+
+#numPhone {
+  position: relative;
+  top: 0.3em;
+  width: 15em;
+}
+
+#txtPassword {
+  position: relative;
+  left: 0em;
+  width: 15em;
+  top: 0em;
+}
+
+#txtPasswordRepeat {
+  position: relative;
+  bottom: 0.7em;
+  width: 15em;
+}
+
+#btnReg {
+  position: relative;
+  bottom: 1em;
+}
 </style>
 
 

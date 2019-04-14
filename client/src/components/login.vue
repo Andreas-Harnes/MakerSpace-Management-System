@@ -10,6 +10,59 @@
 </template>
 
 <style lang="scss">
+/* --------------- login ---------------- */
+#login_txt {
+  font-size: 25px;
+  position: relative;
+  top: 1em;
+  color: #2c3e50;
+  right: 1.5em;
+}
+
+#login {
+  position: relative;
+  
+}
+
+#btnLogin {
+  position: relative;
+  top: 2em;
+  left: 4em;
+  width: 8em;
+  
+}
+
+#txtEmail2 {
+  position: relative;
+  margin: 10px;
+  right: 1em;
+  top: 1em;
+  width: 15em;
+}
+
+#txtPassword2 {
+  position: relative;
+  right: 0.6em;
+  top: 0.8em;
+  width: 15em;
+}
+
+#btnSignout {
+  position: relative;
+  top: 10em;
+}
+
+#btnReqpassword {
+  position: relative;
+  
+}
+
+#forgot_password {
+  position: relative;
+  top: 6em;
+  right: 4.5em;
+  top: 5em;
+}
  
 </style>
 
