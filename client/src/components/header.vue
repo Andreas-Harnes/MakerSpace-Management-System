@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header id="header-test" class="header">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <div>
@@ -54,7 +54,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
   .header {
     /* Endre color til variabel */
     background-color: #f9a31d;

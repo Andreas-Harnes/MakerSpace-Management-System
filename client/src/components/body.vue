@@ -15,7 +15,7 @@
       <img id="content_img" src="smiley.gif" alt="bilde" height="42" width="42">
       <p id="description">Beskrivelse av element her</p>
       <p id="status">Status</p>
-  <b-button id="favorit_button">Favorit</b-button>
+  <b-button id="favorit_button" class="favorit_style">Favorit</b-button>
     </div>
   </div>
 <!-- category -->

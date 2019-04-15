@@ -1,19 +1,32 @@
-/* Smartphones (portrait and landscape) */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-
-
-}
 
 /* Smartphones (landscape)  */
-@media only screen
-and (min-width : 321px) {
+
+@media only screen and (max-width: 600px) {
+  
+    #header-test {
+        width: 300%;
+    }
+    #category {
+        left: 10em;
+        top: -500em;
+    }
+/* -------- log in -------- */
+    #login_txt {
+        left: 10em;
+    }
+   
+    #btnLogin {
+        left: 20em;
+    }
+   
+    #txtEmail2 {
+        left: 17em;
+    }
+
+    #txtPassword2 {
+        left: 17em;
+    }
 
 }
 
-/* Smartphones (portrait) */
-@media only screen
-and (max-width : 320px) {
 
-}

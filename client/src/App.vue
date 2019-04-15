@@ -7,6 +7,7 @@
 
 <style lang="scss">
 @import 'src/scss/style.scss';
+@import 'src/scss/media.scss'
 
  // $primary-color: #f9a31d;
 
