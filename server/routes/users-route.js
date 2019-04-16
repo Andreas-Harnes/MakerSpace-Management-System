@@ -1,6 +1,7 @@
 const express = require('express');
 const passport = require('../config/passport');
 const db = require('../models');
+const isAuthenticated = require('../middleware/authentication/is-authenticated');
 const { check, validationResult } = require('express-validator/check');
 
 const router = express.Router();
@@ -92,7 +93,7 @@ router.post('/signin', signInValidation, passport.authenticate('local'), (req, r
     });
 });
 
-router.get('/signout', (req, res, next) => {
+router.get('/signout', isAuthenticated, (req, res, next) => {
     req.logOut();
     req.session.destroy(error => {
         if (error) {
