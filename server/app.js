@@ -49,8 +49,7 @@ sequelize.sync()
     .catch(error => {
         console.log('SQLite syncing error:');
         console.log(error);
-    });
-*/
+    });*/
 
 app.use('/users', require('./routes/users-route'));
 app.use('/cumulativeitems', require('./routes/cumulative-items-route'));

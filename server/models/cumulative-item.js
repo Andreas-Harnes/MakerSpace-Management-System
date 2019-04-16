@@ -18,6 +18,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true
         },
 
+        image: {
+            type: DataTypes.STRING(MAX_STRING_LENGTH),
+            allowNull: false,
+            defaultValue: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I'
+        },
+
         categoryId: {
             type: DataTypes.INTEGER,
             references: {
