@@ -14,20 +14,20 @@
         <div role="group" aria-labelledby="header1">
           <b-dropdown-item-button aria-describedby="header1">
             <router-link to="/">
-              <a class="" href="">Hjem</a>
+              <a class="" href="">Home</a>
             </router-link>
           </b-dropdown-item-button>
           <b-dropdown-divider>
           </b-dropdown-divider>
-          <b-button id="signIn" v-bind:to="'/login'" variant="primary" size="sm" @click="onClick">Login</b-button>
+          <b-button id="signIn" v-bind:to="'/login'" variant="primary" size="sm" @click="onClick">Log in</b-button>
           <b-dropdown-item-button>
             <router-link to="/register">
-              <a href="#">Registrer deg her!</a>
+              <a href="#">Registrer now</a>
             </router-link>
           </b-dropdown-item-button>
           <b-dropdown-item-button>
             <router-link to="/">
-              <a class="" href="">Glemt passord?</a>
+              <a class="" href="">Forgoten password?</a>
             </router-link>
           </b-dropdown-item-button>
           <b-dropdown-item-button>

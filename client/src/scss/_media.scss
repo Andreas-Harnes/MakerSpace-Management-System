@@ -1,20 +1,31 @@
 
-/* Smartphones */
+/* Smartphones 320 x 600 */
 
 @media only screen and (max-width: 600px) {
+
+/* ---------- header --------- */
   
     #header-test {
         width: 120%;
-        height: 45%;
+        height: 25%;
     }
-    #category {
-        right: 20%;
-        top: -500em;
+    #header-test h2 {
+        font-size: 125%;
+        width: 150%;
+        right: 40%;
     }
 
+   
     .manger-nav a {
         visibility: hidden;
     }
+
+    #dropdownID {
+        right: 45%;
+        height: 10%;
+        top: -30%;
+    }
+
 /* -------- log in -------- */
     #login_txt {
         left: 40%;
@@ -34,6 +45,46 @@
         left: 1%;
     }
 
+
+
+/* ---------- body ------------ */
+
+#container {
+    visibility: hidden;
 }
 
+/* ---------- registrer --------- */
 
+#reg_title {
+   left: 6%;
+  }
+  
+  #txtFirstName {
+   margin: 2%;
+  }
+  
+  #txtLastName {
+    margin: 2%;
+  }
+  
+  #txtEmail {
+    margin: 2%;
+  }
+  
+  #numPhone {
+    margin: 2%;
+  }
+  
+  #txtPassword {
+    margin: 2%;
+  }
+  
+  #txtPasswordRepeat {
+    margin: 2%;
+  }
+  
+  #btnReg {
+    margin: 8%;
+  }
+
+}
