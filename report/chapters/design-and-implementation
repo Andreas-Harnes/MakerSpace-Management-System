@@ -21,10 +21,10 @@ The backend operates on the JavaScript runtime enviroment provided by Node.js.
 The backend uses the default Node.js package manager NPM.
 There are many packages used in the backend but the most prominent of them is the web application framework Express.js.
 The routing Express.js provides is used for all endpoints in the application.
-The endpoints provides clients access to resources stored on the backend or allows clients to create their resources.
 The endpoints provides clients with the ability to create, read, update, or delete resources stored on the backend.
 There are several endpoints provided by the backend.
 
+\subsection{Endpoints}
 User registration is achieved through an endpoint.
 In order to register a new user the client has to send a POST request to the endpoint at /users/signup.
 The backend is implemented with input validation.
@@ -43,33 +43,96 @@ After having validated the input provided by the client the backend compares the
 If the two match the backend returns an HTTP status code of 200 and the user is logged in.
 If they do not match the backend returns an HTTP status code of 401(unauthorized).
 
+Finally logout is also achieved through an endpoints.
+In order to logout the client has to send a GET request to the endpoint at /users/signout.
+As the request is a GET request it cannot contain any fields so unlike the user registration route and the user login route the logout route does not require any fields to be present.
+The request must however contain a valid session ID in the "mms\_sid" cookie as the backend needs to know which user to log out.
+When the user has been logged out the session ID is invalidated, and the server responds with an HTTP status of 200.
+Failure of the client to send the aforementioned cookie, or sending an expired or otherwise invalid cookie, will result in a response with an HTTP status of 401(unauthorized).
 
+Fetching items as well as categories for items stored in the application is also achieved through an endpoint.
+The client has to send a GET request to the endpoint at /cumulativeitems.
+The request is not required to contain any fields or any other information.
+The request may optionally however contain one or more 'category' query parameter.
+The backend only accepts integers as parameters; any other value is ignored.
+The integer represents the ID of a category.
+The parameter is used to filter items based on their category ensuring only items matching the category are included in the response.
+The request may also optionally contain one 'start' query parameter.
+The backend once again also only accepts integers as parameters.
+The integer represents the offset in the list of items.
+The backend always returns a maximum of 25 items in order to preserve network usage.
+Only the items stored in the slots 1-25 will be returned should there be more than 25 items stored in the database and no 'start' parameter is specified.
+The 'start' parameter may be used to change the slots returned in the response.
+For instance when start is set to 5 the items in slots 6-30 will be returned.
+The categories 
+The request will only return one of two responses; the server may respond with an HTTP status of 200 along with the appropriate items, or it may respond with an HTTP status of 500(internal server error).
+The later only occurs should something go wrong - such as the backend being unable to access the database.
 
+SpecificItems ...
 
+UsersProfile ...
 
+Favorites ...
 
-
+\subsection{Restricted endpoints}
 The backend is designed with access restrictions on the resources it provides.
+Users authenticate themselves using their session ID.
+The backend generates a unique session ID when the user successfully registers a new user, or when a user successfully logs in.
+This means the backend does not uniquely identify any users before registering a user or before a user logs in.
+The backend stores the session ID in a local SQLite database
+The backend also creates a cookie named "mms\_sid" which stores the session ID.
+The cookie is sent to the client, and on each subsequent request to an endpoint(or until logout) the client sends its cookie containing the session ID.
+The backend uses the cookie to authenticate the user.
 This ensures protected resources(resources that are only available to a subset of the total number of users) remain confidential and inaccessible to unauthorized or unauthenticated users.
+There are currently no restricted routes, but given the fact the backend already has an implementation for the required authentication functionality, adding such restrictions on new or already existing routes would be trivial using the authentication middleware.
+The backend has thus been designed and implemented with extendability in mind - which was one of the desirable traits for the project.
 
-Logging out kills cookie, no cookie before login ...
-
-Passport ...
-
-Sessions ...
-
-Salting/hashing ...
-
-Authentication ...
-
-Log in ...
-
-Fetching items ...
-
-HTTPS ...
+\section{Connection}
+The frontend and the backend communicates using an HTTP(Hypertext Transfer Protocol) connection.
 
 Domain name ...
 
-\section{Database}
+HTTPS ...
 
-\section{Hardware}
+Using POST instead of request header ...
+
+JSON ...
+
+\section{Database}
+All fields are stored in plain text in the database with the exception of the user's password as storing passwords in plain text is considered poor security practice \cite{plaintext-passwords-poor-practice}.
+There are several reasons for this:
+\begin{itemize}
+    \item Employees(with access to the database) will have access to the passwords.
+    \item In the event of a security breach the intruders may be able to extract the passwords from the database.
+    \item In the event of a database leak the passwords will be accessible to everyone.
+\end{itemize}
+
+Malicious actors would be able to authenticate as other users in the MakerSpace Management System should they have access to the passwords.
+As such the malicious actors would be able to extract information from the victims, or perform actions on their behalf - actions the victims perhaps would not otherwise do.
+Even worse the malicious actors would be able to authenticate as others users on other platforms as many users reuse the same password across services \cite{reuse-passwords}.
+
+For the aforementioned reasons the group has taken extra care when storing passwords.
+The backend uses the NPM package bcrypt.js.
+The passwords go through the following process; they are first salted, then the salted password is hashed and lastly the salted and hashed password has the salt prepended to it.
+For example:
+\begin{enumerate}
+    \item The user enters his password theUs3rP!assw0rd.
+    \item The backend hands the user password to bcrypt.js and it generates the salt:
+    
+    \$2b\$12\$304a14Olae2ZToKVeAk9zO.
+
+    The value has three different fields separated by a \$.
+    The first field (in this case "2b") represents the bcrypt algorithm version used to generate the hash.
+    The second field (in this case "12") represents the cost factor.
+    The third field (in this case "304a14Olae2ZToKVeAk9zO") represents the actual salt.
+
+    \item bcrypt.js adds the salt to the password and hashes it.
+    The hashed password is:
+
+    rfmhWJ/IFZl0eEJZS5KkxVl.T5W4N3K. 
+    \item The hashed password has the salt prepended to it which results in the following value:
+
+    \$2b\$12\$304a14Olae2ZToKVeAk9zOrfmhWJ/IFZl0eEJZS5KkxVl.T5W4N3K.
+    \item bcrypt.js returns the password to the backend and the backend stores it in the MariaDB.
+
+\end{enumerate}
