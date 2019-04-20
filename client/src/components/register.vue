@@ -1,6 +1,6 @@
 <template>
     <div id="reg">
-      <h1 id="reg_title">Registrer now!</h1>
+      <h1 id="reg_title">Register now!</h1>
       <div id="inputFields">
           <input class="regFields" id="txtFirstName" type="text" name="firstName" placeholder="First name" /> <br>
           <input class="regFields" id="txtLastName" type="text" name="lastName" placeholder="Last name" /> <br> 
