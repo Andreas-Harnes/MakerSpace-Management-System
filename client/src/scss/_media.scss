@@ -88,46 +88,6 @@ and (max-width: 600px) {
 
 }
 
-/* ------------------------ tablets 768 x 1024 ----------------------------- */
-
-@media only screen 
-and (min-width: 768px)
-and (max-width: 1024px) {
-
-/* header */
-#header-test {
-  width: 121%;
-  height: 18%;
-}
-
-#makerspace-logo {
-width: 10%;
-right: 10%;
-}
-#test-logo {
-  right: 100%;
-}
-
-#header-test h2 {
-  font-size: 100%;
-  width: 150%;
-  right: 59%;
-}
-
-.manger-nav a {
-  visibility: hidden;
-}
-
-#dropdownID {
-  right: 79%;
-  height: 10%;
-  top: -15%;
-}
-
-
-
-
-
 /* ----------- magnus ----------- */
 @media only screen and (min-width: 720px) and (max-width: 1280px) {
   #header-test h2 {
@@ -250,7 +210,7 @@ right: 10%;
 
 
 
-/* ------------------------ tablets 768 x 1024 ----------------------------- */
+/* ------------------------ Tablets 768 x 1024 ----------------------------- */
 
 @media only screen 
 and (min-width: 768px)
@@ -305,8 +265,5 @@ right: 10%;
 #txtPassword2 {
   left: 1%;
 }
-
-
-
 
 }
