@@ -22,12 +22,12 @@
           <b-button id="signIn" v-bind:to="'/login'" variant="primary" size="sm" @click="onClick">Log in</b-button>
           <b-dropdown-item-button>
             <router-link to="/register">
-              <a href="#">Registrer now</a>
+              <a href="#">Register now</a>
             </router-link>
           </b-dropdown-item-button>
           <b-dropdown-item-button>
             <router-link to="/">
-              <a class="" href="">Forgoten password?</a>
+              <a class="" href="">Forgotten password?</a>
             </router-link>
           </b-dropdown-item-button>
           <b-dropdown-item-button>

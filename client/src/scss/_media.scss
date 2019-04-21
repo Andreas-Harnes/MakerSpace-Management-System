@@ -124,8 +124,169 @@ right: 10%;
   top: -15%;
 }
 
-/* log in */
 
+
+
+
+/* ----------- magnus ----------- */
+@media only screen and (min-width: 720px) and (max-width: 1280px) {
+  #header-test h2 {
+    font-size: 187%;
+    position: relative;
+    left: 0.0005%;
+  }
+  #searching {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 100%;
+    top: 2em;
+    right: 50em;
+  }
+  #category{
+  
+    right: 50%
+  }
+  #availability{
+    position: relative;
+    right: 0%
+  }
+  /*Log in*/
+  #login_txt {
+    left: 26.5%;
+    width: 30%;
+  }
+  #btnLogin {
+    position: relative;
+    right: 2%;
+}
+  #txtEmail2 {
+    right: 2%;
+  }
+  #txtPassword2 {
+    right: 2%;
+}
+#forgot_password{
+  right: 2%;
+}
+
+}
+@media only screen and (min-width: 1080px) and (max-width: 1920px){
+  #header-test h2 {
+    font-size: 187%;
+    position: relative;
+    right: 8.8%;
+  }
+  #makerspace-logo{
+    float: left;
+    height: 6.5%;
+    width: 6.5%;
+    padding: 0% 0% 0% 0%;
+  }
+    /*Log in*/
+    #login_txt {
+      left: 47%;
+      width: 4%;
+    }
+    #btnLogin {
+      position: relative;
+      right: 2%;
+  }
+    #txtEmail2 {
+      right: 2%;
+    }
+    #txtPassword2 { 
+      right: 2%;
+  }
+  #forgot_password{
+    right: 2%;
+  }
+  /*Register--if changes are necessary --fix here*/
+ #reg_title {
+  right: 0.5%;
+ }
+ #txtFirstName {
+  right: 5%;
+ }
+ 
+}
+@media only screen and (min-width: 1440px) and (max-width: 2560px){
+  #header-test h2 {
+    right: 12.4%;
+  }
+  #makerspace-logo{
+    float: left;
+    height: 5%;
+    width: 5%;
+    padding: 0% 0% 0% 0%;
+  }
+    /*Log in*/
+    #login_txt {
+      left: 47.7%;
+      width: 3%;
+    }
+    #btnLogin {
+  }
+    #txtEmail2 {
+      right: 25%;
+    }
+    #txtPassword2 { 
+  }
+  #forgot_password{
+  }
+  /*Register--if changes are necessary --fix here*/
+ #reg_title {
+  right: 2%;
+ }
+ #txtFirstName {
+  right: 3.9%;
+ }
+
+}
+@media only screen and (min-width: 2160px) and (max-width: 3840px){}
+
+
+
+
+
+
+/* ------------------------ tablets 768 x 1024 ----------------------------- */
+
+@media only screen 
+and (min-width: 768px)
+and (max-width: 1024px) {
+
+/* header */
+#header-test {
+  width: 121%;
+  height: 18%;
+}
+
+#makerspace-logo {
+width: 10%;
+right: 10%;
+}
+#test-logo {
+  right: 100%;
+}
+
+#header-test h2 {
+  font-size: 100%;
+  width: 150%;
+  right: 59%;
+}
+
+.manger-nav a {
+  visibility: hidden;
+}
+
+#dropdownID {
+  right: 79%;
+  height: 10%;
+  top: -15%;
+}
+
+/* Log in */
 #login_txt {
   left: 40%;
   width: 30%;
