@@ -2,7 +2,7 @@
   <header id="header-test" class="header">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <div>
+    <div id="test-logo"> 
       <img id="makerspace-logo" src="../assets/facebook-logo.png" v-bind:to="'/'" alt="MakerSpaceLogo" width="9%"  height="9%" />
     </div>
     <h2>MakerSpace Management System</h2>

@@ -1,11 +1,11 @@
 
-/* Smartphones 320 x 600 */
+/* ------------------------------ Smartphones 320 x 600 ------------------------ */
 
 @media only screen 
 and (min-width: 320px)
 and (max-width: 600px) {
 
-/* ---------- header --------- */
+/* header */
   
     #header-test {
         width: 120%;
@@ -17,7 +17,6 @@ and (max-width: 600px) {
         right: 40%;
     }
 
-   
     .manger-nav a {
         visibility: hidden;
     }
@@ -28,7 +27,7 @@ and (max-width: 600px) {
         top: -30%;
     }
 
-/* -------- log in -------- */
+/* log in */
     #login_txt {
         left: 40%;
         width: 30%;
@@ -47,15 +46,13 @@ and (max-width: 600px) {
         left: 1%;
     }
 
-
-
-/* ---------- body ------------ */
+/* body */
 
 #container {
     visibility: hidden;
 }
 
-/* ---------- registrer --------- */
+/* registrer */
 
 #reg_title {
    left: 6%;
@@ -91,26 +88,30 @@ and (max-width: 600px) {
 
 }
 
-/* tablets 768 x 1024 */
+/* ------------------------ tablets 768 x 1024 ----------------------------- */
 
 @media only screen 
 and (min-width: 768px)
 and (max-width: 1024px) {
 
-/* -------- header --------- */
+/* header */
 #header-test {
   width: 121%;
   height: 18%;
 }
 
 #makerspace-logo {
-width: 18%;
+width: 10%;
+right: 10%;
+}
+#test-logo {
+  right: 100%;
 }
 
 #header-test h2 {
-  font-size: 175%;
+  font-size: 100%;
   width: 150%;
-  right: 40%;
+  right: 59%;
 }
 
 .manger-nav a {
@@ -118,14 +119,31 @@ width: 18%;
 }
 
 #dropdownID {
-  right: 20%;
+  right: 79%;
   height: 10%;
-  top: -65%;
+  top: -15%;
 }
 
+/* log in */
 
+#login_txt {
+  left: 40%;
+  width: 30%;
+  font-size: 1%;
+}
 
+#btnLogin {
 
+}
+
+#txtEmail2 {
+  left: 1%;
+
+}
+
+#txtPassword2 {
+  left: 1%;
+}
 
 
 
