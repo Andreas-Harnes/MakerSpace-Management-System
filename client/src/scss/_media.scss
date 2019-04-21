@@ -48,9 +48,9 @@ and (max-width: 600px) {
 
 /* body */
 
-#container {
-    visibility: hidden;
-}
+    #container {
+       visibility: hidden;
+    }
 
 /* registrer */
 
@@ -88,7 +88,12 @@ and (max-width: 600px) {
 
 }
 
+
+
+
 /* ----------- magnus ----------- */
+
+/*
 @media only screen and (min-width: 720px) and (max-width: 1280px) {
   #header-test h2 {
     font-size: 187%;
@@ -111,7 +116,10 @@ and (max-width: 600px) {
     position: relative;
     right: 0%
   }
+
+  */
   /*Log in*/
+  /*
   #login_txt {
     left: 26.5%;
     width: 30%;
@@ -142,8 +150,9 @@ and (max-width: 600px) {
     height: 6.5%;
     width: 6.5%;
     padding: 0% 0% 0% 0%;
-  }
+  } */
     /*Log in*/
+    /*
     #login_txt {
       left: 47%;
       width: 4%;
@@ -160,8 +169,9 @@ and (max-width: 600px) {
   }
   #forgot_password{
     right: 2%;
-  }
+  } */
   /*Register--if changes are necessary --fix here*/
+  /*
  #reg_title {
   right: 0.5%;
  }
@@ -179,8 +189,9 @@ and (max-width: 600px) {
     height: 5%;
     width: 5%;
     padding: 0% 0% 0% 0%;
-  }
+  } */
     /*Log in*/
+    /*
     #login_txt {
       left: 47.7%;
       width: 3%;
@@ -193,8 +204,9 @@ and (max-width: 600px) {
     #txtPassword2 { 
   }
   #forgot_password{
-  }
+  } */
   /*Register--if changes are necessary --fix here*/
+  /*
  #reg_title {
   right: 2%;
  }
@@ -203,7 +215,7 @@ and (max-width: 600px) {
  }
 
 }
-@media only screen and (min-width: 2160px) and (max-width: 3840px){}
+@media only screen and (min-width: 2160px) and (max-width: 3840px){} */
 
 
 
@@ -218,22 +230,19 @@ and (max-width: 1024px) {
 
 /* header */
 #header-test {
-  width: 121%;
+  width: 150%;
   height: 18%;
 }
 
 #makerspace-logo {
-width: 10%;
+width: 9%;
 right: 10%;
-}
-#test-logo {
-  right: 100%;
 }
 
 #header-test h2 {
-  font-size: 100%;
+  font-size: 125%;
   width: 150%;
-  right: 59%;
+  left: -45%;
 }
 
 .manger-nav a {
@@ -241,15 +250,67 @@ right: 10%;
 }
 
 #dropdownID {
-  right: 79%;
+  right: 40%;
   height: 10%;
-  top: -15%;
+  top: -165%;
+}
+
+/* body */
+
+
+#searching {
+  left: -35%;
+}
+
+#category {
+ left: -75%;
+ top: -55%;
+}
+
+
+#availability {
+  left: -10%;
+  visibility: hidden;
+}
+
+.manger-nav a{
+ 
+}
+
+
+#container {
+ width: 20%;
+ visibility: hidden;
+}
+
+#item_element {
+ width: 70%;
+}
+
+#content_img {
+ 
+}
+
+#item_title {
+ 
+}
+
+#description {
+ 
+}
+
+#status {
+  
+}
+
+#favorit_button {
+ 
 }
 
 /* Log in */
 #login_txt {
-  left: 40%;
-  width: 30%;
+  left: 23%;
+  width: 40%;
   font-size: 1%;
 }
 
@@ -258,12 +319,58 @@ right: 10%;
 }
 
 #txtEmail2 {
-  left: 1%;
+  left: 3%;
 
 }
 
 #txtPassword2 {
-  left: 1%;
+  left: 3%;
 }
+
+#forgot_password {
+  left: -4%;
+}
+
+/* Registrering */
+
+#reg_title {
+  left: -8%;
+ }
+ 
+ #txtFirstName {
+  margin: 2%;
+ 
+ }
+ 
+ #txtLastName {
+   margin: 2%;
+   
+ }
+ 
+ #txtEmail {
+   margin: 2%;
+   
+ }
+ 
+ #numPhone {
+   margin: 2%;
+   
+ }
+ 
+ #txtPassword {
+   margin: 2%;
+   
+ }
+ 
+ #txtPasswordRepeat {
+   margin: 2%;
+   
+ }
+ 
+ #btnReg {
+   margin: 8%;
+   left: 5%;
+ }
+
 
 }
