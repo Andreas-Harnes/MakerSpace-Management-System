@@ -1,7 +1,8 @@
 \chapter{Analysis}
-\todo{Endre til at å si at vi har søkt, og michael var enig i valget}
+\todo{Skrevet om, trengs å leses over}
 This chapter provides the background knowledge required to understand the thought process behind the selected technologies.
-The group have been advising the assignment provider as to suitable technologies for the project but the assignment provider has been the one selecting them.
+The Group has been researching different technologies and solutions that can be viable for the application we are developing. Throughout the selection process the group have presented the assignment provider, Michael A. Lundsveen with results from the research and recommendations the group has found for the different technologies that can be used for the application. The group together with Michael worked together to select which technologies that should be used based on the this research.
+
 The chapter first inspects the database technologies that are suitable for the assignment.
 Afterwards the chapter examines the selected frontend technology before analyzing the technology stack used for the backend development.
 Lastly the chapter provides insight as to why the methodology selected is the most suitable for the project.
@@ -11,7 +12,7 @@ The project group has decided to conduct interviews with different MakerSpace br
 
 \subsection{MakerSpace Inspiria}
 
-This section is based on an interview the group conducted, as such the necessary sources are added as an attachment. The source is a voice recording of the interview transcribed. See page::::::::::::: %lage attachement/appendix side for vedlegg?%  
+This section is based on an interview the group conducted, as such the necessary sources are added as an attachment. The source is a voice recording of the interview transcribed. \todo{Husk å endre dette}See page::::::::::::: %lage attachement/appendix side for vedlegg?%  
 
 The first MakerSpace that was interviewed was MakerSpace Inspiria, located in Sarpsborg. It is part of Inspiria Science Centre \cite{Inspiria-SC}, a building full of science for people to enjoy and test out. It is mainly targeted for kids, but the MakerSpace is open for everyone when the centre is open. MakerSpace Inspiria is very much alike MakerSpace Halden. It's closely resembles each other and has a lot of the same equipment; 3D printers, laser cutters, soldering irons etc. 
 And it is here the group conducted its first interview, at MakerSpace Inspiria. The interviewee answered all the questions best possible and the group got a lot of interesting information. There was no system in place for keeping tabs on the inventory, digital or other. The employees were the ones that kept control over the inventory personally, the employees shared responsibility of overseeing the inventory and ordering new parts and equipment when needed. But admitted to not having full control over everything. Components and tools are being kept in lockers and has a box i.e where similar tools or components are grouped and put together. There is however no special categorizing of the equipment, but everything has a predetermined place. 
@@ -24,21 +25,28 @@ When asked if a digital system for inventory keeping was something MakerSpace In
 
 After an interview and getting 20 questionnaire responses from different MakerSpace's. The group has read through the responses and analyzed them. However, since all the answers are anonymous the group doesn't know which MakerSpace's that responded.   
 
-The equipment each respondent have was varied, everything from digital tools and equipment and more heavy tools like CNC machines. Here is an overview of most of the equipment MakerSpace's in Norway have.
+The equipment each respondent have was varied, everything from digital tools and equipment to more heavy tools like CNC machines, laser cutter, metal saws, vinyl cutters, acids for creating circuit boards and more. Basically every tool for the job to let everyone, children and adults be as creative as possible and give them the space they need for it. 
 
-Heavy machinery (metalwokring tools)
+For any workplace that have tools, it is important to know where everything is. This makes it easier to find what you are looking for. Out of 20 respondents the categorizing and placement of tools went from having no idea or no system, to full control with a website and database for every tool and component. The most common sorting was after the size and type of tool and what department it belonged to (Electronics, Mechanical i.e). Here is a short list of different methods of storing and categorizing tools from MakerSpace's:
 
-Hand tools
+\begin{itemize}
+    \item "Big things goes in lockers, small things goes on the wall."
+    \item "Categorized after which department it belongs to, i.e electronics, metal, wood etc."
+    \item "Tools are not categorized and all components counted by stocktaking and saved in a database with potential of resale through own proprietary developed sale system."  
+    \item "Every component is sorted after the category i.e transistors, IC, sensors and tools are sorted after usage area and size. There is a designated room for the biggest/baddest/noisiest tools." 
+    \item "I have no clue"
+    \item "Drawers and shelves etc. On our website you can search i.e for an electronic component and get an overview of what we have and the exact shelf it is located on, but also if the component is available in stock. Sale price is also listed. Heavy machinery like welding gear, wood grinder belongs to a room we call heavy machinery.
+    Most of the electronic components are sorted into shelves with a searchable position from our website. However quantity is not always updated, you will need to check yourself if the component you are looking for is available. If we are informed that we have run empty of a component, it will take usually 1-2 weeks before we have bought in more. We sell Arduino, Raspberry pi and touch monitors to customers. We also have two new room where we have a laser cutter and other stuff but the room Isn't fully decorated yet."  
+\end{itemize}
 
-Woodworking tools
+Tools, equipment and components can be broken. How the broken item is reported broken and handled afterwards was one of the questions asked. How this is handled with or without a digital system could be important information for how the application is developed and how items in the system should be handled(function as removable by unique id or based on quantity i.e). 
+None of the respondents had any digital system for reporting damaged or destroyed tools and components. If anything was broken it was either reported to a superuser or employee by the person that broke or found something broken. Some of the tools and components was considered consumable and just replaced. Certain equipment at one MakerSpace was prohibited from "ordinary users" from using and only certain members was allowed to operate them. Some examples of what equipment was prohibited is; 3D printers, CNC machines, laser cutter and welding tools. The prohibition of the equipment happened after someone broke a very expensive 3D printer. 
+Some of the respondents had a form that needed to be filled out and also used Slack internally for the employees to communicate. Slack is a cloud based system used by teams(development, project management i.e) to communicate with each other\cite{Slack_Software}. This includes chat room, private groups and direct messaging. The very convenient about Slack is that all content inside slack is searchable. Including files, conversations and people\cite{what_is_slack}.
 
-Electronic tools
+60\% said people are allowed to borrow tools and equipment home. The people that could borrow things was restricted to members of the MakerSpace, everyone with a contract, members but something needs to be pawned as collateral i.e drivers license, members or students, students. 
+Out of the people that could borrow tools and equipment, there were some restrictions to what was allowed to borrow.
 
-Electronic components
 
-Acids
-
-The amount of stuuf ranged from 1-22... 45 tons of equipment. skrive om mengde utstyr og alt som ikke apsset inn i listen.
 
 Ut ifra spørreskjema så skriver vi hva vi fikk ut av det og hva vi lærte av det. Vi har ikke sendt ut spørreskjema enda så denne delen er av den grunn ikke fylt ut.
 
@@ -185,6 +193,8 @@ The second major point for choosing Vue.js was the reactivity of Vue. With the r
 
 The last major point for the group was the low learning curve of Vue.js. With this learning curve it means that the easier parts of Vue.js is easier to learn, but the more complicated components can be harder. This is perfect for the groups project since all the group members are new to Vue.js and can get faster into the programming.
 
+\subsection{Css/Scss}
+
 \section{Backend technology selection}
 \todo{en måte: alternativ valg +/- valget}
 For the backend technology there are several technologies that could be used. The group had discussed what backend technology to use, and asked the assignment provider to choose. A full JavaScript technology stack was chosen and some of the major backend technologies have been ruled out. Such as Pythons Django, PHP or Javas Spring backend framework. 
@@ -197,3 +207,32 @@ JavaScript will be used for the backend, Node.js will be used as the server to c
     \caption{Event loop in Node.js}
     \label{fig:Node_Event_Loop}
 \end{figure}
+
+\section{Connecting the frontend and the backend}
+The frontend needs to be able to connect to the backend to create, read, update or delete resources.
+The connection protocol selected is HTTP(Hypertext Transfer Protocol) and HTTPS(Hypertext Transfer Protocol Secure).
+
+\subsection{HTTP and HTTPS}
+HTTP is a protocol designed for communication between distributed systems \cite{mozilla_what_is_http}.
+The flow of the protocol looks like this \cite{mozilla_http_flow}:
+\begin{enumerate}
+    \item The client sends an HTTP request to the target host.
+    \item The host receives the HTTP request.
+    \item The host processes the HTTP request.
+    \item The host sends an HTTP response to the client.
+    \item The client receives the HTTP response.
+\end{enumerate}
+
+HTTPS is an extension of HTTP.
+HTTP transmits data in plain text, and as such the protocol is considered insecure as anyone listening or intercepting the traffic can read the data transmitted \cite{http_vs_https}.
+HTTPS on the other hand encrypts the data before transmitting it to an external host \cite{https_explained}.
+This ensures anyone listening or intercepting the traffic is unable to read the data.
+All data can thus pass freely and securely between the two hosts communicating with one another \cite{http_vs_https}.
+
+HTTP/HTTPS lays the foundation for any data exchange \cite{mozilla_http_overview} on the modern web \cite{tutsplus_what_is_http} which makes the protocols the ideal protocols for communication between the frontend and the backend for the project.
+
+\subsection{HTTP status codes}
+
+\subsection{JSON}
+
+\section{Git and GitHub}

@@ -89,6 +89,7 @@ The backend has thus been designed and implemented with extendability in mind - 
 
 \section{Connection}
 The frontend and the backend communicates using an HTTP(Hypertext Transfer Protocol) connection.
+Using HTTPS whenever possible
 
 Domain name ...
 
