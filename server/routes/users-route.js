@@ -45,13 +45,13 @@ router.post('/signup', signUpValidation, (req, res, next) => {
     db.User.findOne({ where: { email: req.body.email } })
         .then(user => {
             if (user) {
-                return res.status(403).json({ error: 'Email already used' });
+                return res.status(409).json({ error: 'Email already used' });
             }
 
             db.User.findOne({ where: { phone: req.body.phone } })
                 .then(user => {
                     if (user) {
-                        return res.status(403).json({ error: 'Phone already used' });
+                        return res.status(409).json({ error: 'Phone already used' });
                     }
 
                     db.User.create({
