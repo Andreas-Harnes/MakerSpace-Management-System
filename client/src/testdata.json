@@ -1,0 +1,45 @@
+{
+  "categories": [
+      {
+          "id": 1,
+          "name": "Drones"
+      },
+      {
+          "id": 2,
+          "name": "Tools"
+      },
+      {
+          "id": 3,
+          "name": "VR"
+      }
+  ],
+  "cumulativeItems": [
+      {
+          "id": 3,
+          "name": "DJL Drone 3000",
+          "description": "A cool looking drone",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+          "categoryId": 1,
+          "items": 1,
+          "availableItems": 1
+      },
+      {
+          "id": 4,
+          "name": "Eksenterbor maskin",
+          "description": "En bor maskin",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+          "categoryId": 2,
+          "items": 1,
+          "availableItems": 0
+      },
+      {
+          "id": 5,
+          "name": "VR balltre XPF 2.2.3",
+          "description": "Etterfølgeren til stor selgeren The Batshit",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+          "categoryId": 3,
+          "items": 1,
+          "availableItems": 0
+      }
+  ]
+}

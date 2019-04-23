@@ -11,6 +11,8 @@ import login from './components/login'
 import register from './components/register'
 import header from './components/header'
 import body from './components/body'
+import footer from './components/footer'
+
 // import header from './components/header'
 import test from './components/test'
 import forgotten_password from './components/forgotten_password'
@@ -62,3 +64,9 @@ new Vue({
   render: h => h(header),
   router
 }).$mount('#header')
+
+// new Vue({
+//   store,
+//   render: h => h(footer),
+//   router
+// }).$mount('#footer')

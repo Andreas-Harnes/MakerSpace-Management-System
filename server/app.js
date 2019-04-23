@@ -33,7 +33,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-/*db.sequelize.sync({ force: true })
+db.sequelize.sync({ force: true })
     .then(() => {
         console.log('MariaDB synced successfully');
     })
@@ -49,7 +49,7 @@ sequelize.sync()
     .catch(error => {
         console.log('SQLite syncing error:');
         console.log(error);
-    });*/
+    });
 
 app.use('/users', require('./routes/users-route'));
 app.use('/cumulativeitems', require('./routes/cumulative-items-route'));
