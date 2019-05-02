@@ -1,6 +1,5 @@
 <!-- body -->
  <template>
- <tr>
 <!-- search -->
  <!-- <template>
   <div id="searching">
@@ -12,7 +11,7 @@
  <table class="table table-bordered">
    <thead>
      <tr>
-       <!-- <th>ID</th> -->
+       <th>ID</th>
        <th>Name</th>
        <th>Description</th>
        <th>Image</th>
@@ -22,7 +21,7 @@
      </tr>
    </thead>
 
-   <tr v-for="item in jsonData">
+   <tr v-for="item in jsonData" v-bind:key='item'>
 				<td v-for="innerJSON in item" v-bind:key="innerJSON.id">{{innerJSON[item]}}</td>
 	 </tr>
 
@@ -50,13 +49,11 @@
     </b-form-group>
   </div>
   </tr> -->
-  </tr>
 </template>
 <script>
 import axios from 'axios';
 
 function getItems() {
-  //  axios.get('http://158.39.162.154:3000/cumulativeitems')
   axios.get('http://mms.hiof.no:3000/cumulativeitems')
         .then(function (response) {
           // handle success
@@ -85,10 +82,12 @@ function test() {
       }
     },
     mounted: () => {
-      jsonData = getItems();
+      // jsonData = getItems();
       // getItems();
     }
   }
+  // jsonData = getItems();
+  console.log('hello there');
 </script>
 <style>
 /* Search */
