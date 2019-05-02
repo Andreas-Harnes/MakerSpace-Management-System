@@ -21,6 +21,11 @@
        <th>Available</th>
      </tr>
    </thead>
+
+   <tr v-for="item in jsonData[0]">
+				<td v-for="innerJSON in item">{{innerJSON[item]}}</td>
+		</tr>
+    
  </table>  
 <!-- category -->
 <div id="category">
@@ -50,11 +55,12 @@
 import axios from 'axios';
 
 function getItems() {
-   axios.get('http://158.39.162.154:3000/cumulativeitems')
-  // axios.get('http://mms.hiof.no:3000/cumulativeitems')
+  //  axios.get('http://158.39.162.154:3000/cumulativeitems')
+  axios.get('http://mms.hiof.no:3000/cumulativeitems')
         .then(function (response) {
           // handle success
           console.log(response);
+          return response.data.cumulativeItems;
         })
         .catch(function (error) {
           // handle error
@@ -62,7 +68,12 @@ function getItems() {
         })
         .then(function () {
           // always executed
+          console.log('done');
         });
+}
+
+function moveData(array, jsonData) {
+  array = jsonData;
 }
 
 function test() {
@@ -71,12 +82,12 @@ function test() {
 
   export default {
     data() {
+      jsonData : getItems();
       return {
         
       }
     },
     mounted: () => {
-      // doStuff();
       getItems();
     }
   }
