@@ -69,11 +69,14 @@ import axios from 'axios';
         .then(function () {
           // always executed
         });
+      },
 
+      doStuff: () => {
+        console.log("muaaa");
       }
     },
     mounted: () => {
-      getItems();
+      doStuff();
     }
   }
 </script>
