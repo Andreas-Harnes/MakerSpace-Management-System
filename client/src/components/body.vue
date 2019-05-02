@@ -12,7 +12,7 @@
  <table class="table table-bordered">
    <thead>
      <tr>
-       <th>ID</th>
+       <!-- <th>ID</th> -->
        <th>Name</th>
        <th>Description</th>
        <th>Image</th>
@@ -22,13 +22,13 @@
      </tr>
    </thead>
 
-   <tr v-for="item in jsonData[0]">
-				<td v-for="innerJSON in item">{{innerJSON[item]}}</td>
-		</tr>
-    
+   <tr v-for="item in jsonData">
+				<td v-for="innerJSON in item" v-bind:key="innerJSON.id">{{innerJSON[item]}}</td>
+	 </tr>
+
  </table>  
 <!-- category -->
-<div id="category">
+<!-- <div id="category">
     <b-form-group label="Category">
       <b-form-checkbox-group id="checkbox-group-2" v-model="selected" name="flavour-2">
         <b-form-checkbox value="item_title">Drone</b-form-checkbox>
@@ -38,9 +38,9 @@
         <b-form-checkbox value="skruer">Skruer</b-form-checkbox>
       </b-form-checkbox-group>
     </b-form-group>
-  </div>
+  </div> -->
   <!-- availability -->
-  <div id="availability">
+  <!-- <div id="availability">
     <b-form-group label="Availability">
       <b-form-checkbox-group id="checkbox-group-2" name="flavour-3">
         <b-form-checkbox value="available">Available</b-form-checkbox>
@@ -49,6 +49,7 @@
       </b-form-checkbox-group>
     </b-form-group>
   </div>
+  </tr> -->
   </tr>
 </template>
 <script>
@@ -72,23 +73,20 @@ function getItems() {
         });
 }
 
-function moveData(array, jsonData) {
-  array = jsonData;
-}
-
 function test() {
   console.log("hei");
 }
 
   export default {
     data() {
-      jsonData : getItems();
+      jsonData : ''
       return {
         
       }
     },
     mounted: () => {
-      getItems();
+      jsonData = getItems();
+      // getItems();
     }
   }
 </script>
