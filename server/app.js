@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const session = require('express-session');
 const passport = require('./config/passport');
 const db = require('./models');
@@ -19,6 +20,7 @@ const sequelize = new Sequelize(
     }
 );
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(session({
