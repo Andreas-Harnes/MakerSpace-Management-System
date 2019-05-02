@@ -2,22 +2,26 @@
  <template>
  <tr>
 <!-- search -->
- <template>
+ <!-- <template>
   <div id="searching">
     <input type="text" placeholder="Search..." />
   </div>
-</template>
+</template> -->
 
 <!-- containt -->
- <div id="container">
-    <div id="item_element">
-      <h2 id="item_title">Drone</h2>
-      <img id="content_img" src="smiley.gif" alt="bilde" height="42" width="42">
-      <p id="description">Beskrivelse av element her</p>
-      <p id="status">Status</p>
-  <b-button id="favorit_button" class="favorit_style">Favorit</b-button>
-    </div>
-  </div>
+ <table class="table table-bordered">
+   <thead>
+     <tr>
+       <th>ID</th>
+       <th>Name</th>
+       <th>Description</th>
+       <th>Image</th>
+       <th>Category ID</th>
+       <th>Total</th>
+       <th>Available</th>
+     </tr>
+   </thead>
+ </table>  
 <!-- category -->
 <div id="category">
     <b-form-group label="Category">
@@ -43,16 +47,33 @@
   </tr>
 </template>
 <script>
+import axios from 'axios';
+
   export default {
     data() {
       return {
-        selected: [], // Must be an array reference!
-        options: [
-          { text: 'Drone', value: 'item_title' },
-          { text: '3D-printer', value: '3d-printer' },
-          { text: 'Skruer', value: 'skruer' },
-        ]
+        
       }
+    },
+    methods: {
+      getItems: () => {
+        axios.get('mms.hiof.no:3000/cumulativeitems')
+        .then(function (response) {
+          // handle success
+          console.log(response);
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+        });
+
+      }
+    },
+    mounted: () => {
+      getItems();
     }
   }
 </script>
