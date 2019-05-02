@@ -49,15 +49,9 @@
 <script>
 import axios from 'axios';
 
-  export default {
-    data() {
-      return {
-        
-      }
-    },
-    methods: {
-      getItems: () => {
-        axios.get('mms.hiof.no:3000/cumulativeitems')
+function getItems() {
+   axios.get('http://158.39.162.154:3000/cumulativeitems')
+  // axios.get('http://mms.hiof.no:3000/cumulativeitems')
         .then(function (response) {
           // handle success
           console.log(response);
@@ -69,14 +63,21 @@ import axios from 'axios';
         .then(function () {
           // always executed
         });
-      },
+}
 
-      doStuff: () => {
-        console.log("muaaa");
+function test() {
+  console.log("hei");
+}
+
+  export default {
+    data() {
+      return {
+        
       }
     },
     mounted: () => {
-      doStuff();
+      // doStuff();
+      getItems();
     }
   }
 </script>
