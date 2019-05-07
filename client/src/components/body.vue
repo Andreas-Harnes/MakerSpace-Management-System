@@ -70,22 +70,38 @@ function getItems() {
         });
 }
 
-function test() {
-  console.log("hei");
-}
 
   export default {
+    name: 'body',
     data() {
-      jsonData : ''
       return {
-        
+        jsonData:[]
       }
     },
-    mounted: () => {
-      // jsonData = getItems();
-      // getItems();
+    methods:{
+      setJSON: () => {
+        axios.get('http://mms.hiof.no:3000/cumulativeitems')
+        .then(function (response) {
+          // handle success
+          console.log(response);
+          this.jsonData = response.data.cumulativeItems;
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+          console.log('done');
+        });
+      }
+    },
+    mounted(){
+      this.setJSON()
+      
     }
   }
+
   // jsonData = getItems();
   console.log('hello there');
 </script>
