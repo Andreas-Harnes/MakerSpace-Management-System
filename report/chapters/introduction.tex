@@ -1,4 +1,5 @@
-\chapter{Introduction}
+\chapter{Introduction} \todo{introdusksjons tekst}
+In chapter one the information given will be about the introduction of the project group, assignment provider and MakerSpace HiØ. Followed by the point and purpose of the problem the project group has been asked to fix. After that a table of deliveries for the project will be introduced and a full section of methods the project group will use for the project, including methods for project management, information gathering and how to handle gathered information and how evaluation and testing of the MMS will be done. In the end of chapter one the report structure will be found. The report structure contains a short description of what information can be found in every chapter of the report.            
 \section{Project group}
 The bachelor group consists of the following four IT students:
 \begin{itemize}
@@ -48,7 +49,7 @@ Michael also arranges courses for the MakerSpace employees allowing them to lear
 
 \begin{figure}
     \centering
-    \includegraphics[width=115mm,scale=1]{images/makerspace.png}
+    \includegraphics[width=115mm,scale=1]{figures/makerspace.png}
     \caption{Remote controlled drone}
     \label{fig:makerspace}
 \end{figure}
@@ -124,7 +125,7 @@ This allows future features to be incorporated into the modules without difficul
 \subsection{Delivery}
 
 Below are the deliveries the group will deliver during the project.
-
+\todo{Hvorfor scaler denne ut av dokumnetet?}
 \begin{tabu} to 1.2\textwidth { | X[l] | X[c] | }
     \hline
     \textbf{Date} & \textbf{Delivery} \\
@@ -145,13 +146,64 @@ Below are the deliveries the group will deliver during the project.
     \hline
 \end{tabu}
     
-\section{Method}
+\section{Method} \todo{Masse ord som besrkiver lite i 1.5}
+\todo{gjør hele kapittelet konkret}
 For the project the group will use a set of methods for how the group will conduct research, gather information and how to handle the collected information, what kind of project management method we will use and why it fits the project. The methods used for testing the application and how to most efficiently develop it will also be documented here. 
 
-\subsection{Agile}
-The group has decided to use an agile model for the software development process. After a discussion with the assignment provider about a suitable project management method. The group proposed Agile as the most suitable for the project and the most effective for the type of software development the group would do. The assignment provider agreed to the use of Agile.  
-The project is small in scale and is not tightly integrated with any other system. This means the comprehensive documentation a waterfall model requires is not needed before software development can start.  Additionally this means informal communications between group members work well as the group is co-located.
-The agile model does however require a higher presence of the assignment provider as he plays an integral part in which components the group are to prioritize.
+\subsection{Waterfall} \todo{Legg til figur}
+A waterfall model is a sequential project management method which is a linear process of project management\cite{Waterfall_model}. It consists of several discrete phases where no phase begins before the prior phase is complete. Much like a waterfall filling lower level pools, the phases of the waterfall model has six phases where one flow over to the other. The six phases are: Requirements, Design, Implementation, Verification, Deployment and Maintenance\cite{Waterfall_phases}. The reason the group didn't choose waterfall as a project management method is because of the nature of waterfall. The sequential flow of waterfall makes it "impossible" to go back to previous phases. This can be very challenging when going between software development and writing the report. Revisions and changes in both of these can happen at anytime, especially if the scope of the project is changed or planned parts of the projects change during the course of the project.
+\begin{figure}
+    \centering
+    \includegraphics[width=100mm]{figures/waterfallMethods.png}
+    \caption{How waterfall works}
+    \label{fig:Waterfall_model}
+\end{figure}
+The right method needs to be used on the correct project, waterfall is most appropriate to use in some situations where:
+
+The requirements are well documented, clear and fixed\cite{SDLC_Waterfall_Model} and the product definition is stable. If the technology is clearly understood and not dynamic, with no ambiguous requirements the Waterfall method could be a good choice. The Waterfall method is also well put in use in situations with ample resources but with the required expertise to support the product and where the project is short. The waterfall model also has several advantages like departmentalization and control where a schedule can be created with deadlines for each phase of the project. As the development moves from one phase to the other and some of the advantages the waterfall model gives are: 
+It is simple and easy to understand and use, it is also easy to manage and each phase has specific deliverables and a review process. The Waterfall method is also very suited for smaller projects where the requirements are well understood\cite{Waterfall_Requirement_Advantage}, and the process and results are well documented. 
+As with everything the waterfall method has some disadvantages. It doesn't easily allow for changes in the project and when the software reaches the testing stage, going back and making changes to the software can be very challenging if the changes needed to be made haven't been properly documented or thought about in the conceptualization phase\cite{seguetech_waterfall_vs_agile}. Some other disadvantages are: 
+There is no working software developed until late in the project and it is not suitable for projects with high risk of changing its scope or other parts of the project\cite{Waterfalls_clear_advantage}. Another disadvantage especially for the project group is that integration for software is done quickly and at the end of the project, which makes it hard to identify any technological or other challenges early\cite{Waterfall_Software_Engineering}. 
+
+So with the waterfall model there are some clear advantages that fits the MakerSpace Management System project.The project is short and the requirements for the project are well documented, clear and fixed. Waterfall works well for smaller projects like MakerSpace Management System and the sequential and step by step phases would give the project more straight forward and easily arranged tasks to complete, which in turn makes the processes and results well documented. And that is very optimal for writing the report for the project. However the waterfall model creates certain difficulties and has some disadvantages that makes waterfall model not the best suited model compared to Agile for this project\cite{seguetech_waterfall_vs_agile}. 
+
+The waterfall model creates a set of challenges. One of these are the development of software isn't started until late in the project. As a lot of the documentation is produced based on the development of software and not only project specifications and analysis of potential technologies i.e. The project has a risk of changing based on revisions on both the software and the report. As progress on both mirrors each other, if changes must be done to the software, some of the documentation might be re-written. This is especially difficult because of the sequential nature of the phases. Where you cant go back to previous phases after they are complete. The scope of the project could also be changed based on time left on the project or challenges with certain components. 
+
+The Agile model is more lenient with making changes on parts of the project and scope. And going back and forth between phases poses less of a problem. Integration of the software in the waterfall model creates a difficult problem as it is integrated late in the project life cycle and gives the group less time to test and identify technological problems and fix them\cite{Waterfall_Model:_What_is_it}. By starting early by implementing and testing the software and making changes to what works and doesn't. It is easier to iron out problems and make sure the release is as smooth as possible. This is best done with Agile, as it works better at handling constant changes in development without causing further problems and risking the entire project. Based on the type of project and possible difficulties, the waterfall model is not the most suitable model for the MakerSpace Management System project.
+%\begin{itemize}
+    %\item Requirements are very well documented, clear and fixed.
+    %\item Product definition is stable.\cite{SDLC_Waterfall_Model}
+    %\item Technology is understood and is not dynamic.\cite{SDLC_Waterfall_Model} 
+   % \item There are no ambiguous requirements.\cite{SDLC_Waterfall_Model} 
+  %  \item Ample resources with required expertise are available to support the product.\cite{SDLC_Waterfall_Model}
+ %   \item The project is short.\cite{SDLC_Waterfall_Model}
+%\end{itemize}
+
+%\begin{itemize}
+ %   \item Simple and easy to understand and use.\cite{SDLC_Waterfall_Model}
+  %  \item Easy to manage due to the rigidity of the model. Each phase has specific deliverables and a review process.\cite{SDLC_Waterfall_Model}
+   % \item Phases are processed and completed one at the time.\cite{SDLC_Waterfall_Model}
+    %\item Works well for smaller projects where requirements are very well understood.\cite{SDLC_Waterfall_Model}
+    %\item Clearly defined stages.\cite{SDLC_Waterfall_Model}
+%    \item Well understood milestones.\cite{SDLC_Waterfall_Model}
+%    \item Easy to arrange tasks.\cite{SDLC_Waterfall_Model}
+%   \item The process and results are well documented.\cite{SDLC_Waterfall_Model}
+%\end{itemize}
+
+%\begin{itemize}
+%    \item No working software is developed until late in the project life cycle.\cite{SDLC_Waterfall_Model}
+%    \item High amounts of risk and uncertainty.\cite{SDLC_Waterfall_Model}
+%    \item Poor model for long and ongoing projects.\cite{SDLC_Waterfall_Model}
+%    \item Not suitable for projects with high risk changing.\cite{SDLC_Waterfall_Model}
+%    \item Hard to make room for changing requirements.\cite{SDLC_Waterfall_Model}
+%    \item Adjusting the scope of the project can endanger and possibly end the project.
+%    \item Integration of software is done very quickly at the end of the project and makes it hard to identify any technological or other challenges early.
+%\end{itemize}
+
+\subsection{Agile} 
+After looking at the Waterfall model and the Agile model the group has decided to use an agile model for the software development process. After a discussion with the assignment provider about a suitable project management method. The group proposed Agile as the most suitable for the project and the most effective for the type of software development the group would do\cite{Benefits_of_Agile}. The assignment provider agreed to the use of Agile.  
+The project is small in scale and is not tightly integrated with any other system. This means the comprehensive documentation a waterfall model requires is not needed before software development can start. Even though Waterfall can be well used for small projects. Additionally this means informal communications between group members work well as the group is co-located.
+The agile model does however require a higher presence of the assignment provider as he plays an integral part in which components the group are to prioritize\cite{high_quality_agile}. \todo{Kokludere til slutt}
 
 The assignment provider is involved and accessible throughout the project development.
 This allows for incremental development of the requirements set out by the assignment provider which means contract negotiations are not necessary.
@@ -176,42 +228,9 @@ Given the fact that the assignment provider is so involved and accessible it see
 The group believes the flexible approach an agile model used through Scrum provides the best foundation for the successful completion of the project.
 
 %SCRUM (source: https://www.mountaingoatsoftware.com/agile/scrum) will be used as a framework to manage the project and the software development. SCRUM is a derivative of the Agile methodology, but we will use Agile (source:https://www.agilealliance.org) as the methodology when developing software for the project. The Agile method will be used so the group can adjust and adapt to changes in the development as the project goes along. By scaling this to the scope of the group and the project, Agile will fit the development of the project well. 
-\subsection{Waterfall}
-A waterfall model is a sequential project management method which is a linear process of project management\cite{Waterfall_model}. It consists of several discrete phases where no phase begins before the prior phase is complete. Much like a waterfall filling lower level pools, the phases of the waterfall model has six phases where one flow over to the other. The six phases are: Requirements, Design, Implementation, Verification, Deployment and Maintenance\cite{Waterfall_phases}.Why not waterfall......(knytt opp mot teori.... The reason the group didn't choose waterfall as a project management method is because of the nature of waterfall. The sequential flow of waterfall makes it "impossible" to go back to previous phases. This can be very challenging when going between software development and writing the report. Revisions and changes in both of these can happen at anytime, especially if the scope of the project is changed or planned parts of the projects change during the course of the project.
-The right method needs to be used on the correct project, waterfall is most appropriate to use in some situations like:
-\begin{itemize}
-    \item Requirements are very well documented, clear and fixed.\cite{SDLC_Waterfall_Model}
-    \item Product definition is stable.\cite{SDLC_Waterfall_Model}
-    \item Technology is understood and is not dynamic.\cite{SDLC_Waterfall_Model} 
-    \item There are no ambiguous requirements.\cite{SDLC_Waterfall_Model} 
-    \item Ample resources with required expertise are available to support the product.\cite{SDLC_Waterfall_Model}
-    \item The project is short.\cite{SDLC_Waterfall_Model}
-\end{itemize}
-The waterfall model also has several advantages like departmentalization and control where a schedule can be created with deadlines for each phase of the project. As the development moves from one phase to the other and some of the advantages the waterfall model gives are:
-\begin{itemize}
-    \item Simple and easy to understand and use.\cite{SDLC_Waterfall_Model}
-    \item Easy to manage due to the rigidity of the model. Each phase has specific deliverables and a review process.\cite{SDLC_Waterfall_Model}
-    \item Phases are processed and completed one at the time.\cite{SDLC_Waterfall_Model}
-    \item Works well for smaller projects where requirements are very well understood.\cite{SDLC_Waterfall_Model}
-    \item Clearly defined stages.\cite{SDLC_Waterfall_Model}
-    \item Well understood milestones.\cite{SDLC_Waterfall_Model}
-    \item Easy to arrange tasks.\cite{SDLC_Waterfall_Model}
-    \item The process and results are well documented.\cite{SDLC_Waterfall_Model}
-\end{itemize}
-As with everything the waterfall method has some disadvantages. It doesn't easily allow for changes in the project and when the software reaches the testing stage, going back and making changes to the software can be very challenging if the changes needed to be made haven't been properly documented or thought about in the conceptualization phase\cite{seguetech_waterfall_vs_agile}. Some other disadvantages are:
-\begin{itemize}
-    \item No working software is developed until late in the project life cycle.\cite{SDLC_Waterfall_Model}
-    \item High amounts of risk and uncertainty.\cite{SDLC_Waterfall_Model}
-    \item Poor model for long and ongoing projects.\cite{SDLC_Waterfall_Model}
-    \item Not suitable for projects with high risk changing.\cite{SDLC_Waterfall_Model}
-    \item Hard to make room for changing requirements.\cite{SDLC_Waterfall_Model}
-    \item Adjusting the scope of the project can endanger and possibly end the project.
-    \item Integration of software is done very quickly at the end of the project and makes it hard to identify any technological or other challenges early.
-\end{itemize}
-So with the waterfall model there are some clear advantages that fits the MakerSpace Management System project.The project is short and the requirements for the project are well documented, clear and fixed . The technologies being used are understood and well documented also. Waterfall works well for smaller projects like "MakerSpace Management System" and the sequential and step by step phases would give the project more straight forward and easily arranged tasks to complete, which in turn makes the processes and results well documented. And that is very optimal for writing the report for the project. However the waterfall model creates certain difficulties and has some disadvantages that makes waterfall model not the best suited model compared to Agile for this project\cite{seguetech_waterfall_vs_agile}. 
-The waterfall model creates a set of challenges. One of these are the development of software isn't started until late in the project. As a lot of the documentation is produced based on the development of software and not only project specifications and analysis of potential technologies i.e. The project has a risk of changing based on revisions on both the software and the report. As progress on both mirrors each other, if changes must be done to the software, some of the documentation might be re-written. This is especially difficult because of the sequential nature of the phases. Where you cant go back to previous phases after they are complete. The scope of the project could also be changed based on time left on the project or challenges with certain components. The Agile model is more lenient with making changes on parts of the project and scope. And going back and forth between phases poses less of a problem. This makes revisions and changes to the project easier to handle and wont potentially end the project. Integration of the software in the waterfall model creates a difficult problem as it is integrated late in the project life cycle and gives the group less time to test and identify technological problems and fix them\cite{Waterfall_Model:_What_is_it}. By starting early by implementing and testing the software and making changes to what works and doesn't. It is easier to iron out problems and make sure the release is as smooth as possible. This is best done with Agile, as it works better at handling constant changes in development without causing further problems and risking the entire project. Based on the type of project and possible difficulties the waterfall model is not the most suitable model for the MakerSpace Management System project.
 
-\subsection{Qualitative and Quantitative methods} When working on the report and documentation for the project it will mainly follow qualitative research methods for gathering information and comparing/analyzing data. Qualitative research method is a scientific method of observation to gather non-numerical data. The aim of a qualitative research project may vary with the disciplinary background, like a mechanical engineer seeking in-depth understanding of a combustion engine for example\cite{Qualitative-Research}.Quantitative methods is when you objectively measure the statistical, mathematical, or numerical analysis of data collected through polls, questionnaires, and surveys, or by manipulating pre-existing statistical data using computational techniques\cite{Quantitative_Methods}.   
+
+\subsection{Qualitative and Quantitative methods} When working on the report and documentation for the project it will mainly follow qualitative research methods for gathering information and comparing/analyzing data. Qualitative research method is a scientific method of observation to gather non-numerical data. The aim of a qualitative research project may vary with the disciplinary background, like a mechanical engineer seeking in-depth understanding of a combustion engine for example\cite{Qualitative-Research}. Quantitative methods is when you objectively measure the statistical, mathematical, or numerical analysis of data collected through polls, questionnaires, and surveys, or by manipulating pre-existing statistical data using computational techniques\cite{Quantitative_Methods}.   
  
  Qualitative methods are best for researching many of the why and how questions of something \cite{Qualitative-Research}. Qualitative research is widely used by political science, social work, and education researchers and only produce an explanation for the particular case that is studied. All the qualitative research done for this project will be focused on how we will do something and why that is the best way to do it. Like why did the group choose a certain program over another and how we are going to use said program. The reason for this is that the project does not need any quantitative data for the documentation of the project, two exceptions that might occur is in the testing phase and in a questionnaire that will be sent out. The information gathered from the questionnaire will be about different MakerSpaces in Norway. In the testing phase the project group will ask for a number of students and/or employees to test the developed system and it's ease of use i.g: UI (User Interface), UE (User Experience) and possible bugs. A User Interface is the space where the user (humans) interact with computers (machines)\cite{user-interface}. And the purpose of a User Interface is to make the interaction as effective as possible for a person. Some UI layers could be tactile (touch), visual (sight) and auditory (sound). These layers usually makes up what we know as Graphical User Interface (GUI)\cite{GUI}. The User Experience is about how good, easy and accessible it is to use the competed product. This has everything to do with the customer, and the end user interacting with the product. In the UX the interface, graphics and design is taken into account and planned to be as best as possible\cite{UX}.  
  The data collected from testing could be used to statistically to show that the UI and UX is good for all potential users. No matter how experienced the users are with IT or how many times the users have used the system.
@@ -246,81 +265,58 @@ When conducting an heuristic evaluation, you need some kind of usability princip
 If it is impossible the group will try to find other makerspace systems or other systems that have the same similarity, that can be evaluated through an heuristic evaluation, to find out what kind of mistakes or good elements that other systems have, so the group can get some good ideas that they might avoid or implement in the system that is being developed. If the group don't find any other makerspace or other systems that has this kind of a digital system, the group will if possible do an evaluation on a previous bachelor thesis who tried doing the same project as this one. By looking into a previous attempt, the group will see what went wrong and what the other group did well.\cite{heuristic-evaluation}
 
 \subsection{Usability testing}
-When the group is done with making a prototype for the system, it can be 
-smart to run a usability test on it. The main purpose of this kind of testing is to predict the expected performance of an customer using the current system and to detect serious errors before release of the system.\cite{usability-testing}%kilde her
+When the group is done with making a prototype for the system, it can be smart to run a usability test on it \cite{usability-testing}. The main purpose of this kind of testing is to predict the expected performance of an customer using the current system and to detect serious errors before release of the system.\cite{usability-testing}
 It will help find difficulties with the prototype and give the group the opportunity to correct the errors before delivery.   
 
-The usability test will need to consist of a test plan that will be followed through the testing. The plan and the test should contain these points:\cite{usability-testing}%kilde
-\begin{enumerate}
-  \item \textbf{Purpose:} This is where you describe the purpose of what you will find with this usability test.
-  \item \textbf{Problem statement:} Here you need to make some kind of list of problems that you want to be answered through the test.
-  \item \textbf{User profile:} This is where you need to describe what kind of users that is supposed to take the test. What age are they? What background information do they have on what they will be testing? It is important to describe your user to see if that will affect the results of the test.
-  \item \textbf{Methodology:} This is more of an concrete way to describe how the test should be carried out. Often it is four steps that should be followed. Those four steps are: 
-  \begin{enumerate}
-  \item \textbf{Participant greeting and background questionnaire:} This is where you can greet the participants and make them feel welcome. Do a background questionnaire and make sure that an anonymity agreement is signed.
-  
-  \item \textbf{Orientation:} The participant will get a short, verbal and scripted introduction and orientation about the test.
-  The purpose of the test will be explained and what is expected from them as a participant. The participant will also be informed that they will be observed, videotaped or audio taped.
-  
-  \item \textbf{Performance test:} The performance test consist of a series of tasks and/or scenarios that the participant will be asked to do while being observed. The observer will write down any of the participants behavior, comment and any other unusual circumstances that might affect the result of the test.       
-  
-  \item \textbf{Participant debriefing:} After the test is done, it's time for a debriefing with the participant. It should follow these steps:
-  
-  - Filling out some kind of a brief performance questionnaire of the usability of the system. 
-  
-  - Let the participant give an overall comment of her or his performance of the test.
-  
-  - Let the participant tell about errors or problems that occurred during the test.
-  
-  \end{enumerate}
-  \item \textbf{Task list:} This will contain a list of tasks that the monitor of the test want the participants to do. This is in order for the monitor to be able to test the things that he or she wants to test.
-  
-  \item \textbf{Test environment and equipment requirements:} This one need to describe the environment that the participant will be in. Is the environment quiet and calm or is it a lot of disturbance around that can disturb and affect the test result? That is important to document.
-  
-  Alongside with a description of the environment, it can be necessary to write down what kind of equipment that will be needed to complete the test. An example can be if there is a need for a pen, paper or maybe a phone. 
-  
-  \item \textbf{Test monitor role:} This is a description of what kind of role the test monitor will have during the test. Is the monitor going to be closed or open. By that it means will the monitor be closed as in the participant wont get any help if they ask, or if the monitor will be open where the monitor can answer questions and give some leads.
-  
-  It will need to be describe what the test monitor will be looking for. If the test is recorded, are the monitor still gonna write notes during the test, or is he or she just gonna look at the recording afterwards?  
-  
-  \item \textbf{Evaluation measure:} This is what kind of information or data that will be collected through the testing. It can be how long the participant use to complete the task, how many errors that occurs or other things that is needs to be collected.
+The usability test will need to consist of a test plan (read about the test plan in attachment) that will be followed through the testing \cite{usability-testing}. The test plan consist of a recipe off how to 
+to plan and complete the testing and what information that will be collected\cite{usability-testing}. 
 
-  \item \textbf{Test report contents and presentation:} This is what the usability test consist of, and what the reader can find. It mainly consists of the test plan, the result and findings found in the test.
-\end{enumerate}
+The test can be run as many times as desired. In the process of developing a system it can help to run another usability test after fixing the errors from the first test, to detect any new errors that may have appeared after developing some more.
 
-As mentioned, a usability test is used to discover errors and to try and improve your system.\cite{usability-testing} You can run this kind of test as many times as you wish. In the process of developing a system it can help to run another usability test after fixing the errors from the first test, to detect any new errors that may have appeared after developing some more. %kilde
-
-\subsection{Think Aloud}
-Think Aloud is a testing tool that will be used when doing the usability test. %kilde
-How the tool is supposed to be used is by letting the participant to think aloud when doing the test task he or she has been given. By letting the participant to think aloud will make it easier to discover what the participant really think about the design and the system that has been made. %kilde
+\subsection{Think Aloud method}
+Think Aloud is a testing tool that will be used when doing the usability test. \cite{Think_Aloud}
+How the tool is supposed to be used is by letting the participant to think aloud when doing the test task he or she has been given. By letting the participant to think aloud will make it easier to discover what the participant really think about the design and the system that has been made. \cite{Think_Aloud}
 It will then be easier to know what elements that need to be change to best fit the users needs. 
 
-Some good benefits that the Think Aloud method will offer is: %kilde
+Some good benefits that the Think Aloud method will offer is: \cite{Think_Aloud} 
 \begin{itemize}
   \item \textbf{Cheap.} This method do not need any special equipment to be able to use it. The only thing that will be needed is someone that can sit next to the participant and take notes from what he or she thinks. 
-  \item \textbf{Robust.}
-  \item \textbf{Flexible.} It is possible to use this 
-  \item \textbf{Convincing.}
-  \item \textbf{Easy to learn.}
+  \item \textbf{Flexible.} It is possible to use this method wherever in a process of developing. Either if it is just a paper prototype or a fully implemented running system. This method can also be used on everyone that is able to tell what they are thinking when doing the test, so that makes it possible to also use this method with users who are visually impaired.
+  \item \textbf{Convincing.} When given a direct respond from users and what they think about the design, will be for someone more convincing on what has been tested need a change.
+  \item \textbf{Easy to learn.} There are not that many steps to learn, before someone can use this method when doing a usability test. 
 \end{itemize}
 
-\section{Report structure}
+Although there are many good benefits with the Think Aloud method, it does not mean that there are no downsides. Here is some downsides by using the method: \cite{Think_Aloud} 
+\begin{itemize}
+  \item \textbf{Unnatural situation.} For most people, they are not used to go around and talk to them self all day. This might makes it hard for the participants to keep up the thinking aloud when doing the test. 
+  \item \textbf{Filtered statements.} For some people they want to appear smart when doing the test. This make them to think more detailed before answering, when it is preferred to be given the answer direct. Because of that it is possible to get different result then expected or needed. 
+  \item \textbf{Biasing user behavior.} Very often can interruptions change user behavior. In such cases, the behavior doesn't represent the real use, so one cannot base the design on the outcome.
+  \item \textbf{Not enough.} Although this Think Aloud tool brings many good benefits, it is not enough to use this tool alone. It is preferable to combine several different tools to get the whole picture of testing.
+\end{itemize}
+
+\newpage
+\section{Report structure} 
 \textbf{Chapter 1, Introduction:}
-Gives background information about the project as well as a brief summary of the methodology used.
+% Chapter 1.1 contains information about each member of the project group to give more information about who is working on the project. Chapter 1.2 gives into about the assigment provider in this project; Østfold University college. This chapter also contains information about our contact at Østfold University College, Michael Andersen Lundsveen. Chapter 1.3 describes why the project was created, wishes for the project and a scope over the project. Chapter 1.4 is divided  into two sub chapters. The first sub chapter is 1.4.1 Purpose. In 1.4.1 The Goals of the project is described. In chapter 1.4.2 Delivery all the important delivery dates are listed. Chapter 1.5 Method describes the different work methods and approaches that was researched and selected for this project. Chapter 1.6 is the Structure of the report. In this chapter the order and content of every chapter in the report is explained. 
+It contains information about the members of the project group and the assignment provider. This chapter also explains why the project was created, wishes for the project and a scope over the project. Here you will also find all the goals and the important delivery dates. Lastly this chapter describes the different research and working methods and approaches that was researched and selected for this project and the structure for the rest of the report. 
+
 
 \textbf{Chapter 2, Analysis:}
-Provides a thorough description of the assignment based on the requirements set by the assignment provider in addition to explaining what the selected technologies are and why they are suitable for the project.
+% Chapter 2.1 contains information about different MakerSpace's, what systems they use and how the lab is organized. Chapter 2.2 contains information about all the database technology the project group chose and why it is being used. It also contains information of other database technology that is not being used and why. Chapter 2.3 contains all information about the Frontend technology selection. What the project group chose and why and also other alternatives that were not suitable for the project. Chapter 2.4 contains information about style sheets that are being used, what kind of CSS and why it is being used. Chapter 2.5 contains information about the Backend technology, what kind of technology is being used and why. Chapter 2.6 contains information about how the Frontend and Backend is connected. This includes HTTP and HTTPS, request methods and status codes. Chapter 2.7 contains information about Git and Github, what it is and how it is being used.   
+It contains the analysis part of the report. The chapter includes the analysis of the systems used in other Makerspaces and how their equipment is organized, the analysis of different database systems and the groups choices for the project. Description of the analysis for the frontend- and backend architecture and the selection of the technology chosen. And information about other technologies and protocols used in the project.
 
 \textbf{Chapter 3, Design and implementation:}
-Describes how the components of the application are designed and implemented in addition to describing the application itself.
+% Chapter 3.1 contains information about the Frontend and it's design and how it is implemented to look and work the way it does. This includes design choices for both the look and functionality of the web application. Chapter 3.2 Backend contains information about the design and functionality of the Backend for the end-user and what it provides them, with a good look at Endpoints and how it functions. Chapter 3.3 contains information about Frontend and Backend connection and how communication between each other is designed and function. Chapter 3.4 Database contains information about the implementation and design of the database and how it functions.    
+The chapter contains information about the design choices and the functionality of the frontend- and the backend architecture are explained. This chapter also contains information and documentation about how the frontend and backend are communicating and the implementation and documentation of the database system.
 
 \textbf{Chapter 4, Testing and Evaluation:}
-Explains how the components of the application were tested - which components were tested, how they were tested and who tested them.
-The chapter also provides feedback received and whether the application passed the acceptance tests.
+% Chapter 4.1 contains information about the Heuristic evaluation method to evaluate the project groups web application by comparing it to a similar web application. Chapter 4.2 contains information about the testing of the web application and it's functionality by asking a group of people to use the web application and a detailed test plan.    
+It contains information about the different testing methods and interview methods used during testing the application and the result of the testing.
 
 \textbf{Chapter 5, Discussion:}
-Describes the project process - what went well, what did not and what could have been done differently.
-The chapter also outlines what the group has learned during the project.
+% Chapter 5.1 contains information about the project groups thoughts on what went well with the project. Chapter 5.2 contains information about the project groups thoughts on what did not go as well as they thought it would and complications during the project. 5.3 contains information about what could have been done differently during the project and what lead the project group to think what they decided to do, could have been done another way. Chapter 5.4 contains information about deviations from the original plan and idea the project group had before and during the project. What was included and what had to be dropped or couldn't be done in time is also part of this chapter. Chapter 5.5 contains information about what the project group learned during the project. What will they remember best and what will they take with them further into work life.
+It contains information about the project groups thoughts from the project, complications and what went well in the project. In this chapter you also find information about what the group would have done differently and any deviation from the original plan. In the last part of this chapter there is information about what the group learned during the project.
 
 \textbf{Chapter 6, Conclusion:}
-Presents the results and outlines the continuation of the project.
+% Chapter 6.1 contains information about the results of the project. What did the project group deliver, does the web application cover the necessary functions and is the developed application usable. Chapter 6.2 contains information about the continuation of the project. What can be built upon the already existing web application and how to hand over access to MakerSpace HiØ. 
+It contains information about the results of the project. In this chapter there will be information about the final application, the state of the web application and information about continuation of the project of the application after this project is done.

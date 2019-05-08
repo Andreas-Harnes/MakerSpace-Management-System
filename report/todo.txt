@@ -1,0 +1,51 @@
+Kap 1:
+    - Introduksjonstekst(Magnus)(done)
+
+Kap 2:
+    - fikse beskrivelse av kap.2 vi har lagt til mye nytt (? c:)
+    - JSON(? c:)
+    - SCSS 
+    - NPM(? * u *)
+    - Express(?) uWu
+    - Frontend (Andreas WiP)
+
+Kap 3:
+    - Frontend kap (Andreas WiP)
+    - bildet i 3.1.1 hopper litt
+    - Scss 3.1.1 (Celina)
+Kap 4:
+    - Lese over klønete formuleringer
+
+Kap 5:
+    -  Discussion (Alle, Magnus)
+
+Kap 6:
+    -
+
+Uspesifisert kap:
+    - Git
+    - GitHub
+
+Alle kap:
+    - Korrekturlesing(x ain't gon' give it to ya)
+
+
+
+Ikke prioritert
+Applikasjonen:
+    - Fiks footer
+    - Scaling for mobil, tablets, vanlige PCer, store skjermer
+    - Parse JSON for å vise dataen
+    - Sortere basert på kriterier
+    - Neste/forrige side
+
+Annet:
+    - Sammendrag (etter konklusjon)
+    - Kort oppsummert tittelside
+
+
+
+vedlegg:
+    - Spørreskejma
+    - Kontrakt
+    - testing spørsmål

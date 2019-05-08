@@ -1,18 +1,18 @@
 \chapter{Analysis}
 \todo{Skrevet om, trengs å leses over}
 This chapter provides the background knowledge required to understand the thought process behind the selected technologies.
-The Group has been researching different technologies and solutions that can be viable for the application we are developing. Throughout the selection process the group have presented the assignment provider, Michael A. Lundsveen with results from the research and recommendations the group has found for the different technologies that can be used for the application. The group together with Michael worked together to select which technologies that should be used based on the this research.
+The group has been researching different technologies and solutions that can be viable for the application we are developing. Throughout the selection process the group have presented the assignment provider, Michael A. Lundsveen with results from the research and recommendations the group has found for the different technologies that can be used for the application. The group together with Michael worked together to select which technologies that should be used based on the this research.
 
 The chapter first inspects the database technologies that are suitable for the assignment.
 Afterwards the chapter examines the selected frontend technology before analyzing the technology stack used for the backend development.
 Lastly the chapter provides insight as to why the methodology selected is the most suitable for the project.
 
 \section{Analysis of different MakerSpaces}
-The project group has decided to conduct interviews with different MakerSpace branches in Norway. The reason for choosing interviews is to be able to decide what information we want to get out of the interviewees. The project group will make a set of predetermined questions about how MakerSpace operates and what kind of systems and technologies they have. While conducting the interviews the project group also wants to arrange the interview at the respective MakerSpace, where the project group could get a tour of the MakerSpace and take a look at the systems they have and how they are used. This will be used to get more hands-on knowledge for the project, to be able to make a better system. The interviewee will also be more comfortable in a known environment during the interview.
+ A questionnaire has been sent out to as many MakerSpace's as possible. A list of the recipients can be found as an attachment.    
 
-\subsection{MakerSpace Inspiria}
+\subsection{MakerSpace Inspiria interview}
 
-This section is based on an interview the group conducted, as such the necessary sources are added as an attachment. The source is a voice recording of the interview transcribed. \todo{Husk å endre dette}See page::::::::::::: %lage attachement/appendix side for vedlegg?%  
+This section is based on an interview the group conducted, as such the necessary sources are added as an attachment. The source is a voice recording of the interview transcribed.It can be found as an attachment.  
 
 The first MakerSpace that was interviewed was MakerSpace Inspiria, located in Sarpsborg. It is part of Inspiria Science Centre \cite{Inspiria-SC}, a building full of science for people to enjoy and test out. It is mainly targeted for kids, but the MakerSpace is open for everyone when the centre is open. MakerSpace Inspiria is very much alike MakerSpace Halden. It's closely resembles each other and has a lot of the same equipment; 3D printers, laser cutters, soldering irons etc. 
 And it is here the group conducted its first interview, at MakerSpace Inspiria. The interviewee answered all the questions best possible and the group got a lot of interesting information. There was no system in place for keeping tabs on the inventory, digital or other. The employees were the ones that kept control over the inventory personally, the employees shared responsibility of overseeing the inventory and ordering new parts and equipment when needed. But admitted to not having full control over everything. Components and tools are being kept in lockers and has a box i.e where similar tools or components are grouped and put together. There is however no special categorizing of the equipment, but everything has a predetermined place. 
@@ -21,11 +21,9 @@ As far as lending out equipment, MakerSpace Inspiria has no system in place for 
 
 When asked if a digital system for inventory keeping was something MakerSpace Inspiria could potentially want, the interviewee positively agreed. The interviewee already had an idea for a potential digital system. A simple bar-code and a scanner, zero thinking. Everything has its own ID and it gets scanned into a system. Everything about it has to be simple and have as few button presses as possible. This was from the interviewees own experience with people and IT, or more about people who doesn't know a lot about IT and would be using mentioned system. Other than that the interviewee didn't have any specific ideas on how the system should work or look. But the project group got some very nice ideas and pointers for the User Interface (UI) and User Experience (UX). Keep it nice and simple, not very complicated which is something the project group had already thought of. A bar-code was discussed early on in the project as a possible solution for both lending out equipment and inventory keeping. 
 
-\subsection{Conclusion of the interview and questionnaire}
+\subsection{Summary of the questionnaire}
 
-After an interview and getting 20 questionnaire responses from different MakerSpace's. The group has read through the responses and analyzed them. However, since all the answers are anonymous the group doesn't know which MakerSpace's that responded.   
-
-The equipment each respondent have was varied, everything from digital tools and equipment to more heavy tools like CNC machines, laser cutter, metal saws, vinyl cutters, acids for creating circuit boards and more. Basically every tool for the job to let everyone, children and adults be as creative as possible and give them the space they need for it. 
+After an interview and getting 20 questionnaire responses from different MakerSpace's. The group has read through the responses and analyzed them. However, since all the answers are anonymous the group doesn't know which MakerSpace's that responded. The equipment each respondent have was varied, everything from digital tools and equipment to more heavy tools like CNC machines, laser cutter, metal saws, vinyl cutters, acids for creating circuit boards and more. Basically every tool for the job to let everyone, children and adults be as creative as possible and give them the space they need for it. 
 
 For any workplace that have tools, it is important to know where everything is. This makes it easier to find what you are looking for. Out of 20 respondents the categorizing and placement of tools went from having no idea or no system, to full control with a website and database for every tool and component. The most common sorting was after the size and type of tool and what department it belonged to (Electronics, Mechanical i.e). Here is a short list of different methods of storing and categorizing tools from MakerSpace's:
 
@@ -43,12 +41,51 @@ Tools, equipment and components can be broken. How the broken item is reported b
 None of the respondents had any digital system for reporting damaged or destroyed tools and components. If anything was broken it was either reported to a superuser or employee by the person that broke or found something broken. Some of the tools and components was considered consumable and just replaced. Certain equipment at one MakerSpace was prohibited from "ordinary users" from using and only certain members was allowed to operate them. Some examples of what equipment was prohibited is; 3D printers, CNC machines, laser cutter and welding tools. The prohibition of the equipment happened after someone broke a very expensive 3D printer. 
 Some of the respondents had a form that needed to be filled out and also used Slack internally for the employees to communicate. Slack is a cloud based system used by teams(development, project management i.e) to communicate with each other\cite{Slack_Software}. This includes chat room, private groups and direct messaging. The very convenient about Slack is that all content inside slack is searchable. Including files, conversations and people\cite{what_is_slack}.
 
-60\% said people are allowed to borrow tools and equipment home. The people that could borrow things was restricted to members of the MakerSpace, everyone with a contract, members but something needs to be pawned as collateral i.e drivers license, members or students, students. 
-Out of the people that could borrow tools and equipment, there were some restrictions to what was allowed to borrow.
+60\% said people are allowed to borrow tools and equipment home. The people that could borrow things was restricted to members of the MakerSpace, everyone with a contract, members but something needs to be pawned as collateral i.e drivers license, members or students, students. Out of the people that could borrow tools and equipment, there were some restrictions to what was allowed to borrow.    
 
+\begin{itemize}
+    \item Some items had a chip that marked them as loan able.
+    \item Only small tools that won't be missed or there is more than one of them.
+    \item Only equipment that there was more than one of, but collateral had to be left behind. Like a drivers license,keys or bankcard.
+    \item No limits on what members can borrow
+    \item Some equipment needed training and membership.
+    \item Items are loaned out based on how well they are known to the employees but expensive or advanced equipment is something that is rarely loaned out to members. Unless they have a really good reason or makes a written deal.
+\end{itemize}
 
+The way every item was kept track of when it was lent out. Was either by utilizing a library's loaning system, written down in a log, orally or no overview at all. Of the ones who used a written system, one never really enforced the use of the log but the system worked because they hostages in the form of driver licenses. phones, keys and most owners of these were very eager to get their things back. Another used Google Sheet with the name of the person that is loaning something, what they are loaning, how they can be contacted, who lent it to the person(employee etc) and date for planned delivery.
+Two of the MakerSpace's that used a log(paper) reported that they have a digital system in development where one said the system would incorporate pawning of a valuable item as collateral in the system. 
+If the borrowed items didn't get returned a number of things would happen to the people that borrowed something.(Nevn halden makerspace) A compensation claim would be sent if the person couldn't be contacted or could be contacted but didn't return the item regardless. Most of the time, contacting the person would resolve the problem peacefully with the item returned. The MakerSpace's that took hostages would keep the valuable items left as collateral, one reported sending the collateral for destruction if the loaned item wasn't returned. Another MakerSpace reported that if an item wasn't returned they would yell at them, angrily. 
 
-Ut ifra spørreskjema så skriver vi hva vi fikk ut av det og hva vi lærte av det. Vi har ikke sendt ut spørreskjema enda så denne delen er av den grunn ikke fylt ut.
+The 20 responses that the group got from the form reported that 55\% did not have a inventory system to keep track of their tools, equipment and components. 45\% reported they had a system. Out of the 45\% that had a inventory system, 66.7\% said the system was digital(6 respondents) and 33.3\% said it was not digital. If the system wasn't digital most of the other system was either a written one, like a list, marked shelves or orally where the employees have control. Most of the access to the inventory system was limited to one person or admins, but everyone had access to basic usage like search options to see what and how much of something was in stock for the digital systems. 
+The detail of the systems the different MakerSpace's had was varied in detail but similar how it all was organized. One MakerSpace had every components in one permanent place with quantity of the item. No info on how the tools where being kept in the system. Another had every component in small marked drawers and tools in shelves, on the wall or in other, bigger drawers. Some of the digital systems used was either developed on their own, or used Google-spreadsheet. In the Google-spreadsheet each item was detailed as well as possible, but consumable components are not part of the inventory system. The most detailed digital inventory system is quite extensive and well developed. It had a very detailed system for storing components looking like this:
+
+\begin{itemize}
+    \item Name 
+    \item Description
+    \item Producer
+    \item The type of component (10 Ohm, 100 Ohm i.e)
+    \item Quantity
+    \item Price
+    \item Shelf placement (four null-indexed values to find it) 
+    \item Section
+    \item Row and column
+    \item Depth (Some boxes and drawers might have several components in it but at different depth)
+\end{itemize}
+This system was coupled up with a cashless system where payments was done through "iZettle"\cite{iZettle_Financial_Products}. IZettle is a Swedish financial company and offers some finanical products like payments through their app. IZettle let's smaller companies accept card payments\cite{What_is_iZettle}. For payments students and other users of the MakerSpace could use their student id card or an "RFID" chip to make payments for components. RFID is a technology where digital data can be encoded in RFID tags or smart labels. And the data can be read by capturing radio waves. RFID is an acronym for "radio-frequency identification"\cite{What_is_RFID}. However the MakerSpace did not have any lists or a system in place over tools or equipment they loan out. Most of their users use the workshop and it's tools and equipment there. 
+
+New items in the system was registered either by the one responsible for buying the components or delegated the task to someone else. For deleting or removing items in the system. It was done by the system updating itself when an item was removed, sold or by stocktaking at some point. Other alternatives was switching the item for a new one based on shelf location or removing the item from the system entirely if it was broken.
+For those that had a system in place for inventory, they got a follow up question if there was something that could be different or better with the system in place. Some of the note worthy changes was better logging of items in the system with an alert when stock is low. Better digital logging for loaning of tools, easier to use/search through, better logging of history and some wanted a web-shop function for sale of consumable items. 
+
+There were a set of MakerSpaces that didn't have a inventory system. And most of them had control over items by memory and that employees or volunteers also keeps an overview over what they have and where it is. A lot of the control is based on trust and respect over the workshop and that no one steals and keeps everything tidy. Of the eleven responses that didn't have a inventory system, 54.5\% said they did not want a digital system. And if they were to have a digital system the functions that was most wanted from a system was; a loan function, overview/list function, barcode for each item or RFID, a experience log for logging how to use equipment, settings, adjustments, mistakes and tricks. A function that could "tag" equipment that is broken combined with a detail history log for whether it has been broken before and how it was fixed. The option of adding video, pdf or a picture to what is broken or has been broken was a potential function a MakerSpace wanted. A wish list that employees could use to add wanted equipment and a shift log/report for employees where they can note needs, problems and other issues. 
+When asked if there was something they wished was different by how they organize and categorize their equipment and tools compared to now. The answer was; better overview, more space, an inventory system,  a system for more control over items and better marked equipment to be able to have a better overview and make it automatic. So there is a lot of room for improvement and changes based on the answers from the questionnaire.
+
+\subsection{Conclusion of the interview and questionnaire}
+After one interview and several responses on the questionnaire the project group has gathered a lot of useful information that can be used to improve the project. And with that information the project group has learned a lot about MakerSpace's around Norway. One thing the project group learned was that many did not have any system in place for inventory keeping or for lending out equipment, digital or other. However the employees or volunteers would be the ones that either memorized or had personally control over where think was located. If something was loaned out it was done by either taking a "hostage", this was the case with digital systems as well. Or it was based on respect/the employees knowing who they lend something to, but many surprisingly used some form of paper log or just an oral deal. Which is similar to how MakerSpace HiØ operates with today and the control over equipment and tools was similar between MakerSpace HiØ, MakerSpace Inspiria and from MakerSpace responses. Where the employees and volunteers have control and items are placed in general places that isn't assigned but "that's where they go". 
+For the digital systems there was six confirmed systems in place with many of the features MakerSpace HiØ needs and could want. Which means many MakerSpace's feels a bit disorganized at times and want better control. Of all the responses the project group got five that said they wanted a digital system and was either planning or developing one at the time of answering. So developing a digital system is definitely useful for many MakerSpace's and makes this project something that could be potentially used at other MakerSpace's when fully developed. Many ideas the project group had like potentially using RFID and student id's for registering users and using it to loan equipment. Is also something other MakerSpace's and the project group has thought about. 
+
+So from the interview and questionnaire the project group found out that some MakerSpace's are in the same place as MakerSpace HiØ and seeking better systems to keep control over their workshop. And some MakerSpace's are where MakerSpace HiØ wants to be in the future. The responses have provided important information about vital functions a digital system should and could have. As well as shown ideas to how a digital system could be done. This information will be an imoportant part for the project and for further development of the project. As it could lead to potential cooperation between MakerSpace's for developing a joint system. Since many sees the need and usefulness of a digital system for management and equipment lending.    
+
+%Ut ifra spørreskjema så skriver vi hva vi fikk ut av det og hva vi lærte av det. Vi har ikke sendt ut spørreskjema enda så denne delen er av den grunn ikke fylt ut.
 
 \todo{Why only looking at the two most popular? Why not others?}
 \section{Database technology selection}
@@ -177,14 +214,39 @@ Lastly MariaDB offers a Node.js connector allowing applications developed on Nod
 
 \todo{Ikkje bruk several - ver konkret.}
 \section{Frontend technology selection} 
-The assignment provider wanted a full JavaScript technology stack and as such there were several technologies that could have been chosen for the frontend development.
-There are several JavaScript frontend frameworks and libraries freely available and as such this was not a limitation.
 
-The assignment provider ended up choosing Vue.js because of three major factors; the size of the framework, live updating in the browser and the low learning curve it has. Vue.js is comparably smaller than many of the other big JavaScript frameworks. It is roughly 58.8 kB in size. Since the framework is so small it will help with the loading speed of the web application \cite{vue-size}. 
+The assignment provider wanted a full JavaScript technology stack and as such there were several technologies that could have been chosen for the frontend development. There are several JavaScript frontend frameworks and libraries freely available and as such this was not a big limitation \cite{JavaScript_libraries}.
+
+\subsection{Vue.js}
+Vue.js is a progressive JavaScript framework created by Evan You. Being a progressive framework means the user is able to select what features to include, instead of selecting which features not to include. By having a progressive framework you can make a web application only include the minimum of necessary components to work. This is one of the major features of the framework Vue.js. The core library of Vue.js is heavily focused on the view layer only, and is easy to integrate in already existing projects or other libraries \cite{what_is_Vue}. 
+
+Easy Learning Curve
+    All you need to know is html and ES5 JavaScript
+
+Vue components
+
+Native Reactivity
+
+Template
+
+Component scoped css
+
+\subsection{React}
+JSX
+
+
+
+\subsection{Angular}
+TypeScript
+
+Learning Curve steep
+
+\subsection{Our solution}
+The group decided to recommend using Vue.js because of three major factors; the size of the framework, live updating in the browser and the low learning curve it has. Vue.js is comparably smaller than many of the other big JavaScript frameworks. It is roughly 58.8 kB in size. Since the framework is so small it will help with the loading speed of the web application \cite{vue-size}. 
 
 The second major point for choosing Vue.js was the reactivity of Vue. With the reactivity of Vue.js you could update individual components based off of which data had been updated in the database. In Vue.js each component has getters and setters that enables Vue to track each component for when it's been accessed or modified. Each component also has a watcher instance that will be notified when that components setter is triggered. When this happens the watcher will notify Vue to run the component render function on that component again. With this feature there will be no need to update the whole site to show an update in the database \cite{vue-reactivity}. 
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width=115mm,scale=1]{figures/reactivity.png}
     \caption{Reactivity in Vue.js}
@@ -193,7 +255,77 @@ The second major point for choosing Vue.js was the reactivity of Vue. With the r
 
 The last major point for the group was the low learning curve of Vue.js. With this learning curve it means that the easier parts of Vue.js is easier to learn, but the more complicated components can be harder. This is perfect for the groups project since all the group members are new to Vue.js and can get faster into the programming.
 
-\subsection{Css/Scss}
+The assignment provider agreed with the groups recommendation of Vue.js and allowed to project to be built using Vue.js
+
+\subsection{Style sheet}
+A style sheet is a file that is used in word processing and to define layout style of a document\cite{Style_sheet}.
+For Microsoft Word as an example, the style sheets is known as a template\cite{Style_sheet}.
+A style sheet contains specifications of a document layout\cite{Style_sheet}. 
+The specifications is what page size, margins, fonts and font sizes is going to be set on the document\cite{Style_sheet}.
+The group will not dive into what template is going to be used for Microsoft Word, but rather what style sheet is going to be used when developing a web system. Below it can be read what style sheet that will be used in the project and also what units that will be used. 
+
+\subsubsection{CSS} \todo{Skriv om SVG og XML + referer til bildet. Gå til Waterfall og referer til bildet der også}
+Cascading style sheet or "CSS" is used in any web application one way or another\cite{CSS_Introduction}. %and it will be used in the MakerSpace Management System web application.
+CSS provides the visual aesthetics for the webpage by taking HyperText Markup Language (HTML), Scalable Vector Graphics (SVG) or Extensible Markup Language (XML) and converting it into a presentable form\cite{What_is_CSS}. This is done by web browsers applying CSS rules to an HTML document to affect how it is displayed. SVG is a text based open web standard designed to work with CSS and Document Object Model (DOM). It is an XML based text mark up language for two dimensional vector graphics\cite{SVG_definition}. SVG works by defining its data in XML text files and can be searched, indexed, scripted and compressed\cite{SVG_functions}. XML is a text-based format for representing and sharing structured information\cite{What_is_XML}. Figure 2.4 is a simple example of a CSS rule. The "p" stands for "paragraph" and within the brackets we declare that the color(property) is "red"(property value). The result would be the paragraphs text color will be red.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=80mm]{figures/css-declaration-small.png}
+    \caption{CSS rule}
+    \label{fig:Css rule example}
+\end{figure}
+When a webpage is being displayed, what is actually happening is the browser combining the document (HTML) with the CSS information\cite{CSS_and_DOM}. This process happens in two stages, where stage one converts the HTML and CSS into DOM\cite{What_is_DOM}. In figure 2.5 the stages of combining HTML and CSS is shown. The DOM is the PC's memory where the content of the HTML and CSS is combined. Stage two is the browser showing the content of the DOM where the webpage is displayed in all its glory with CSS applied to the HTML.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=130mm]{figures/DOM.png}
+    \caption{HTML and CSS into DOM}
+    \label{fig:DOM}
+\end{figure}
+\clearpage
+% bildet plaseres ikke der den skal!!
+
+\subsubsection{SASS}
+SASS or "Syntactically Awesome Style Sheets" is a preprocessor scripting language that is compatible with all versions of CSS \cite{Sass_1}. 
+With that it means it is possible to use any available CSS libraries that exists. Sass consists of two different syntaxes, the orginal syntas that they call "the indented syntax" (SASS) and the other one that is a newer syntax called "SCSS" (Sassy CSS)\cite{Sass_2}. 
+The first syntax is build like it have indentation to separate code blocks and newline characters to separate rules. The other syntax (SCSS) uses block formatting like in CSS. It uses braces to denote code blocks and semicolons to separate lines within a block. The syntax SASS and SCSS files are also given the extensions .sass and .scss \cite{Sass_2}. 
+Below it shows the syntax differences between SASS and SCSS. 
+
+\begin{figure}[h]
+    \centering
+     \includegraphics[width=115mm,scale=1]{figures/sass_and_scss.png}
+    \caption{Sass and Scss syntax}
+    \label{fig:Sass}
+\end{figure}
+
+
+what SASS can offer in which 
+CSS alone can't, is that Sass can use variables, mathematical operations, loops, functions, imports, and other  functionalities that make writing CSS much more powerful \cite{Sass_3}. 
+This can be good when working with a large and complex sites.
+
+One of the greatest benefits 
+by using SASS is as mentioned the ability to use variables. A variable allows to store a value or a set of values, and to reuse these variables through the SASS files as many times as desired \cite{Sass_3}. 
+This make the developers job a lot easier as for example if one want to use a color, instead of remember the color code, it can be stored as a describing variable that can be used everywhere in the project.
+
+\subsubsection{Conclusion}
+The project group in addition of agreement from the assignment provider have found out that it will be used SASS for this project. SASS is as mentioned compatible with all versions of CSS, only with more functionality. By choosing SASS the group think it will be taking benefits from its functionality that SASS offers. For this project it will only be developed a simple prototype, but for 
+those who will take over the project, it will be nice that they have the opportunity to use this kind of functionality that SASS offers when the project get bigger and more complex. This since the group also have to think about that other can further develop the system.
+
+\subsubsection{Units}
+As the SASS was selected as a style sheet, the group needed also to find out what units to use with the style sheet. Units is what that can be used together with properties. Properties can for an example be length, where it can be used width or margin to set the length of an element \cite{Units_1}. 
+Units is what defines the actual length of the element.
+
+It exist two different length units, absolute and relative units \cite{Units_1}.
+\begin{enumerate}
+  \item \textbf{Absolute units:} The absolute length units are fixed, that means that a length will appear as exactly that size. This can be good when the output medium is known, such as for print layout. On the other hand, absolute length units should not be used on screens, because screens sizes vary so much. 
+  
+  Some of the units that exists is: \textbf{cm} (centimeters), \textbf{mm} (millimeters) and \textbf{in} (inches).
+  \item \textbf{Relative units:} Relative length units is specifying a length that is relative to another length property. Relative length units will scale better between different rendering mediums. In other hand, this is good when working with different screen size, and is much greater to use when one will adjust the SASS to several platforms as mobile, different PC screens and tablets. 
+  
+  Some of the units that exist is: \textbf{em} (relative to the font-size of the element), \textbf{rem} (relative to font-size of the root element) and \textbf{\%} (relative to the parent element).
+\end{enumerate}
+
+As that the group will be working with different screens and platforms and also want it to scale great, it will be relative units that is going to be used for the project. The assignment provider also agrees that this is the best solution.
+
 
 \section{Backend technology selection}
 \todo{en måte: alternativ valg +/- valget}
@@ -201,9 +333,9 @@ For the backend technology there are several technologies that could be used. Th
 
 JavaScript will be used for the backend, Node.js will be used as the server to create and handle the backend operations needed in the application. Node.js is a JavaScript run-time environment that can run JavaScript code outside of the browser using the V8 JavaScript engine. Node.js runs on a single thread and is able to do this because of the Event Loop. When a request gets sent to Node from the application it will be added to the event queue before being picked up by the Event Loop. The Event Loop will take these requests and send them to the system that Node runs on. Here each request will be sent to different threads and be completed. When the task in done a callback function in the request is activated and the feedback is sent directly back to the application. The reason this event loop is so efficient at handling requests is because it runs asynchronous. So when it receives a request and sends off a callback function for that request. It doesn't need to wait for that callback function to return something before it handles a new request \cite{Node-event-loop}.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics[width=115mm,scale=1]{figures/event_loop.png}
+    \includegraphics[width=100mm,scale=1]{figures/event_loop.png}
     \caption{Event loop in Node.js}
     \label{fig:Node_Event_Loop}
 \end{figure}
@@ -223,7 +355,7 @@ The flow of the protocol looks like this \cite{mozilla_http_flow}:
     \item The client receives the HTTP response.
 \end{enumerate}
 
-HTTPS is an extension of HTTP.
+HTTPS is an extension of HTTP \cite{http_vs_https}.
 HTTP transmits data in plain text, and as such the protocol is considered insecure as anyone listening or intercepting the traffic can read the data transmitted \cite{http_vs_https}.
 HTTPS on the other hand encrypts the data before transmitting it to an external host \cite{https_explained}.
 This ensures anyone listening or intercepting the traffic is unable to read the data.
@@ -231,7 +363,39 @@ All data can thus pass freely and securely between the two hosts communicating w
 
 HTTP/HTTPS lays the foundation for any data exchange \cite{mozilla_http_overview} on the modern web \cite{tutsplus_what_is_http} which makes the protocols the ideal protocols for communication between the frontend and the backend for the project.
 
+\subsection{HTTP request methods}
+HTTP request methods indicate the desired action to be performed on the given resource.
+There are several HTTP request methods \cite{mozilla_http_status_methods_list} however the application is likely to use some of the following:
+\begin{itemize}
+    \item GET indicates the client wishes to retrieve the data for the resource identified with the resource identifier provided in the HTTP request, or the client indicates - in the absence of such an identifier - it wishes to retrieve the data for all resources \cite{mozilla_http_status_methods_list}.
+    \item POST indicates the client wishes to create a new resource with the provided data in the HTTP request \cite{mozilla_http_status_methods_list}.
+    \item PUT indicates the client wishes to update the resource identified with the resource identifier provided in the HTTP request \cite{mozilla_http_status_methods_list}.
+    \item DELETE indicates the client wishes to delete the resource identified with the resource indentifier provided in the HTTP request \cite{mozilla_http_status_methods_list}.
+\end{itemize}
+
 \subsection{HTTP status codes}
+HTTP status codes are responses made by the server in response to a request made by the client indicating either success or failure of the request \cite{http_vs_https}.
+All HTTP status codes are separated into the following categories \cite{mozilla_http}:
+\begin{itemize}
+    \item 1xx represents informational state; The request was received and understood but the server is still processing the request.
+    \item 2xx represents successful state; The request was successfully received, understood and fulfilled.
+    \item 3xx represents a state of redirection; The client must take further action to complete the initial HTTP request.
+    \item 4xx represents client error; The request is invalid in some way and the initial request was therefore not fulfilled.
+    \item 5xx represents server error: The server either failed to fulfill a seemingly valid request, refused to carry it out, or is otherwise incapable of carrying it out.
+\end{itemize}
+
+There are many HTTP status codes \cite{http_status_codes_list}.
+To name a few the application is likely to use:
+\begin{itemize}
+    \item 200(OK) indicates the request succeeded \cite{mozilla_http_status_codes_success}.
+    \item 201(Created) indicates the request succeeded and a new resource was created as a result of it \cite{mozilla_http_status_codes_success}.
+    \item 400(Bad Request) indicates the server cannot or will not process the request due to errors believed to be produced by the client \cite{mozilla_http_status_codes_client_error}.
+    \item 401(Unauthorized) indicates the client is not authenticated while attempting to perform an action which requires the client to be authenticated \cite{mozilla_http_status_codes_client_error}.
+    \item 403(Forbidden) indicates the client is attempting to perform an action it is unauthorized to perform \cite{mozilla_http_status_codes_client_error}.
+    \item 404(Not Found) indicates the request requested a resource which does not exist \cite{mozilla_http_status_codes_client_error}.
+    \item 409(Conflict) indicates the request could not be processed because the request contained a resource in conflict with another resource \cite{mozilla_http_status_codes_client_error}.
+    \item 500(Internal Server Error) indicates the server encountered an unexpected condition which it was unable to resolve \cite{mozilla_http_status_codes_server_error}.
+\end{itemize}
 
 \subsection{JSON}
 

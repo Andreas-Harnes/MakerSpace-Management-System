@@ -6,16 +6,29 @@ The System is divided into two sections; the frontend and the backend. The front
 
 \section{Frontend}
 
-The frontend was built using HTML(Hyper Text Markup Language), JavaScript, Vue.js and Sass(Syntactically awesome style sheets).
-Vue.js is a Framework based on the programming language JavaScript and is used for creating web applications.  Sass is CSS(Cascading Style Sheet) preprocessor which allows the developer to write CSS rules in another scripting language that will be compiled into CSS by the browser. 
+The frontend of the application a SPA (Single Page Application) built by using HTML (Hyper Text Markup Language), JavaScript, vue.JS and Sass (Syntactically awesome style sheets).
+Vue.JS (See chapter 2.3.1) was used to create the structure, layout and content of the application. For the styling of the application Scss was used (See chapter 2.3.5). 
 
-SPA
+\subsection{Single Page Application}
+Single Page Applications are web applications where a single HTML page is loaded and the content of that page is dynamically updated as the user interacts with the page. By doing this web application does not have to reload for every user interaction and can create a more fluent experience for the user.
 
-Components
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=115mm,scale=1]{figures/spa_lifecycle.png}
+    \caption{The Traditional Page Lifecycle vs. the SPA Lifecycle}
+    \label{fig:SPAs_lifecycle}
+\end{figure}
 
-Wireframes
+The project application can be divided into two parts; the header and the body. These two parts are two individual places where components can be loaded and displayed to the user. The header part will always display the header component and stay at the top of the web application. The body part is the part of the web application that will be dynamically chnaged out based on the user interaction.
 
 
+
+\subsection{Components}
+
+\subsection{Wireframes}
+
+\subsection{Style sheet}
+For this project it will be used the .scss files ending. It have been made a directory where it will be collected some of the SCSS. The directory contains of a file \_btn.scss (for buttons), \_colors.scss (for storing colors), \_style.scss (for other universal rules), and \_media.scss where all off the responsive SCSS will be collected (for different platforms as mobile, tablet etc..). 
 \section{Backend}
 The backend operates on the JavaScript runtime enviroment provided by Node.js.
 The backend uses the default Node.js package manager NPM.
@@ -28,17 +41,17 @@ There are several endpoints provided by the backend.
 User registration is achieved through an endpoint.
 In order to register a new user the client has to send a POST request to the endpoint at /users/signup.
 The backend is implemented with input validation.
-Therefore the request must contain the necessary fields, and the fields must be in the proper format, when requesting the backend to create a new account.
+Therefore the request must contain the necessary fields when requesting the backend to create a new account.
 The required fields are email, password, phone, firstName and lastName.
-The backend will return an HTTP status code of 422(unprocessable entity) should the client fail to provide the necessary fields.
+The backend will return an HTTP status code of 400(bad request) should the client fail to provide the necessary fields.
 After having validated the input provided by the client the backend verifies that the email has not been registered before.
-If the email has been registered before the backend responds with an HTTP status code of 403(forbidden).
+If the email has been registered before the backend responds with an HTTP status code of 409(conflict).
 If the email has not been registered before the backend creates the new user and sends a response with an HTTP status of 201.
 
 Login is also achieved through an endpoint.
 In order to login the client has to send a POST request to the endpoint at /users/signin.
 The request must contain the two required fields; email and password.
-The backend will return an HTTP status code of 422(unprocessable entity) should the client fail to provide the necessary fields or the fields be in an improper format.
+The backend will return an HTTP status code of 400(bad request) should the client fail to provide the necessary fields or the fields be in an improper format.
 After having validated the input provided by the client the backend compares the information provided by the client with the one stored in the database.
 If the two match the backend returns an HTTP status code of 200 and the user is logged in.
 If they do not match the backend returns an HTTP status code of 401(unauthorized).
@@ -68,12 +81,6 @@ The categories
 The request will only return one of two responses; the server may respond with an HTTP status of 200 along with the appropriate items, or it may respond with an HTTP status of 500(internal server error).
 The later only occurs should something go wrong - such as the backend being unable to access the database.
 
-SpecificItems ...
-
-UsersProfile ...
-
-Favorites ...
-
 \subsection{Restricted endpoints}
 The backend is designed with access restrictions on the resources it provides.
 Users authenticate themselves using their session ID.
@@ -88,18 +95,25 @@ There are currently no restricted routes, but given the fact the backend already
 The backend has thus been designed and implemented with extendability in mind - which was one of the desirable traits for the project.
 
 \section{Connection}
-The frontend and the backend communicates using an HTTP(Hypertext Transfer Protocol) connection.
-Using HTTPS whenever possible
-
-Domain name ...
-
-HTTPS ...
+The frontend and the backend currently communicate using an HTTP connection.
+The group initially wanted the frontend and the backend to communicate using an HTTPS connection as one should always use HTTPS connections \cite{google_always_https}.
+HTTPS was not implemented however as the application was to be hosted on the colleges servers and the system administrators of the college system were unable to provide us with the necessary environment required for us to implement HTTPS due to juridical reasons.
+HTTPS will therefore have to be implemented in the aftermath of the project.
 
 Using POST instead of request header ...
 
-JSON ...
-
 \section{Database}
+The database as implemented consists of the following tables:
+\begin{enumerate}
+    \item Users.
+    This table holds information about the users such as their name and their email.
+    For a full list of fields see figure [INSERT FIGURE NUMBER].
+    \item Categories.
+    This table stores the categories used to categorize the items.
+    The table is illustrated in figure [INSERT FIGURE NUMBER].
+    \item CumulativeItems.
+    \item SpecificItems.
+\end{enumerate}
 All fields are stored in plain text in the database with the exception of the user's password as storing passwords in plain text is considered poor security practice \cite{plaintext-passwords-poor-practice}.
 There are several reasons for this:
 \begin{itemize}
@@ -135,5 +149,7 @@ For example:
 
     \$2b\$12\$304a14Olae2ZToKVeAk9zOrfmhWJ/IFZl0eEJZS5KkxVl.T5W4N3K.
     \item bcrypt.js returns the password to the backend and the backend stores it in the MariaDB.
+
+ \includegraphics[width=100mm,scale=1]{figures/datamodel_ba.png}
 
 \end{enumerate}

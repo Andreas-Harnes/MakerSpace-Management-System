@@ -12,6 +12,9 @@
 % Times new roman
 \usepackage{mathptmx}
 \usepackage{styles/presentationpage}
+\usepackage{float}
+% Use more of the page
+\usepackage{a4wide}
 
 \input{meta/presentationpage.tex}
 
@@ -44,7 +47,7 @@
 
 \textsc{\LARGE ØSTFOLD UNIVERSITY COLLEGE}\\[0.5cm] % Name of your university/college
 \textsc{\Large Faculty of Computer Sciences}\\[1.0cm]
-\includegraphics[scale=.1]{images/makerspace_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+\includegraphics[scale=.1]{figures/makerspace_logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
 
 \textsc{\Large Bachelor thesis}\\[0.5cm]
 \textsc{\large BO19-G03}\\[0.5cm] % Minor heading such as course title
@@ -85,8 +88,20 @@ Morten Offerdal \textsc{Kvigne}\\% Your name
 
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
-\todo{tanks to kan være her}
-\todo{Preface(ta med thanks to) og summary er greit - kan ta bort code list og tables, og vurder om vi skal ha med figures }
+
+This thesis is written by three computer science students and one information systems student for our bachelor thesis at Østfold University College spring 2019.
+
+HiØ MakerSpace lacks a central repository containing an overview of their items.
+The employees and the users of MakerSpace therefore have no way of knowing which items MakerSpace offer, and of those items MakerSpace offer, they have no way of knowing which items are available.
+This is problematic because they have to search through MakerSpace in its entirety in order to find a given piece of equipment.
+They have no way of knowing whether the piece of equipment is damaged until they find it.
+They also have no way of knowing whether MakerSpace has the piece of equipment or if another user is currently borrowing it.
+This projects aims to solve the problems outlined above.
+
+The group would like to thank Terje Samuelsen.
+His guidance and insight has been an invaluable contribution to the project and its progression. In addition the group would like to thank Michael Anderesen Lundsveen for providing us with the project and guiding the group with his technical expertise.
+Lastly the group would like to thank Ted Magnus Sørlie for helping the group with the servers when needed and all the different Makerspaces that answered the questionnaire that was sent out and helped the group gather important information regarding the project.
+
 
 \chapter*{Summary}
 \addcontentsline{toc}{chapter}{Summary}
@@ -113,4 +128,5 @@ Morten Offerdal \textsc{Kvigne}\\% Your name
 
 \printbibliography
 
+\input{chapters/attachments.tex}
 \end{document}
