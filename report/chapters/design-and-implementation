@@ -19,21 +19,35 @@ Single Page Applications are web applications where a single HTML page is loaded
     \label{fig:SPAs_lifecycle}
 \end{figure}
 
-The project application can be divided into two parts; the header and the body. These two parts are two individual places where components can be loaded and displayed to the user. The header part will always display the header component and stay at the top of the web application. The body part is the part of the web application that will be dynamically chnaged out based on the user interaction.
-
-
+The project application can be divided into two parts; the header and the body. These two parts are two individual places where components can be loaded and displayed to the user. The header part will always display the header component and stay at the top of the web application. The body part is the part of the web application that will be dynamically changed out based on the user interaction.
 
 \subsection{Components}
+
 
 \subsection{Wireframes}
 
 \subsection{Style sheet}
-For this project it will be used the .scss files ending. It have been made a directory where it will be collected some of the SCSS. The directory contains of a file \_btn.scss (for buttons), \_colors.scss (for storing colors), \_style.scss (for other universal rules), and \_media.scss where all off the responsive SCSS will be collected (for different platforms as mobile, tablet etc..). 
+For this project it will be used the .scss files ending. It have been made a directory where it will be collected some of the SCSS. The directory contains of files as \_btn.scss (for buttons), \_colors.scss (for storing colors), \_style.scss (for other universal rules), and \_media.scss where all off the responsive SCSS will be collected (for different platforms as mobile, tablet etc..).
+
+One of the strongest sides of Vue.js, is that in the vue files, it gives permission to 
+defining style tags to be what can be called "scoped". With that it means that the SASS that will be written inside the style that is set to scoped, will only apply to that component. The group have been taking advantage of this and have for example all SASS that belongs to the header file, written in header style tag, and what belongs to body in the body files. Other tings as rules that suits several different files, is kept in separate files. 
+
+The group also have a separate file as mention, that is called \_media.scss. This is where all the SASS for different platforms as mobile, tablets and different PC screens is written. This because it becomes more transparent when working with only the responsive design. The screen size that the group has been working on is:
+
+\begin{itemize}
+  \item Phones (320 x 600)
+  \item Tablets (768 x 1024)
+  \item Screen (720 x 1280)
+  \item Screen (1080 x 1920)
+  \item Screen (1440 x 2560)
+\end{itemize}
+
 \section{Backend}
 The backend operates on the JavaScript runtime enviroment provided by Node.js.
 The backend uses the default Node.js package manager NPM.
 There are many packages used in the backend but the most prominent of them is the web application framework Express.js.
 The routing Express.js provides is used for all endpoints in the application.
+\todo{Resources cannot be deleted or updated etc.}
 The endpoints provides clients with the ability to create, read, update, or delete resources stored on the backend.
 There are several endpoints provided by the backend.
 
@@ -107,13 +121,27 @@ The database as implemented consists of the following tables:
 \begin{enumerate}
     \item Users.
     This table holds information about the users such as their name and their email.
-    For a full list of fields see figure [INSERT FIGURE NUMBER].
+    For a full list of fields see figure \ref{fig:db-tables}.
     \item Categories.
     This table stores the categories used to categorize the items.
-    The table is illustrated in figure [INSERT FIGURE NUMBER].
+    The table is illustrated in figure \ref{fig:db-tables}
     \item CumulativeItems.
+    This table stores general information regarding an item such as its name along with a description and an image of it.
+    This table is also illustrated in figure \ref{fig:db-tables}.
     \item SpecificItems.
+    This table stores information regarding a given existing item.
+    The status indicates the availability of the item; a value of 0 indicates the item is unavailable and a value of 1 indicates the item is available.
+    The status may be expanded in the future to represent more states than the ones listed here with states such as "out for maintenance", "missing" or "stolen".
+    Finally this table is also illustrated in figure \ref{fig:db-tables}.
 \end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=120mm,scale=1]{figures/datamodel_ba.png}
+    \caption{Database tables with their relations}
+    \label{fig:db-tables}
+\end{figure}
+
 All fields are stored in plain text in the database with the exception of the user's password as storing passwords in plain text is considered poor security practice \cite{plaintext-passwords-poor-practice}.
 There are several reasons for this:
 \begin{itemize}
@@ -149,7 +177,5 @@ For example:
 
     \$2b\$12\$304a14Olae2ZToKVeAk9zOrfmhWJ/IFZl0eEJZS5KkxVl.T5W4N3K.
     \item bcrypt.js returns the password to the backend and the backend stores it in the MariaDB.
-
- \includegraphics[width=100mm,scale=1]{figures/datamodel_ba.png}
 
 \end{enumerate}
