@@ -21,8 +21,8 @@
      </tr>
    </thead>
 
-   <tr v-for="item in jsonData" v-bind:key='item'>
-				<td v-for="innerJSON in item" v-bind:key="innerJSON.id">{{innerJSON[item]}}</td>
+   <tr v-for="item in jsonData" v-bind:key='item.id'>
+				<td v-for="innerJSON in item" v-bind:key="innerJSON.id">{{innerJSON}}</td>
 	 </tr>
 
  </table>  
@@ -75,7 +75,78 @@ function getItems() {
     name: 'body',
     data() {
       return {
-        jsonData:[]
+        jsonData:[ {
+            "id": 1,
+            "name": "Wata K20",
+            "description": "Underwater drone",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 1,
+            "items": 6,
+            "availableItems": 5
+        },
+        {
+            "id": 2,
+            "name": "Aireal XV60",
+            "description": "Such fast, very speed, much wow",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 1,
+            "items": 1,
+            "availableItems": 1
+        },
+        {
+            "id": 3,
+            "name": "Glax2K",
+            "description": "VR glasses",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 2,
+            "items": 5,
+            "availableItems": 2
+        },
+        {
+            "id": 4,
+            "name": "SeeVR",
+            "description": "Virtual reality glasses",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 2,
+            "items": 0,
+            "availableItems": 0
+        },
+        {
+            "id": 5,
+            "name": "Windows 10",
+            "description": "Home computer for everyone",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 3,
+            "items": 12,
+            "availableItems": 7
+        },
+        {
+            "id": 6,
+            "name": "Ubuntu",
+            "description": "Home computer for Linux-Users",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 3,
+            "items": 4,
+            "availableItems": 3
+        },
+        {
+            "id": 7,
+            "name": "Arch Linux",
+            "description": "DIY Computer",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 3,
+            "items": 5,
+            "availableItems": 1
+        },
+        {
+            "id": 8,
+            "name": "Mac",
+            "description": "It's fast, it's expensive, it's very expensive",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVP0bs6R7ss0uljAAIqW3mCH4ViTEJNwGOx3ndqc9L4yJh-R0I",
+            "categoryId": 3,
+            "items": 7,
+            "availableItems": 7
+        }]
       }
     },
     methods:{
@@ -97,7 +168,7 @@ function getItems() {
       }
     },
     mounted(){
-      this.setJSON()
+      // this.setJSON()
       
     }
   }
