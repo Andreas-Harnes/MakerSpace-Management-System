@@ -8,7 +8,7 @@
 </template> -->
 
 <!-- containt -->
- <table class="table table-bordered">
+ <table class="table table-bordered" id="itemTable">
    <thead>
      <tr>
        <th>ID</th>
@@ -167,14 +167,8 @@ function getItems() {
         });
       }
     },
-    mounted(){
-      // this.setJSON()
-      
-    }
   }
 
-  // jsonData = getItems();
-  console.log('hello there');
 </script>
 <style>
 /* Search */
@@ -265,4 +259,5 @@ function getItems() {
   top: 1em;
   left: 7em;
 }
+
 </style>

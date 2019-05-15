@@ -30,11 +30,7 @@
               <a class="" href="">Forgotten password?</a>
             </router-link>
           </b-dropdown-item-button>
-          <b-dropdown-item-button>
-            <router-link to="/test">
-              <a class="" href="">Test</a>
-            </router-link>
-          </b-dropdown-item-button>
+
         </div>
       </b-dropdown>
     </div>
@@ -72,6 +68,7 @@ export default {
     float: right;
     position: relative;
     bottom: 40px;
+    right: 2em;
   }
 
   #signIn {
